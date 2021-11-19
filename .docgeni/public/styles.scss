@@ -6,7 +6,7 @@
   display: none !important;
 }
 
-$languages: HTML, CSS, JS, TS, JAVA, GO, BASH;
+$languages: html, css, js, ts, java, go, bash, sh;
 
 @each $language in $languages {
   pre[class~="language-#{$language}"] {
