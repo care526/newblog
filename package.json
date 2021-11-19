@@ -2,15 +2,10 @@
   "name": "alib",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "npm run start:docs",
-    "docgeni": "npx --no-install docgeni init",
     "start:docs": "docgeni serve --port 4600",
     "build": "ng build --configuration production",
     "build:docs": "docgeni build --configuration production",
-    "build:docs-gh-pages": "docgeni build --configuration production --base-href=/docgeni-template/",
-    "test": "ng test",
-    "lint": "ng lint",
     "prepare": "husky install",
     "pretty": "pretty-quick"
   },
