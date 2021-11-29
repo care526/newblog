@@ -20,6 +20,7 @@
     "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
+    "experimentalDecorators": true,
     "enableI18nLegacyMessageIdFormat": false
   }
 }
