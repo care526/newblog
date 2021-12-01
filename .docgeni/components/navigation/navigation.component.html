@@ -19,56 +19,13 @@
         {{ item.text }}
       </div>
     </div>
+    <div class="content-links">
+      <div *ngFor="let item of navigationData[currentMenu].children[currentChildMenu].children" class="content-link__item">
+        <div class="content__link" (click)="go(item.link)">
+          <img class="content__link-logo" [src]="item.logo" alt="" />
+          {{ item.text }}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<style>
-  #navigation {
-    position: fixed;
-    top: 62px;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 62px);
-    background: #fff;
-    display: flex;
-  }
-  .menu {
-    width: 200px;
-    height: 100%;
-    border-right: 1px solid #ebebeb;
-  }
-  .menu-item {
-    height: 40px;
-    line-height: 40px;
-    padding-left: 30px;
-    border-bottom: 1px solid #ebebeb;
-    cursor: pointer;
-  }
-  .menu-item--active {
-    color: #348fe4;
-    background: rgba(52, 143, 228, 0.12);
-  }
-  .content {
-    flex: 1;
-    height: 100%;
-  }
-  .content-childmenu {
-    width: 100%;
-    border-bottom: 1px solid #ebebeb;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    overflow-x: auto;
-  }
-  .content-childmenu__item {
-    height: 32px;
-    line-height: 32px;
-    margin: 4px;
-    padding: 0 8px;
-    cursor: pointer;
-  }
-  .content-childmenu__item--active {
-    color: #348fe4;
-    background: rgba(52, 143, 228, 0.12);
-  }
-</style>

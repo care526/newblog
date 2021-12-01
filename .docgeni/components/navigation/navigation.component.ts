@@ -24,8 +24,11 @@ export class NavigationComponent extends DocgeniBuiltInComponent implements OnIn
 
   currentMenuChange(index: number): void {
     this.currentMenu = index;
-
     this.currentChildMenu = 0;
+  }
+
+  go(link: string) {
+    window.open(link);
   }
 }
 

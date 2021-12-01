@@ -1,15 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "@docgeni/template/styles/index.css";
+@import '@docgeni/template/styles/index.css';
 
 .dg-doc-header {
   display: none !important;
+}
+.dg-sidebar {
+  width: 200px !important;
+}
+.dg-doc-viewer {
+  margin-left: 200px !important;
+  padding: 16px 24px 0 !important;
 }
 
 $languages: html, css, js, ts, java, go, bash, sh;
 
 @each $language in $languages {
-  pre[class~="language-#{$language}"] {
+  pre[class~='language-#{$language}'] {
     position: relative;
     &::before {
       content: quote($language);
@@ -18,6 +25,78 @@ $languages: html, css, js, ts, java, go, bash, sh;
       top: 4px;
       right: 8px;
       color: #999;
+    }
+  }
+}
+
+#navigation {
+  position: fixed;
+  top: 62px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 62px);
+  background: #fff;
+  display: flex;
+  .menu {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #ebebeb;
+    &-item {
+      height: 40px;
+      line-height: 40px;
+      padding-left: 30px;
+      border-bottom: 1px solid #ebebeb;
+      cursor: pointer;
+      &--active {
+        color: #348fe4;
+        background: rgba(52, 143, 228, 0.12);
+        border-radius: 4px;
+      }
+    }
+  }
+  .content {
+    flex: 1;
+    height: 100%;
+    &-childmenu {
+      width: 100%;
+      border-bottom: 1px solid #ebebeb;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      overflow-x: auto;
+      &__item {
+        height: 32px;
+        line-height: 32px;
+        margin: 4px;
+        padding: 0 8px;
+        cursor: pointer;
+        &--active {
+          color: #348fe4;
+          background: rgba(52, 143, 228, 0.12);
+          border-radius: 4px;
+        }
+      }
+    }
+    &-links {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__link {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      min-width: 175px;
+      height: 40px;
+      margin: 4px;
+      padding-right: 8px;
+      border: 1px solid #ebebeb;
+      cursor: pointer;
+      &-logo {
+        width: 32px;
+        height: 32px;
+        margin-left: 4px;
+        margin-right: 8px;
+      }
     }
   }
 }
