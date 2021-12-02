@@ -8,8 +8,8 @@
       "order": 9007199254740991,
       "toc": "content",
       "headings": [],
-      "contentPath": "docs/navigation.html",
-      "originPath": "docs/navigation.md"
+      "contentPath": "care/navigation.html",
+      "originPath": "care/navigation.md"
     },
     {
       "id": "前端",
@@ -25,8 +25,8 @@
           "order": 9007199254740991,
           "toc": "content",
           "headings": [],
-          "contentPath": "docs/前端/sdf.html",
-          "originPath": "docs/前端/sdf.md"
+          "contentPath": "care/前端/sdf.html",
+          "originPath": "care/前端/sdf.md"
         }
       ],
       "order": 9007199254740991
@@ -45,8 +45,8 @@
           "order": 9007199254740991,
           "toc": "content",
           "headings": [],
-          "contentPath": "docs/后端/asd.html",
-          "originPath": "docs/后端/asd.md"
+          "contentPath": "care/后端/asd.html",
+          "originPath": "care/后端/asd.md"
         }
       ],
       "order": 9007199254740991
@@ -71,8 +71,8 @@
               "order": 9007199254740991,
               "toc": "content",
               "headings": [],
-              "contentPath": "docs/基础/数据结构算法/1树.html",
-              "originPath": "docs/基础/数据结构算法/1树.md"
+              "contentPath": "care/基础/数据结构算法/1树.html",
+              "originPath": "care/基础/数据结构算法/1树.md"
             }
           ],
           "order": 9007199254740991
@@ -146,8 +146,8 @@
                   "type": "h2"
                 }
               ],
-              "contentPath": "docs/基础/源码分析/rxjs.html",
-              "originPath": "docs/基础/源码分析/rxjs.md"
+              "contentPath": "care/基础/源码分析/rxjs.html",
+              "originPath": "care/基础/源码分析/rxjs.md"
             }
           ],
           "order": 9007199254740991
@@ -299,8 +299,8 @@
                       "type": "h4"
                     }
                   ],
-                  "contentPath": "docs/基础/语言/TS/1泛型.html",
-                  "originPath": "docs/基础/语言/TS/1泛型.md"
+                  "contentPath": "care/基础/语言/TS/1泛型.html",
+                  "originPath": "care/基础/语言/TS/1泛型.md"
                 }
               ],
               "order": 9007199254740991
@@ -325,8 +325,8 @@
           "order": 9007199254740991,
           "toc": "content",
           "headings": [],
-          "contentPath": "docs/部署/docker.html",
-          "originPath": "docs/部署/docker.md"
+          "contentPath": "care/部署/docker.html",
+          "originPath": "care/部署/docker.md"
         }
       ],
       "order": 9007199254740991
@@ -341,8 +341,8 @@
       "order": 9007199254740991,
       "toc": "content",
       "headings": [],
-      "contentPath": "docs/navigation.html",
-      "originPath": "docs/navigation.md"
+      "contentPath": "care/navigation.html",
+      "originPath": "care/navigation.md"
     },
     {
       "id": "sdf",
@@ -352,8 +352,8 @@
       "order": 9007199254740991,
       "toc": "content",
       "headings": [],
-      "contentPath": "docs/前端/sdf.html",
-      "originPath": "docs/前端/sdf.md"
+      "contentPath": "care/前端/sdf.html",
+      "originPath": "care/前端/sdf.md"
     },
     {
       "id": "asd",
@@ -363,8 +363,8 @@
       "order": 9007199254740991,
       "toc": "content",
       "headings": [],
-      "contentPath": "docs/后端/asd.html",
-      "originPath": "docs/后端/asd.md"
+      "contentPath": "care/后端/asd.html",
+      "originPath": "care/后端/asd.md"
     },
     {
       "id": "1树",
@@ -374,8 +374,8 @@
       "order": 9007199254740991,
       "toc": "content",
       "headings": [],
-      "contentPath": "docs/基础/数据结构算法/1树.html",
-      "originPath": "docs/基础/数据结构算法/1树.md"
+      "contentPath": "care/基础/数据结构算法/1树.html",
+      "originPath": "care/基础/数据结构算法/1树.md"
     },
     {
       "id": "rxjs",
@@ -440,8 +440,8 @@
           "type": "h2"
         }
       ],
-      "contentPath": "docs/基础/源码分析/rxjs.html",
-      "originPath": "docs/基础/源码分析/rxjs.md"
+      "contentPath": "care/基础/源码分析/rxjs.html",
+      "originPath": "care/基础/源码分析/rxjs.md"
     },
     {
       "id": "1泛型",
@@ -578,8 +578,8 @@
           "type": "h4"
         }
       ],
-      "contentPath": "docs/基础/语言/TS/1泛型.html",
-      "originPath": "docs/基础/语言/TS/1泛型.md"
+      "contentPath": "care/基础/语言/TS/1泛型.html",
+      "originPath": "care/基础/语言/TS/1泛型.md"
     },
     {
       "id": "docker",
@@ -589,8 +589,8 @@
       "order": 9007199254740991,
       "toc": "content",
       "headings": [],
-      "contentPath": "docs/部署/docker.html",
-      "originPath": "docs/部署/docker.md"
+      "contentPath": "care/部署/docker.html",
+      "originPath": "care/部署/docker.md"
     }
   ],
   "homeMeta": {
@@ -598,6 +598,6 @@
       "title": "care's blog",
       "description": "the meaning of my existence"
     },
-    "contentPath": "docs/index.html"
+    "contentPath": "care/index.html"
   }
 }
