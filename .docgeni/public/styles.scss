@@ -38,7 +38,7 @@ $languages: html, css, js, ts, java, go, bash, sh;
   background: #fff;
   display: flex;
   .menu {
-    width: 200px;
+    width: 160px;
     height: 100%;
     border-right: 1px solid #ebebeb;
     &-item {
@@ -57,25 +57,13 @@ $languages: html, css, js, ts, java, go, bash, sh;
   .content {
     flex: 1;
     height: 100%;
-    &-childmenu {
-      width: 100%;
-      border-bottom: 1px solid #ebebeb;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      overflow-x: auto;
-      &__item {
-        height: 32px;
-        line-height: 32px;
-        margin: 4px;
-        padding: 0 8px;
-        cursor: pointer;
-        &--active {
-          color: #348fe4;
-          background: rgba(52, 143, 228, 0.12);
-          border-radius: 4px;
-        }
-      }
+    padding: 9px;
+    overflow-y: auto;
+    &-item {
+      margin-bottom: 16px;
+    }
+    &-title {
+      padding-left: 8px;
     }
     &-links {
       display: flex;

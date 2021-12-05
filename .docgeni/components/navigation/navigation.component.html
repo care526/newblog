@@ -10,20 +10,14 @@
     </div>
   </div>
   <div class="content">
-    <div class="content-childmenu">
-      <div
-        *ngFor="let item of navigationData[currentMenu].children; let i = index"
-        [class]="['content-childmenu__item', currentChildMenu === i && 'content-childmenu__item--active']"
-        (click)="currentChildMenu = i"
-      >
-        {{ item.text }}
-      </div>
-    </div>
-    <div class="content-links">
-      <div *ngFor="let item of navigationData[currentMenu].children[currentChildMenu].children" class="content-link__item">
-        <div class="content__link" (click)="go(item.link)">
-          <img class="content__link-logo" [src]="item.logo" alt="" />
-          {{ item.text }}
+    <div *ngFor="let item of navigationData[currentMenu].children; let i = index" class="content-item">
+      <div class="content-title">{{ item.text }}</div>
+      <div class="content-links">
+        <div *ngFor="let item of item.children" class="content-link__item">
+          <div class="content__link" (click)="go(item.link)">
+            <img class="content__link-logo" [src]="item.logo" alt="" />
+            {{ item.text }}
+          </div>
         </div>
       </div>
     </div>

@@ -14,7 +14,6 @@ export class NavigationComponent extends DocgeniBuiltInComponent implements OnIn
   // }
   navigationData: MenuItem[] = navigationData;
   currentMenu = 0;
-  currentChildMenu = 0;
 
   constructor(elementRef: ElementRef<unknown>) {
     super(elementRef);
@@ -24,7 +23,6 @@ export class NavigationComponent extends DocgeniBuiltInComponent implements OnIn
 
   currentMenuChange(index: number): void {
     this.currentMenu = index;
-    this.currentChildMenu = 0;
   }
 
   go(link: string) {

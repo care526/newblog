@@ -26,9 +26,9 @@ const qianduanFramework: MenuItem = {
           logo: 'https://user-images.githubusercontent.com/1203827/39177217-3c49254c-47e1-11e8-9380-760c9e25c48e.png',
         },
         { text: 'ChatUI', link: 'https://chatui.io', logo: 'https://gw.alicdn.com/tfs/TB1ZY1ycUD1gK0jSZFGXXbd3FXa-142-142.png' },
+        { text: 'MUI', link: 'https://mui.com/zh/', logo: 'https://mui.com/static/favicon.ico' },
         { text: 'Zarm', link: 'https://zarm.design/#/components/button', logo: 'https://zarm-vue.gitee.io/favicon.ico' },
         { text: 'Recoil', link: 'https://www.recoiljs.cn', logo: 'https://www.recoiljs.cn/img/logo.svg' },
-        { text: 'MATERIAL-UI', link: 'https://material-ui.com/zh/', logo: 'https://material-ui.com/static/logo_raw.svg' },
       ],
     },
     {
