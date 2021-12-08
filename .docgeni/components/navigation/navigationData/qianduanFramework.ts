@@ -31,8 +31,6 @@ const qianduanFramework: MenuItem = {
         { text: 'Zarm', link: 'https://zarm.design/#/components/button', logo: 'https://zarm-vue.gitee.io/favicon.ico' },
         { text: 'Recoil', link: 'https://www.recoiljs.cn', logo: 'https://www.recoiljs.cn/img/logo.svg' },
         { text: 'BuildYourWwnReact', link: 'https://pomb.us/build-your-own-react/', logo: 'https://pomb.us/favicon.ico' },
-        {}
-        
       ],
     },
     {

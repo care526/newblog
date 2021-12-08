@@ -27,6 +27,165 @@
           "headings": [],
           "contentPath": "care/前端/sdf.html",
           "originPath": "care/前端/sdf.md"
+        },
+        {
+          "id": "前端/库",
+          "path": "前端/库",
+          "channelPath": "前端",
+          "title": "库",
+          "items": [
+            {
+              "id": "pm2",
+              "path": "库/pm2",
+              "channelPath": "前端",
+              "title": "Pm2",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "pm2",
+                  "name": "PM2",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "安装",
+                  "name": "安装",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "命令",
+                  "name": "命令",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "start",
+                  "name": "start",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "restart",
+                  "name": "restart",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "reload",
+                  "name": "reload",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "stop",
+                  "name": "stop",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "delete",
+                  "name": "delete",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "list/ls/status",
+                  "name": "list/ls/status",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "logs",
+                  "name": "logs",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "monit",
+                  "name": "monit",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "plus",
+                  "name": "plus",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "startup",
+                  "name": "startup",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "save",
+                  "name": "save",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "flush",
+                  "name": "flush",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "reloadlogs",
+                  "name": "reloadLogs",
+                  "level": 3,
+                  "type": "h3"
+                }
+              ],
+              "contentPath": "care/前端/库/pm2.html",
+              "originPath": "care/前端/库/pm2.md"
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "前端/框架",
+          "path": "前端/框架",
+          "channelPath": "前端",
+          "title": "框架",
+          "items": [
+            {
+              "id": "前端/框架/angular",
+              "path": "前端/框架/angular",
+              "channelPath": "前端",
+              "title": "Angular",
+              "items": [
+                {
+                  "id": "injector",
+                  "path": "框架/angular/injector",
+                  "channelPath": "前端",
+                  "title": "Injector",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "依赖注入",
+                      "name": "依赖注入",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "层级",
+                      "name": "层级",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/前端/框架/angular/injector.html",
+                  "originPath": "care/前端/框架/angular/injector.md"
+                }
+              ],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 9007199254740991
         }
       ],
       "order": 9007199254740991
@@ -84,70 +243,103 @@
           "title": "源码分析",
           "items": [
             {
-              "id": "rxjs",
-              "path": "源码分析/rxjs",
+              "id": "基础/源码分析/rxjs",
+              "path": "基础/源码分析/rxjs",
               "channelPath": "基础",
               "title": "Rxjs",
-              "order": 9007199254740991,
-              "toc": "content",
-              "headings": [
+              "items": [
+                {
+                  "id": "operate",
+                  "path": "源码分析/rxjs/operate",
+                  "channelPath": "基础",
+                  "title": "Operate",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "of",
+                      "name": "of",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "take",
+                      "name": "take",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/基础/源码分析/rxjs/operate.html",
+                  "originPath": "care/基础/源码分析/rxjs/operate.md"
+                },
                 {
                   "id": "rxjs",
-                  "name": "RxJs",
-                  "level": 1,
-                  "type": "h1"
-                },
-                {
-                  "id": "observable",
-                  "name": "Observable",
-                  "level": 2,
-                  "type": "h2"
-                },
-                {
-                  "id": "observer",
-                  "name": "Observer",
-                  "level": 2,
-                  "type": "h2"
-                },
-                {
-                  "id": "subscriber",
-                  "name": "Subscriber",
-                  "level": 2,
-                  "type": "h2"
-                },
-                {
-                  "id": "subscription",
-                  "name": "Subscription",
-                  "level": 2,
-                  "type": "h2"
-                },
-                {
-                  "id": "subject",
-                  "name": "Subject",
-                  "level": 2,
-                  "type": "h2"
-                },
-                {
-                  "id": "特殊类型的subject",
-                  "name": "特殊类型的Subject",
-                  "level": 3,
-                  "type": "h3"
-                },
-                {
-                  "id": "operators",
-                  "name": "Operators",
-                  "level": 2,
-                  "type": "h2"
-                },
-                {
-                  "id": "scheduler",
-                  "name": "Scheduler",
-                  "level": 2,
-                  "type": "h2"
+                  "path": "源码分析/rxjs/rxjs",
+                  "channelPath": "基础",
+                  "title": "Rxjs",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "rxjs",
+                      "name": "RxJs",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "observable",
+                      "name": "Observable",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "observer",
+                      "name": "Observer",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "subscriber",
+                      "name": "Subscriber",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "subscription",
+                      "name": "Subscription",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "subject",
+                      "name": "Subject",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "特殊类型的subject",
+                      "name": "特殊类型的Subject",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "operators",
+                      "name": "Operators",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "scheduler",
+                      "name": "Scheduler",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/基础/源码分析/rxjs/rxjs.html",
+                  "originPath": "care/基础/源码分析/rxjs/rxjs.md"
                 }
               ],
-              "contentPath": "care/基础/源码分析/rxjs.html",
-              "originPath": "care/基础/源码分析/rxjs.md"
+              "order": 9007199254740991
             }
           ],
           "order": 9007199254740991
@@ -356,6 +548,138 @@
       "originPath": "care/前端/sdf.md"
     },
     {
+      "id": "pm2",
+      "path": "库/pm2",
+      "channelPath": "前端",
+      "title": "Pm2",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "pm2",
+          "name": "PM2",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "安装",
+          "name": "安装",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "命令",
+          "name": "命令",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "start",
+          "name": "start",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "restart",
+          "name": "restart",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "reload",
+          "name": "reload",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "stop",
+          "name": "stop",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "delete",
+          "name": "delete",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "list/ls/status",
+          "name": "list/ls/status",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "logs",
+          "name": "logs",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "monit",
+          "name": "monit",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "plus",
+          "name": "plus",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "startup",
+          "name": "startup",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "save",
+          "name": "save",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "flush",
+          "name": "flush",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "reloadlogs",
+          "name": "reloadLogs",
+          "level": 3,
+          "type": "h3"
+        }
+      ],
+      "contentPath": "care/前端/库/pm2.html",
+      "originPath": "care/前端/库/pm2.md"
+    },
+    {
+      "id": "injector",
+      "path": "框架/angular/injector",
+      "channelPath": "前端",
+      "title": "Injector",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "依赖注入",
+          "name": "依赖注入",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "层级",
+          "name": "层级",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/前端/框架/angular/injector.html",
+      "originPath": "care/前端/框架/angular/injector.md"
+    },
+    {
       "id": "asd",
       "path": "asd",
       "channelPath": "后端",
@@ -378,8 +702,32 @@
       "originPath": "care/基础/数据结构算法/1树.md"
     },
     {
+      "id": "operate",
+      "path": "源码分析/rxjs/operate",
+      "channelPath": "基础",
+      "title": "Operate",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "of",
+          "name": "of",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "take",
+          "name": "take",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/基础/源码分析/rxjs/operate.html",
+      "originPath": "care/基础/源码分析/rxjs/operate.md"
+    },
+    {
       "id": "rxjs",
-      "path": "源码分析/rxjs",
+      "path": "源码分析/rxjs/rxjs",
       "channelPath": "基础",
       "title": "Rxjs",
       "order": 9007199254740991,
@@ -440,8 +788,8 @@
           "type": "h2"
         }
       ],
-      "contentPath": "care/基础/源码分析/rxjs.html",
-      "originPath": "care/基础/源码分析/rxjs.md"
+      "contentPath": "care/基础/源码分析/rxjs/rxjs.html",
+      "originPath": "care/基础/源码分析/rxjs/rxjs.md"
     },
     {
       "id": "1泛型",
