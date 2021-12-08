@@ -5,7 +5,10 @@ const tools: MenuItem = {
   children: [
     {
       text: '导航网站',
-      children: [{ text: '艾特网', link: 'https://iiter.cn/', logo: 'https://iiter.cn/favicon.ico' }],
+      children: [
+        { text: '艾特网', link: 'https://iiter.cn/', logo: 'https://iiter.cn/favicon.ico' },
+        { text: '自学之路', link: 'https://www.r2coding.com/#/', logo: 'https://cdn.jsdelivr.net/gh/justacoder99/r2coding@master/img/r2coding_logo_cover.7hb2s8l3eqk0.png' }
+    ],
     },
     {
       text: '代码托管平台',
