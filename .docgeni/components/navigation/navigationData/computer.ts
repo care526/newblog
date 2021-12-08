@@ -28,10 +28,33 @@ const computer: MenuItem = {
         },
       ],
     },
-    // {
-    //   text: '视频',
-    //   children: [{ text: '', link: '' }],
-    // },
+    {
+      text: '视频',
+      children: [
+        { text: '算法初步', link: 'https://www.bilibili.com/video/BV1XL411M7a6', logo: 'https://www.bilibili.com/favicon.ico' },
+        { text: 'grep、sed、awk', link: 'https://www.bilibili.com/video/BV1244y1e73a', logo: 'https://www.bilibili.com/favicon.ico' },
+        { text: '计算机基础', link: 'https://www.bilibili.com/video/BV1mY411s7bh', logo: 'https://www.bilibili.com/favicon.ico' },
+        { text: 'Nginx', link: 'https://www.bilibili.com/video/BV1Nq4y137xK', logo: 'https://www.bilibili.com/favicon.ico' },
+        { text: 'Nginx', link: 'https://www.bilibili.com/video/BV1yU4y1T7E8', logo: 'https://www.bilibili.com/favicon.ico' },
+        { text: 'Redis', link: 'https://www.bilibili.com/video/BV1hb4y1B7Nm', logo: 'https://www.bilibili.com/favicon.ico' },
+        { text: 'Apple design principles', link: 'https://www.bilibili.com/video/BV1BS4y1X7TC', logo: 'https://www.bilibili.com/favicon.ico' },
+        { text: 'AI For Everyone', link: 'https://www.bilibili.com/video/BV1yL411u7q6', logo: 'https://www.bilibili.com/favicon.ico' },
+        { text: '计算机组成原理', link: 'https://www.bilibili.com/video/BV1kU4y177x9', logo: 'https://www.bilibili.com/favicon.ico' },
+        { text: 'Linux-shell', link: 'https://www.bilibili.com/video/BV1d3411t7Js', logo: 'https://www.bilibili.com/favicon.ico' },
+      ],
+    },
+    {
+      text: '演讲',
+      children: [
+        { text: '马斯克2012年在加州理工学院励志演讲', link: 'https://www.bilibili.com/video/BV1Tv411L7Pz', logo: 'https://www.bilibili.com/favicon.ico' },
+      ]
+    },
+    {
+      text: '访谈',
+      children: [
+        { text: '门罗访谈马斯克完整版', link: 'https://www.bilibili.com/video/BV1734y1Z7ig', logo: 'https://www.bilibili.com/favicon.ico' },
+      ]
+    }
   ],
 };
 

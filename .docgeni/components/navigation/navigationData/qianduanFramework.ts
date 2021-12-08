@@ -30,6 +30,9 @@ const qianduanFramework: MenuItem = {
         { text: 'MUI', link: 'https://mui.com/zh/', logo: 'https://mui.com/static/favicon.ico' },
         { text: 'Zarm', link: 'https://zarm.design/#/components/button', logo: 'https://zarm-vue.gitee.io/favicon.ico' },
         { text: 'Recoil', link: 'https://www.recoiljs.cn', logo: 'https://www.recoiljs.cn/img/logo.svg' },
+        { text: 'BuildYourWwnReact', link: 'https://pomb.us/build-your-own-react/', logo: 'https://pomb.us/favicon.ico' },
+        {}
+        
       ],
     },
     {
@@ -78,6 +81,7 @@ const qianduanFramework: MenuItem = {
           logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
         },
         { text: 'NGRX', link: 'https://next.ngrx.io/', logo: 'https://next.ngrx.io/assets/images/badge.svg' },
+        { text: 'Docgeni', link: 'https://docgeni.org/', logo: 'https://cdn.pingcode.com/open-sources/docgeni/logo.png' },
       ],
     },
     {

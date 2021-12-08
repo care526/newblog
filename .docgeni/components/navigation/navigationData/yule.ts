@@ -63,6 +63,8 @@ const yule: MenuItem = {
         { text: 'MVCAT电影推荐', link: 'https://www.mvcat.com/', logo: 'https://www.mvcat.com/img/logo_appicon.png' },
         { text: '美剧天堂', link: 'https://www.meijutt.tv/', logo: 'https://www.meijutt.tv/favicon.ico' },
         { text: '星河影院', link: 'https://xingheyy.com/', logo: 'https://xingheyy.com/favicon.ico' },
+        { text: 'pdoro', link: 'http://www.pdoro.com/', logo: 'http://www.pdoro.com/wp-content/uploads/2019/10/19d938570915af-32x32.png' },
+        
       ],
     },
   ],
