@@ -39,6 +39,7 @@ const qianduanFramework: MenuItem = {
         { text: 'VueJs', link: 'https://cn.vuejs.org/v2/api/', logo: 'https://cn.vuejs.org/images/logo.svg' },
         { text: 'Vue Router', link: 'https://router.vuejs.org/zh/', logo: 'https://cn.vuejs.org/images/logo.svg' },
         { text: 'Vuex', link: 'https://vuex.vuejs.org/zh/', logo: 'https://cn.vuejs.org/images/logo.svg' },
+        { text: 'VueUse', link: 'https://vueuse.org/', logo: 'https://d33wubrfki0l68.cloudfront.net/a5780e53fee68ddd1cd73a00484151d2d052cb4d/b7469/logo-vertical.png' },
         { text: 'Pinia', link: 'https://pinia.esm.dev/', logo: 'https://pinia.esm.dev/logo.svg' },
         { text: 'Vue CLI', link: 'https://cli.vuejs.org/zh/', logo: 'https://cn.vuejs.org/images/logo.svg' },
         { text: 'VuePress', link: 'https://www.vuepress.cn/', logo: 'https://vuepress.vuejs.org/hero.png' },
@@ -80,6 +81,7 @@ const qianduanFramework: MenuItem = {
         },
         { text: 'NGRX', link: 'https://next.ngrx.io/', logo: 'https://next.ngrx.io/assets/images/badge.svg' },
         { text: 'Docgeni', link: 'https://docgeni.org/', logo: 'https://cdn.pingcode.com/open-sources/docgeni/logo.png' },
+        { text: 'ng-nice', link: 'https://www.zhihu.com/column/ng-nice', logo: '' },
       ],
     },
     {
