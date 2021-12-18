@@ -64,6 +64,13 @@ const qianduan: MenuItem = {
       ],
     },
     {
+      text: '知乎',
+      children: [
+        { text: '黄玄', link: 'https://www.zhihu.com/people/huxpro', logo: 'https://pic2.zhimg.com/v2-2a2bfb7617ff3566b4a5610a655bcc65_xl.jpg' }
+        { text: '徐海峰', link: 'https://www.zhihu.com/people/why520crazy', logo: 'https://pic3.zhimg.com/ccf676352_xl.jpg' }
+      ],
+    },
+    {
       text: 'CSS',
       children: [
         { text: 'CSS速查总表', link: 'http://css.yanzhihui.com/', logo: 'http://css.yanzhihui.com/images/favicon.ico' },

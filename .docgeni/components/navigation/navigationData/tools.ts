@@ -7,8 +7,12 @@ const tools: MenuItem = {
       text: '导航网站',
       children: [
         { text: '艾特网', link: 'https://iiter.cn/', logo: 'https://iiter.cn/favicon.ico' },
-        { text: '自学之路', link: 'https://www.r2coding.com/#/', logo: 'https://cdn.jsdelivr.net/gh/justacoder99/r2coding@master/img/r2coding_logo_cover.7hb2s8l3eqk0.png' }
-    ],
+        {
+          text: '自学之路',
+          link: 'https://www.r2coding.com/#/',
+          logo: 'https://cdn.jsdelivr.net/gh/justacoder99/r2coding@master/img/r2coding_logo_cover.7hb2s8l3eqk0.png',
+        },
+      ],
     },
     {
       text: '代码托管平台',
@@ -114,6 +118,21 @@ const tools: MenuItem = {
         { text: '百度', link: 'https://www.baidu.com/', logo: 'https://www.baidu.com/favicon.ico' },
         { text: '必应', link: 'https://cn.bing.com/?mkt=zh-CN', logo: 'https://cn.bing.com/sa/simg/favicon-2x.ico' },
         { text: '谷歌', link: 'https://www.google.com/', logo: 'https://www.google.com/favicon.ico' },
+      ],
+    },
+    {
+      text: '壁纸',
+      children: [
+        { text: 'wallhaven', link: 'https://wallhaven.cc/', logo: 'https://wallhaven.cc/favicon.ico' },
+        { text: '美图集', link: 'http://photo.ihansen.org/', logo: 'https://photo.ihansen.org/favicon.ico' },
+        { text: 'alphacoders', link: 'https://wall.alphacoders.com/', logo: 'https://static.alphacoders.com/icons/wallpaper/favicon.ico' },
+        { text: '彼岸图网', link: 'https://pic.netbian.com/', logo: 'https://pic.netbian.com/favicon.ico' },
+        { text: '极简壁纸', link: 'https://bz.zzzmh.cn/index', logo: 'https://bz.zzzmh.cn/favicon.ico' },
+        {
+          text: '乌云壁纸',
+          link: 'http://www.obzhi.com/',
+          logo: 'http://www.obzhi.com/wp-content/uploads/2016/09/www.ico.la_512423bc80c1b7f3d5e2f5be43f42407_32X32.ico',
+        },
       ],
     },
     {

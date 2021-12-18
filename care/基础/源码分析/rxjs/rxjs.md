@@ -1,8 +1,10 @@
 # RxJs
 
 ## Observable
+
 可观察对象  
 运算是同步的
+
 ```ts
 type PartialObserver<T> = NextObserver<T> | ErrorObserver<T> | CompletionObserver<T>;
 interface Subscribable<T> {
@@ -14,7 +16,6 @@ class Observable<T> implements Subscribable<T> {
   source: Observable<any>; // 保存的自身上层管道前的 Observable
   operator: Operator<any, T>;
 
-  
   // 注意下，两种情况创建
   // 1、通过 new Observable(subscribe)
   // 2、通过 pipe 生成
@@ -36,9 +37,9 @@ class Observable<T> implements Subscribable<T> {
       sink.add(operator.call(sink, this.source));
     } else {
       sink.add(
-        this.source || (config.useDeprecatedSynchronousErrorHandling && !sink.syncErrorThrowable) ?
-        this._subscribe(sink) :
-        this._trySubscribe(sink)
+        this.source || (config.useDeprecatedSynchronousErrorHandling && !sink.syncErrorThrowable)
+          ? this._subscribe(sink)
+          : this._trySubscribe(sink)
       );
     }
   }
@@ -65,6 +66,7 @@ class Observable<T> implements Subscribable<T> {
   toPromise(promiseCtor?: PromiseConstructorLike): Promise<T> {}
 }
 ```
+
 ```ts
 function pipeFromArray<T, R>(fns: Array<UnaryFunction<T, R>>): UnaryFunction<T, R> {
   if (fns.length === 1) {
@@ -76,15 +78,33 @@ function pipeFromArray<T, R>(fns: Array<UnaryFunction<T, R>>): UnaryFunction<T, 
   };
 }
 ```
+
 ```ts
-interface UnaryFunction<T, R> { (source: T): R; }
+interface UnaryFunction<T, R> {
+  (source: T): R;
+}
 function identity<T>(x: T): T {
   return x;
 }
 ```
 
+> 例子
+
+```ts
+new Observable((Observer) => {
+  let timer = setInterval(() => {}, 1000);
+
+  return () => {
+    clearInterval(timer);
+    timer = null;
+  };
+});
+```
+
 ## Observer
-观察者 
+
+观察者
+
 ```ts
 // 抽象类
 interface Observer<T> {
@@ -96,7 +116,9 @@ interface Observer<T> {
 ```
 
 ## Subscriber
+
 订阅者
+
 ```ts
 class Subscriber<T> extends Subscription implements Observer<T> {
   // 当前订阅者停止，error complete 都会导致停止
@@ -104,14 +126,10 @@ class Subscriber<T> extends Subscription implements Observer<T> {
   // 传入的订阅执行方法
   protected destination: PartialObserver<any> | Subscriber<any>;
 
-  constructor(
-    destinationOrNext?: PartialObserver<any> | ((value: T) => void),
-    error?: (e?: any) => void,
-    complete?: () => void
-  ) {
+  constructor(destinationOrNext?: PartialObserver<any> | ((value: T) => void), error?: (e?: any) => void, complete?: () => void) {
     // 这里对传入的参数处理 并储存在 destination 中
   }
-  
+
   next(value?: T): void {
     if (!this.isStopped) {
       this._next(value);
@@ -151,7 +169,9 @@ class Subscriber<T> extends Subscription implements Observer<T> {
 ```
 
 ## Subscription
+
 订阅(n)
+
 ```ts
 interface Unsubscribable {
   unsubscribe(): void;
@@ -167,6 +187,12 @@ class Subscription implements SubscriptionLike {
   public closed: boolean = false; // Subscription 是否已经解除订阅
   protected _parentOrParents: Subscription | Subscription[] = null;
   private _subscriptions: SubscriptionLike[] = null;
+
+  constructor(unsubscribe?: () => void) {
+    if (unsubscribe) {
+      this._unsubscribe = unsubscribe;
+    }
+  }
 
   unsubscribe(): void {
     // 把 _parentOrParents 中的自己去除
@@ -184,24 +210,56 @@ class Subscription implements SubscriptionLike {
 ```
 
 ## Subject
+
 是一种特殊类型的 Observable  
 鸭式辩型
+
 ```ts
 class Subject<T> extends Observable<T> implements SubscriptionLike {
   observers: Observer<T>[] = []; // 所有的订阅者
-  closed = false; // 
+  closed = false; //
   isStopped = false; // Subject complete 标识
 
-
+  lift<R>(operator: Operator<T, R>): Observable<R> {}
+  next(value?: T) {
+    // 循环调用 observers 的 next 方法
+  }
+  error(err: any) {
+    this.isStopped = true;
+    // 循环调用 observers 的 error 方法
+  }
+  complete() {
+    this.isStopped = true;
+    // 循环调用 observers 的 complete 方法
+    this.observers.length = 0;
+  }
+  unsubscribe() {
+    this.isStopped = true;
+    this.closed = true;
+    this.observers = null;
+  }
+  _subscribe() {
+    this.observers.push(subscriber);
+    return new SubjectSubscription(this, subscriber);
+  }
+  asObservable(): Observable<T> {
+    const observable = new Observable<T>();
+    (<any>observable).source = this;
+    return observable;
+  }
 }
 ```
-### 特殊类型的Subject
-- BehaviorSubject  
-- ReplaySubject  
-- AsyncSubject  
+
+### 特殊类型的 Subject
+
+- BehaviorSubject
+- ReplaySubject
+- AsyncSubject
 
 ## Operators
+
 操作符
+
 ```ts
 function take<T>(count: number): MonoTypeOperatorFunction<T> {
   return (source: Observable<T>) => {
@@ -213,11 +271,12 @@ function take<T>(count: number): MonoTypeOperatorFunction<T> {
   };
 }
 ```
+
 ```ts
 class TakeOperator<T> implements Operator<T, T> {
   constructor(private total: number) {
     if (this.total < 0) {
-      throw new ArgumentOutOfRangeError;
+      throw new ArgumentOutOfRangeError();
     }
   }
 
@@ -226,6 +285,7 @@ class TakeOperator<T> implements Operator<T, T> {
   }
 }
 ```
+
 ```ts
 class TakeSubscriber<T> extends Subscriber<T> {
   private count: number = 0;
@@ -249,13 +309,5 @@ class TakeSubscriber<T> extends Subscriber<T> {
 ```
 
 ## Scheduler
+
 调度器
-
-
-
-
-
-
-
-
-
