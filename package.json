@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "docgeni serve --port 4600",
+    "build": "docgeni build"
+  },
+  "devDependencies": {
+    "@docgeni/angular": "^17.0.0",
+    "@docgeni/cli": "^2.3.2",
+    "@docgeni/template": "^2.3.2",
+    "typescript": "5.4"
+  }
+}
