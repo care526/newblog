@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@docgeni/template/styles/index.css';
+
+// .dg-doc-header {
+//   display: none !important;
+// }
+// .dg-sidebar {
+//   width: 200px !important;
+// }
+// .dg-doc-viewer {
+//   margin-left: 200px !important;
+//   padding: 16px 24px 0 !important;
+// }
+
+$languages: html, css, js, ts, java, go, bash, sh;
+
+@each $language in $languages {
+  pre[class~='language-#{$language}'] {
+    position: relative;
+    &::before {
+      content: quote($language);
+      position: absolute;
+      font-size: 12px;
+      top: 4px;
+      right: 8px;
+      color: #999;
+    }
+  }
+}
