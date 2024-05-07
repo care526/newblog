@@ -1,0 +1,88 @@
+
+        <h1 id="%E5%A4%8D%E6%9D%82%E5%BA%A6" class="docs-header-link">
+          <span header-link="%E5%A4%8D%E6%9D%82%E5%BA%A6"></span>
+          复杂度
+        </h1>
+      
+        <h2 id="%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%A4%8D%E6%9D%82%E6%80%A7" class="docs-header-link">
+          <span header-link="%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%A4%8D%E6%9D%82%E6%80%A7"></span>
+          如何定义复杂性
+        </h2>
+      
+        <h2 id="%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E8%A1%A8%E7%8E%B0" class="docs-header-link">
+          <span header-link="%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E8%A1%A8%E7%8E%B0"></span>
+          复杂性的表现
+        </h2>
+      <ul>
+<li>简单的变更需要在许多不同的地方进行代码修改  </li>
+<li>认知负荷：开发人员完成一项任务需要了解大量的知识  </li>
+<li>开发人员完成一个任务，不知道需要修改哪些代码才能完成任务</li>
+</ul>
+
+        <h2 id="%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E6%88%90%E5%9B%A0" class="docs-header-link">
+          <span header-link="%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E6%88%90%E5%9B%A0"></span>
+          复杂性的成因
+        </h2>
+      <ul>
+<li>依赖性
+当你无法孤立地理解和修改给定的一段代码，便存在依赖关系<br>该代码以某种方式和其他代码相关，如果更改了给定的代码，则必须考虑、修改其他代码</li>
+</ul>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> Config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  host<span class="token punctuation">:</span> <span class="token string">'http://xxx'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">import</span> Config <span class="token keyword">from</span> <span class="token string">'@/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">getPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> Config<span class="token punctuation">.</span>host <span class="token operator">+</span> <span class="token string">'/api/auth'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">class</span> <span class="token class-name">Config</span> <span class="token punctuation">{</span>
+  apiHost<span class="token punctuation">:</span> <span class="token string">'http://xxx'</span><span class="token punctuation">;</span>
+
+  <span class="token function">getApiHost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>apiHost<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">import</span> Config <span class="token keyword">from</span> <span class="token string">'@/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">getPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Config</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getApiHost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'/api/auth'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">import</span> <span class="token punctuation">{</span> getLocation<span class="token punctuation">,</span> transLocationToAddress <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/utils/tool'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> lat<span class="token punctuation">,</span> lng <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">getLocation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">transLocationToAddress</span><span class="token punctuation">(</span>lat<span class="token punctuation">,</span> lng<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+<p>依赖性是软件的基本组成部分，不能完全消除<br>而且软件设计的过程中有意引入了依赖性，如：基类、子类<br>软件设计的目标之一是减少依赖关系，</p>
+<ul>
+<li>模糊性
+晦涩的代码导致信息不明显  <ul>
+<li>命名
+变量的命名如果没有表达出他本应该有的意思，那么开发人员需要在文件中搜索改变量的定义和使用情况，甚至需要对照注释才知道这个变量是干嘛的</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="%E6%80%BB%E7%BB%93" class="docs-header-link">
+          <span header-link="%E6%80%BB%E7%BB%93"></span>
+          总结
+        </h3>
+      <blockquote>
+<p>依赖性导致变化放大和高认知负荷<br>晦涩会产生未知，也会增加认知负荷  </p>
+</blockquote>
+<hr>
+<blockquote>
+<p>复杂性也不是一蹴而就的<br>单个依赖项或模糊性本身不太可能显著的影响软件系统的可维护性<br>随着时间的流逝，成千上万的小依赖项和模糊性最终导致了软件系统的复杂性成倍的增大<br>每次修改和新功能都导致开发人员需要花费更多的时间来获取足够的信息来安全的进行更改</p>
+</blockquote>
+
+        <h2 id="%E5%A6%82%E4%BD%95%E5%87%8F%E4%BD%8E%E5%A4%8D%E6%9D%82%E6%80%A7" class="docs-header-link">
+          <span header-link="%E5%A6%82%E4%BD%95%E5%87%8F%E4%BD%8E%E5%A4%8D%E6%9D%82%E6%80%A7"></span>
+          如何减低复杂性
+        </h2>
+      <blockquote>
+<p>找到最小化依赖关系<br>降低模糊性<br>就达到了减低软件复杂性的目的  </p>
+</blockquote>
+<hr>
+<blockquote>
+<p>消除每一个小的依赖项和模糊性最终在不知不觉中达到减低整个系统复杂性的目的</p>
+</blockquote>

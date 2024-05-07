@@ -1,0 +1,79 @@
+
+        <h1 id="prettier" class="docs-header-link">
+          <span header-link="prettier"></span>
+          Prettier
+        </h1>
+      
+        <h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F" class="docs-header-link">
+          <span header-link="%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"></span>
+          使用方式
+        </h2>
+      
+        <h2 id="%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" class="docs-header-link">
+          <span header-link="%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"></span>
+          配置文件
+        </h2>
+      <pre class="language-json"><code class="language-json"><div><span class="token punctuation">{</span>
+  <span class="token property">"printWidth"</span><span class="token operator">:</span> <span class="token number">80</span><span class="token punctuation">,</span>                     // 单行最大长度
+  <span class="token property">"tabWidth"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>                        // tab的宽度
+  <span class="token property">"useTabs"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>                     // 使用tab代替空格
+  <span class="token property">"semi"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                         // 每个语句后面加空格
+  <span class="token property">"singleQuote"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>                 // 使用单引号代替双引号
+  <span class="token property">"jsxSingleQuote"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>              // 在JSX中使用单引号
+  <span class="token property">"trailingComma"</span><span class="token operator">:</span> "&lt;es5|none|all>"<span class="token punctuation">,</span>    // 在对象或数组的最后一个元素后面添加尾逗号(<span class="token punctuation">)</span>
+  <span class="token property">"bracketSpacing"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>               // 字面量对象中的空格
+  <span class="token property">"jsxBracketSameLine"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>          // 闭合标签同一行还是另起一行
+  <span class="token property">"arrowParens"</span><span class="token operator">:</span> "&lt;always|avoid>"<span class="token punctuation">,</span>      // 箭头函数的参数两边是否需要括号(始终需要|需要的时候使用<span class="token punctuation">)</span>
+  <span class="token property">"endOfLine"</span><span class="token operator">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span>                  // 行末尾标识，一般用auto，自动识别文件第一行换行标识
+  <span class="token property">"htmlWhitespaceSensitivity"</span><span class="token operator">:</span> <span class="token string">"ignore"</span><span class="token punctuation">,</span>// 方式结束标签>跑到下一行
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h3 id="%E6%94%AF%E6%8C%81%E7%9A%84%E7%B1%BB%E5%9E%8B" class="docs-header-link">
+          <span header-link="%E6%94%AF%E6%8C%81%E7%9A%84%E7%B1%BB%E5%9E%8B"></span>
+          支持的类型
+        </h3>
+      <ul>
+<li>package.json 中的 prettier 属性</li>
+<li>.prettierrc 文件 格式支持：JSON / YAML</li>
+<li>.prettierrc.json
+.prettierrc.yml
+.prettierrc.yaml
+.prettierrc.json5</li>
+<li>.prettierrc.js
+.prettierrc.cjs
+prettier.config.js
+prettier.config.cjs<blockquote>
+<p>exports an object using module.exports</p>
+</blockquote>
+</li>
+<li>.prettierrc.toml</li>
+</ul>
+
+        <h2 id="%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6" class="docs-header-link">
+          <span header-link="%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6"></span>
+          忽略文件
+        </h2>
+      <p>基于</p>
+<ul>
+<li>.prettierignore<pre><code><div># Ignore artifacts<span class="token punctuation">:</span>
+  build
+  coverage
+
+  # Ignore all HTML files<span class="token punctuation">:</span>
+  <span class="token operator">*</span><span class="token punctuation">.</span>html</div></code></pre></li>
+</ul>
+
+        <h2 id="cli%E5%91%BD%E4%BB%A4" class="docs-header-link">
+          <span header-link="cli%E5%91%BD%E4%BB%A4"></span>
+          cli命令
+        </h2>
+      <pre class="language-bash"><code class="language-bash"><div><span class="token comment" spellcheck="true"># 格式化文件</span>
+prettier --write ./xxx.ts
+<span class="token comment" spellcheck="true"># 格式化目录下的所有文件</span>
+prettier --write ./src/</div></code></pre>
+
+        <h1 id="%E9%85%8D%E7%BD%AE%E9%A1%B9" class="docs-header-link">
+          <span header-link="%E9%85%8D%E7%BD%AE%E9%A1%B9"></span>
+          配置项
+        </h1>
+      

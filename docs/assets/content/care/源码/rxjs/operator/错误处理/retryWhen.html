@@ -1,0 +1,64 @@
+
+        <h1 id="retrywhen" class="docs-header-link">
+          <span header-link="retrywhen"></span>
+          retryWhen
+        </h1>
+      
+        <h2 id="%E7%A4%BA%E4%BE%8B" class="docs-header-link">
+          <span header-link="%E7%A4%BA%E4%BE%8B"></span>
+          示例
+        </h2>
+      
+        <h2 id="%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90" class="docs-header-link">
+          <span header-link="%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"></span>
+          源码分析
+        </h2>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">export</span> <span class="token keyword">function</span> retryWhen<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">(</span>notifier<span class="token punctuation">:</span> <span class="token punctuation">(</span>errors<span class="token punctuation">:</span> Observable<span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Observable<span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">:</span> MonoTypeOperatorFunction<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">operate</span><span class="token punctuation">(</span><span class="token punctuation">(</span>source<span class="token punctuation">,</span> subscriber<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> innerSub<span class="token punctuation">:</span> Subscription <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> syncResub <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> errors$<span class="token punctuation">:</span> Subject<span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> subscribeForRetryWhen <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      innerSub <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span>
+        <span class="token keyword">new</span> <span class="token class-name">OperatorSubscriber</span><span class="token punctuation">(</span>subscriber<span class="token punctuation">,</span> undefined<span class="token punctuation">,</span> undefined<span class="token punctuation">,</span> err <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>errors$<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            errors$ <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Subject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">notifier</span><span class="token punctuation">(</span>errors$<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span>
+              <span class="token keyword">new</span> <span class="token class-name">OperatorSubscriber</span><span class="token punctuation">(</span>subscriber<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
+                <span class="token comment" spellcheck="true">// If we have an innerSub, this was an asynchronous call, kick off the retry.</span>
+                <span class="token comment" spellcheck="true">// Otherwise, if we don't have an innerSub yet, that's because the inner subscription</span>
+                <span class="token comment" spellcheck="true">// call hasn't even returned yet. We've arrived here synchronously.</span>
+                <span class="token comment" spellcheck="true">// So we flag that we want to resub, such that we can ensure teardown</span>
+                <span class="token comment" spellcheck="true">// happens before we resubscribe.</span>
+                innerSub <span class="token operator">?</span> <span class="token function">subscribeForRetryWhen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>syncResub <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>errors$<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// We have set up the notifier without error.</span>
+            errors$<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>syncResub<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// Ensure that the inner subscription is torn down before</span>
+        <span class="token comment" spellcheck="true">// moving on to the next subscription in the synchronous case.</span>
+        <span class="token comment" spellcheck="true">// If we don't do this here, all inner subscriptions will not be</span>
+        <span class="token comment" spellcheck="true">// torn down until the entire observable is done.</span>
+        innerSub<span class="token punctuation">.</span><span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        innerSub <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// We may need to do this multiple times, so reset the flag.</span>
+        syncResub <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// Resubscribe</span>
+        <span class="token function">subscribeForRetryWhen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// Start the subscription</span>
+    <span class="token function">subscribeForRetryWhen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>

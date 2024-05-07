@@ -1,0 +1,74 @@
+
+        <h1 id="%E6%B3%A8%E9%87%8A" class="docs-header-link">
+          <span header-link="%E6%B3%A8%E9%87%8A"></span>
+          注释
+        </h1>
+      <p>注释的恰当用法是弥补我们再写代码表达意图时遭遇的<strong>失败</strong><br>别给糟糕的代码加注释，重新写吧<br>陈旧，错误的注释更具有破坏性  </p>
+
+        <h2 id="%E7%90%86%E6%83%B3" class="docs-header-link">
+          <span header-link="%E7%90%86%E6%83%B3"></span>
+          理想
+        </h2>
+      <p>若编程语言有足够的表达力，那就不需要注释<br>完美的代码是没有一行注释，读代码就像读文章一样</p>
+
+        <h2 id="%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98" class="docs-header-link">
+          <span header-link="%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"></span>
+          存在的问题
+        </h2>
+      <ul>
+<li>注释会撒谎
+注释存在的时间越久，离它所描述的代码就越远，越来越变的全然错误<br>根本原因是代码在不断的变更，程序员不能坚持维护注释<br>只有代码能忠实的告诉你它所做的事  </li>
+<li>注释不能美化糟糕的代码
+与其花时间解释你搞出来的糟糕代码的注释，不如花时间清洁那堆糟糕的代码</li>
+</ul>
+
+        <h2 id="%E7%8E%B0%E5%AE%9E" class="docs-header-link">
+          <span header-link="%E7%8E%B0%E5%AE%9E"></span>
+          现实
+        </h2>
+      <p>尽可能的去加你认为有意义的注释</p>
+<blockquote>
+<p>为什么</p>
+</blockquote>
+<ul>
+<li>编码人员水平的不一致</li>
+<li>编码人员不是从一而终的<br>会有人员的流失，不同编码人员对于同一段的代码的理解可能不同</li>
+</ul>
+
+        <h2 id="%E5%A5%BD%E6%B3%A8%E9%87%8A" class="docs-header-link">
+          <span header-link="%E5%A5%BD%E6%B3%A8%E9%87%8A"></span>
+          好注释
+        </h2>
+      <p>唯一好的注释是想办法不去写注释  </p>
+
+        <h2 id="%E6%B3%A8%E9%87%8A%E7%9A%84%E7%B1%BB%E5%9E%8B" class="docs-header-link">
+          <span header-link="%E6%B3%A8%E9%87%8A%E7%9A%84%E7%B1%BB%E5%9E%8B"></span>
+          注释的类型
+        </h2>
+      <ul>
+<li>解释函数的返回值</li>
+<li>对于编码意图的解释</li>
+<li>警示其他程序员</li>
+<li>TODO注释，待实现</li>
+<li>FIXME注释，待修复</li>
+</ul>
+
+        <h2 id="%E5%9D%8F%E6%B3%A8%E9%87%8A" class="docs-header-link">
+          <span header-link="%E5%9D%8F%E6%B3%A8%E9%87%8A"></span>
+          坏注释
+        </h2>
+      <ul>
+<li>多余的注释</li>
+<li>误导性注释</li>
+<li>循规式注释<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * @param title the title of the CD
+ * @param author the author of the CD
+*/</span>
+<span class="token keyword">function</span> <span class="token function">addCD</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span> author<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// xxx</span>
+<span class="token punctuation">}</span></div></code></pre>
+</li>
+<li>废话型注释</li>
+<li>程序注释
+如果必要请注明：产生注释的原因、注释时间。在合适的时候启用或直接删除</li>
+</ul>

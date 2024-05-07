@@ -1,0 +1,148 @@
+
+        <h1 id="%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E5%91%BD%E5%90%8D" class="docs-header-link">
+          <span header-link="%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E5%91%BD%E5%90%8D"></span>
+          有意义的命名
+        </h1>
+      
+        <h2 id="%E8%A7%84%E5%88%99" class="docs-header-link">
+          <span header-link="%E8%A7%84%E5%88%99"></span>
+          规则
+        </h2>
+      <blockquote>
+<p>名副其实</p>
+</blockquote>
+<ol>
+<li>起名字是一件很严肃的事情</li>
+<li>一旦发现更好的名称，就替换掉旧的(需要预估替换的成本)</li>
+<li>名称应该已经答复了所有的大问题(如果需要注释补充就不算名副其实)</li>
+</ol>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> d<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 消逝的时间，以日记</span>
+<span class="token keyword">const</span> elapsedTimeInDays<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> theList <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> index<span class="token punctuation">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> index<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> index<span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> index<span class="token punctuation">:</span> <span class="token number">4</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> list<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  theList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>i <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token punctuation">.</span>index <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      list<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">class</span> <span class="token class-name">Cell</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> flagStatus <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> status<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span>status<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>status <span class="token operator">=</span> status<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">isFlagged</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 是否标识的4 可以用一个常量代替</span>
+    <span class="token keyword">return</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> gameBoard <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token keyword">new</span> <span class="token class-name">Cell</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Cell</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Cell</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Cell</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">getFlaggedCells</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Cell<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> flaggedCells<span class="token punctuation">:</span> Cell<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  gameBoard<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>cell <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>cell<span class="token punctuation">.</span><span class="token function">isFlagged</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      flaggedCells<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cell<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> flaggedCells
+<span class="token punctuation">}</span></div></code></pre>
+<blockquote>
+<p>避免误导</p>
+</blockquote>
+<ol>
+<li>一些通用的关键名词不要用来命名
+ hp、aix、sco UNIX的专有名词  </li>
+<li>避免出现极其相似的单词<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> XYZControllerForEfficientHandLingOfSettings<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> XYZControllerForEfficientStorageOfSettings<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span></div></code></pre>
+</li>
+<li>不要单独用l O 做名字<br> l O 和 1 0 比较像  </li>
+<li>做有意义的区分
+ 不要同时用xxx0，xxx1 等来命名多个变量<br> 不要同时用Product ProductInfo ProductData 和使用a an the是废话</li>
+<li>使用读得出来的名称
+ 使用日常单词<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// 反例</span>
+<span class="token keyword">const</span> XLQY<span class="token punctuation">;</span>
+<span class="token keyword">const</span> FCNV<span class="token punctuation">;</span>
+<span class="token keyword">const</span> LTQManager<span class="token punctuation">;</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// 一些通用的缩写</span>
+<span class="token keyword">const</span> conf<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// config</span></div></code></pre>
+</li>
+<li>使用可搜索的名称
+ 避免使用一些单词中出现出现频率极高的一些短字母组合<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> ab <span class="token operator">=</span> <span class="token string">'xxx'</span><span class="token punctuation">;</span></div></code></pre>
+ps: 6、7 两点凸显了英语的重要性  </li>
+<li>避免使用编码  <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> <span class="token number">0x649</span> <span class="token operator">=</span> <span class="token string">'xxxx'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 列举了一个16进制的编码</span></div></code></pre>
+</li>
+<li>避免使用无意义的前/后缀<br> 虽然是这样说，但是还是有一些很常见的前缀命名法<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> m_info <span class="token operator">=</span> <span class="token string">'xxx'</span><span class="token punctuation">;</span>
+<span class="token keyword">interface</span> <span class="token class-name">IProps</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 前缀的接口</span>
+<span class="token keyword">const</span> $timeChange <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Observable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// $前缀代表Observable</span>
+<span class="token keyword">class</span> <span class="token class-name">ShapeFactoryImp</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 尾缀的抽象类</span></div></code></pre>
+</li>
+<li>每一个概念对应一个词，一个语意用一个词写完<br>不用同一个意思出现多个不同的变量  <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> Controller<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 管理员 管理者</span>
+<span class="token keyword">const</span> Manager<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 管理员 管理者</span>
+<span class="token keyword">const</span> ControllerManger<span class="token punctuation">;</span></div></code></pre>
+</li>
+<li>双关语，避免用同一术语代表不同的概念  <pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// 同一个类中有两个不同的插入</span>
+<span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+  <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token function">append</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>
+</li>
+<li>使用计算机相关的名称  </li>
+<li>为变量增加有意义的语境  <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> firstName<span class="token punctuation">;</span>
+<span class="token keyword">const</span> lastName<span class="token punctuation">;</span>
+<span class="token keyword">const</span> street<span class="token punctuation">;</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> AddrfirstName<span class="token punctuation">;</span>
+<span class="token keyword">const</span> AddrLastName<span class="token punctuation">;</span>
+<span class="token keyword">const</span> AddrStreet<span class="token punctuation">;</span></div></code></pre>
+</li>
+</ol>
+
+        <h2 id="%E9%82%A3%E4%BA%9B%E9%9C%80%E8%A6%81%E5%91%BD%E5%90%8D" class="docs-header-link">
+          <span header-link="%E9%82%A3%E4%BA%9B%E9%9C%80%E8%A6%81%E5%91%BD%E5%90%8D"></span>
+          那些需要命名
+        </h2>
+      <ul>
+<li>变量<blockquote>
+<p>函数
+函数或方法应该是动词或动词短语</p>
+</blockquote>
+</li>
+</ul>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">function</span> <span class="token function">postPayment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">deletePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">saveXXX</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></div></code></pre>
+<ul>
+<li>参数<blockquote>
+<p>类
+类名和对象应该是名词或名词短语</p>
+</blockquote>
+</li>
+</ul>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">class</span> <span class="token class-name">Customer</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Account</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Manager</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">XXXInfo</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></div></code></pre>
+<ul>
+<li>包</li>
+<li>文件<pre class="language-ts"><code class="language-ts"><div>xxx<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+xxx<span class="token punctuation">.</span>pipe<span class="token punctuation">.</span>ts
+xxx<span class="token punctuation">.</span>service<span class="token punctuation">.</span>ts</div></code></pre>
+</li>
+<li>目录
+父级目录实际上提供了一个前置的语境<pre class="language-ts"><code class="language-ts"><div>payXXX
+  payOrder
+  payList
+
+  <span class="token comment" spellcheck="true">// 对应具体文件中的类名或其他的名字是需要加上Pay的</span>
+  <span class="token keyword">class</span> <span class="token class-name">PayOrder</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">class</span> <span class="token class-name">PayList</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 单独的order 和 list 在被引入的时候太过常见容易 名字冲突</span></div></code></pre>
+</li>
+</ul>

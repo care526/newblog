@@ -1,0 +1,231 @@
+
+        <h1 id="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95" class="docs-header-link">
+          <span header-link="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95"></span>
+          数据结构与算法
+        </h1>
+      
+        <h2 id="%E5%A4%8D%E6%9D%82%E5%BA%A6" class="docs-header-link">
+          <span header-link="%E5%A4%8D%E6%9D%82%E5%BA%A6"></span>
+          复杂度
+        </h2>
+      
+        <h3 id="%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6" class="docs-header-link">
+          <span header-link="%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"></span>
+          时间复杂度
+        </h3>
+      <p>O(1) 、 O(log(n)) 、 O(n) 、 O(n2)</p>
+
+        <h3 id="%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6" class="docs-header-link">
+          <span header-link="%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"></span>
+          空间复杂度
+        </h3>
+      <p>O(1) 、 O(log(n)) 、 O(n) 、 O(n2)</p>
+
+        <h2 id="%E6%95%B0%E6%8D%AE" class="docs-header-link">
+          <span header-link="%E6%95%B0%E6%8D%AE"></span>
+          数据
+        </h2>
+      <hr>
+
+        <h3 id="%E5%A0%86" class="docs-header-link">
+          <span header-link="%E5%A0%86"></span>
+          堆
+        </h3>
+      <hr>
+
+        <h3 id="%E6%A0%88" class="docs-header-link">
+          <span header-link="%E6%A0%88"></span>
+          栈
+        </h3>
+      <p>是一种只能在一端进行插入和删除操作的特殊线性表<br>先进后出的原则存储数据  </p>
+<hr>
+
+        <h3 id="%E9%98%9F%E5%88%97" class="docs-header-link">
+          <span header-link="%E9%98%9F%E5%88%97"></span>
+          队列
+        </h3>
+      <p>特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端（rear）进行插入操作，和栈一样，队列是一种操作受限制的线性表  </p>
+<hr>
+
+        <h3 id="%E9%93%BE%E8%A1%A8" class="docs-header-link">
+          <span header-link="%E9%93%BE%E8%A1%A8"></span>
+          链表
+        </h3>
+      <ul>
+<li>单链表</li>
+<li>双链表</li>
+<li>循环链表</li>
+</ul>
+<hr>
+
+        <h3 id="%E6%A0%91" class="docs-header-link">
+          <span header-link="%E6%A0%91"></span>
+          树
+        </h3>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">class</span> <span class="token class-name">TreeNode</span> <span class="token punctuation">{</span>
+   <span class="token keyword">public</span> data<span class="token punctuation">:</span> <span class="token keyword">number</span>
+   <span class="token keyword">public</span> num<span class="token punctuation">:</span> <span class="token keyword">number</span>
+   <span class="token keyword">public</span> leftChild<span class="token punctuation">:</span> TreeNode <span class="token operator">|</span> <span class="token keyword">null</span>
+   <span class="token keyword">public</span> rightChild<span class="token punctuation">:</span> TreeNode <span class="token operator">|</span> <span class="token keyword">null</span>
+
+   <span class="token keyword">constructor</span><span class="token punctuation">(</span>data<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data
+      <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">1</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>leftChild <span class="token operator">=</span> <span class="token keyword">null</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>rightChild <span class="token operator">=</span> <span class="token keyword">null</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">BinaryTree</span> <span class="token punctuation">{</span>
+   <span class="token keyword">public</span> root<span class="token punctuation">:</span> TreeNode
+   <span class="token keyword">public</span> order <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token string">'before'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'in'</span><span class="token punctuation">,</span> <span class="token string">'left'</span><span class="token punctuation">,</span> <span class="token string">'right'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string">'after'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'left'</span><span class="token punctuation">,</span> <span class="token string">'in'</span><span class="token punctuation">,</span> <span class="token string">'right'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string">'in'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'left'</span><span class="token punctuation">,</span> <span class="token string">'right'</span><span class="token punctuation">,</span> <span class="token string">'in'</span><span class="token punctuation">]</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token keyword">constructor</span><span class="token punctuation">(</span>initData<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>root <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TreeNode</span><span class="token punctuation">(</span>initData<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+   
+   <span class="token keyword">public</span> <span class="token function">add</span><span class="token punctuation">(</span>data<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>root<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token keyword">private</span> <span class="token function">compare</span><span class="token punctuation">(</span>waitData<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">,</span> node<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>waitData <span class="token operator">===</span> node<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token keyword">return</span> node<span class="token punctuation">.</span>num<span class="token operator">++</span>
+      <span class="token comment" spellcheck="true">// 左节点</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>waitData <span class="token operator">&lt;</span> node<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         node<span class="token punctuation">.</span>leftChild
+               <span class="token operator">?</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span>waitData<span class="token punctuation">,</span> node<span class="token punctuation">.</span>leftChild<span class="token punctuation">)</span>
+               <span class="token punctuation">:</span> node<span class="token punctuation">.</span>leftChild <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TreeNode</span><span class="token punctuation">(</span>waitData<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 右节点</span>
+         node<span class="token punctuation">.</span>rightChild
+               <span class="token operator">?</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span>waitData<span class="token punctuation">,</span> node<span class="token punctuation">.</span>rightChild<span class="token punctuation">)</span>
+               <span class="token punctuation">:</span> node<span class="token punctuation">.</span>rightChild <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TreeNode</span><span class="token punctuation">(</span>waitData<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token keyword">public</span> <span class="token function">detele</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    
+   <span class="token comment" spellcheck="true">// 基础遍历</span>
+   <span class="token keyword">private</span> <span class="token function">baseTraverse</span><span class="token punctuation">(</span>node<span class="token punctuation">:</span> TreeNode<span class="token punctuation">,</span> order<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> findObj<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      rules<span class="token punctuation">:</span> <span class="token punctuation">(</span>node<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">boolean</span><span class="token punctuation">,</span>
+      foundNodes<span class="token punctuation">:</span> TreeNode<span class="token punctuation">[</span><span class="token punctuation">]</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>node<span class="token punctuation">)</span> <span class="token keyword">return</span>
+
+      <span class="token keyword">const</span> traverses <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+         <span class="token punctuation">[</span><span class="token string">'left'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">baseTraverse</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>leftChild<span class="token punctuation">,</span> order<span class="token punctuation">,</span> findObj<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token string">'in'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+               <span class="token keyword">if</span> <span class="token punctuation">(</span>findObj <span class="token operator">&amp;&amp;</span> findObj<span class="token punctuation">.</span><span class="token function">rules</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">)</span> findObj<span class="token punctuation">.</span>foundNodes<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+         <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token string">'right'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">baseTraverse</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>rightChild<span class="token punctuation">,</span> order<span class="token punctuation">,</span> findObj<span class="token punctuation">)</span><span class="token punctuation">]</span>
+      <span class="token punctuation">]</span><span class="token punctuation">)</span>
+      order<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>i <span class="token operator">=</span><span class="token operator">></span> traverses<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token comment" spellcheck="true">// 深度优先遍历的三种方式（栈）</span>
+   <span class="token comment" spellcheck="true">// 前序遍历  ['in', 'left', 'right']</span>
+   <span class="token comment" spellcheck="true">// 中序遍历  ['left', 'in', 'right']</span>
+   <span class="token comment" spellcheck="true">// 后序遍历  ['left', 'right', 'in']</span>
+   <span class="token keyword">public</span> <span class="token function">traverse</span><span class="token punctuation">(</span>order<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> findObj<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      rules<span class="token punctuation">:</span> <span class="token punctuation">(</span>node<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">boolean</span><span class="token punctuation">,</span>
+      findedCallback<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>foundNodes<span class="token punctuation">:</span> TreeNode<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> foundNodes<span class="token punctuation">:</span> TreeNode<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">baseTraverse</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>root<span class="token punctuation">,</span> order<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+         rules<span class="token punctuation">:</span> findObj <span class="token operator">?</span> findObj<span class="token punctuation">.</span>rules <span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">false</span><span class="token punctuation">,</span>
+         foundNodes
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      findObj <span class="token operator">&amp;&amp;</span> findObj<span class="token punctuation">.</span><span class="token function">findedCallback</span><span class="token punctuation">(</span>foundNodes<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+   <span class="token comment" spellcheck="true">// 广度优先遍历（队列）</span>
+   <span class="token comment" spellcheck="true">// 层序遍历</span>
+   <span class="token keyword">public</span> <span class="token function">traverseFloor</span><span class="token punctuation">(</span>findObj<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      rules<span class="token punctuation">:</span> <span class="token punctuation">(</span>node<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">boolean</span><span class="token punctuation">,</span>
+      findedCallback<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>foundNodes<span class="token punctuation">:</span> TreeNode<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> queue<span class="token punctuation">:</span> TreeNode<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      <span class="token keyword">const</span> foundNodes<span class="token punctuation">:</span> TreeNode<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      queue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>root<span class="token punctuation">)</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>queue<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">const</span> node <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+         findObj <span class="token operator">&amp;&amp;</span> foundNodes<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+         node<span class="token punctuation">.</span>leftChild <span class="token operator">&amp;&amp;</span> queue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>leftChild<span class="token punctuation">)</span>
+         node<span class="token punctuation">.</span>rightChild <span class="token operator">&amp;&amp;</span> queue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>rightChild<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      findObj <span class="token operator">&amp;&amp;</span> findObj<span class="token punctuation">.</span><span class="token function">findedCallback</span><span class="token punctuation">(</span>foundNodes<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>
+<hr>
+
+        <h3 id="%E6%95%A3%E5%88%97%E8%A1%A8" class="docs-header-link">
+          <span header-link="%E6%95%A3%E5%88%97%E8%A1%A8"></span>
+          散列表
+        </h3>
+      <hr>
+
+        <h3 id="%E5%9B%BE" class="docs-header-link">
+          <span header-link="%E5%9B%BE"></span>
+          图
+        </h3>
+      
+        <h3 id="%E5%88%86%E7%B1%BB" class="docs-header-link">
+          <span header-link="%E5%88%86%E7%B1%BB"></span>
+          分类
+        </h3>
+      <ul>
+<li>无/有向图</li>
+<li>无/有权图</li>
+</ul>
+
+        <h3 id="%E5%9B%BE%E7%9A%84%E4%B8%80%E4%BA%9B%E5%90%8D%E7%A7%B0" class="docs-header-link">
+          <span header-link="%E5%9B%BE%E7%9A%84%E4%B8%80%E4%BA%9B%E5%90%8D%E7%A7%B0"></span>
+          图的一些名称
+        </h3>
+      <ul>
+<li>度
+无向：顶点的度为以该顶点为一个端点的边的数目<br>  度数之和是顶点边数的两倍
+有向：有向图的全部顶点入度之和等于出度之和且等于边数。顶点的度等于入度与出度之和<ul>
+<li>入度(有向图)：是以顶点为终点  </li>
+<li>出度(有向图)：是以顶点为起点</li>
+</ul>
+</li>
+<li>连通：两顶点之间有路径存在</li>
+<li>连通图：图中任意两顶点都连通，同此图为连通图</li>
+<li>连通分量：无向图中的极大连通子图</li>
+<li>强连通：在有向图中，两顶点两个方向都有路径</li>
+</ul>
+
+        <h3 id="%E5%82%A8%E5%AD%98" class="docs-header-link">
+          <span header-link="%E5%82%A8%E5%AD%98"></span>
+          储存
+        </h3>
+      <ul>
+<li><p>邻接矩阵
+邻接矩阵是一个二维数组，数据项表示两点间是否存在边，如果图中有 N 个顶点，邻接矩阵就是 N*N 的数组  </p>
+<ol>
+<li>无向
+<img src="./images/tree1.png" alt=""></li>
+<li>有向
+<img src="./images/tree2.png" alt=""></li>
+<li>有向加权
+<img src="./images/tree3.png" alt=""></li>
+</ol>
+</li>
+<li><p>邻接表
+每个单独的链表表示了有哪些顶点与当前顶点邻接<br>对于有向图，可分为出度邻接表和入度邻接表</p>
+<ol>
+<li>无向
+<img src="./images/tree4.png" alt=""></li>
+<li>有向出度
+<img src="./images/tree5.png" alt=""></li>
+<li>有向入度
+<img src="./images/tree6.png" alt=""></li>
+<li>有向加权出度
+<img src="./images/tree7.png" alt=""></li>
+</ol>
+</li>
+</ul>

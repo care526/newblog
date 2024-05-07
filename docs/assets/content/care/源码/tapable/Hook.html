@@ -1,0 +1,238 @@
+
+        <h1 id="hook" class="docs-header-link">
+          <span header-link="hook"></span>
+          Hook
+        </h1>
+      <pre class="language-js"><code class="language-js"><div><span class="token keyword">const</span> util <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"util"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// done</span>
+<span class="token keyword">const</span> deprecateContext <span class="token operator">=</span> util<span class="token punctuation">.</span><span class="token function">deprecate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token string">"Hook.context is deprecated and will be removed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 构造同步方法</span>
+<span class="token keyword">const</span> CALL_DELEGATE <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 计算新的执行函数，赋值给 call</span>
+  <span class="token comment" spellcheck="true">// 如果没有新的订阅了，这个函数就不会再执行了</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>call <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_createCall</span><span class="token punctuation">(</span><span class="token string">"sync"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 构造异步方法</span>
+<span class="token keyword">const</span> CALL_ASYNC_DELEGATE <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>callAsync <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_createCall</span><span class="token punctuation">(</span><span class="token string">"async"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callAsync</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> PROMISE_DELEGATE <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>promise <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_createCall</span><span class="token punctuation">(</span><span class="token string">"promise"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">promise</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Hook</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> name <span class="token operator">=</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 形参，在执行的时候传递给钩子函数</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_args <span class="token operator">=</span> args<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 钩子的 名字</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 钩子订阅的数组</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>taps <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 钩子订阅的拦截器数组</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>interceptors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 执行同步订阅的私有方法</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_call <span class="token operator">=</span> CALL_DELEGATE<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 执行同步订阅的方法</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>call <span class="token operator">=</span> CALL_DELEGATE<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 执行异步订阅的私有方法(通过 调用callback 执行钩子是否完成的通知)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_callAsync <span class="token operator">=</span> CALL_ASYNC_DELEGATE<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 执行异步订阅的方法</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>callAsync <span class="token operator">=</span> CALL_ASYNC_DELEGATE<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 执行异步订阅的私有方法(通过 返回的Promise的状态 判断钩子是否完成的通知)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_promise <span class="token operator">=</span> PROMISE_DELEGATE<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 执行异步订阅的方法</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>promise <span class="token operator">=</span> PROMISE_DELEGATE<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 钩子函数数组 由工厂函数的 setup 生成赋值</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_x <span class="token operator">=</span> undefined<span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>compile <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>compile<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 四个方法挂载</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>tap <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>tap<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>tapAsync <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>tapAsync<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>tapPromise <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>tapPromise<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 编译器 创建具体的执行函数 抽象方法需要继承后具体实现</span>
+  <span class="token function">compile</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Abstract: should be overridden"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 执行构造执行函数的私有方法</span>
+  <span class="token function">_createCall</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      taps<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>taps<span class="token punctuation">,</span>
+      interceptors<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>interceptors<span class="token punctuation">,</span>
+      args<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_args<span class="token punctuation">,</span>
+      type<span class="token punctuation">:</span> type<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">_tap</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> options<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// options 只支持 string object</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> options <span class="token operator">===</span> <span class="token string">"string"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 传入字符串作为 订阅的name</span>
+      options <span class="token operator">=</span> <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span> options<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> options <span class="token operator">!==</span> <span class="token string">"object"</span> <span class="token operator">||</span> options <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Invalid tap options"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// 到这里 options 已经是配置对象了</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> options<span class="token punctuation">.</span>name <span class="token operator">!==</span> <span class="token string">"string"</span> <span class="token operator">||</span> options<span class="token punctuation">.</span>name <span class="token operator">===</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Missing name for tap"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> options<span class="token punctuation">.</span>context <span class="token operator">!==</span> <span class="token string">"undefined"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 该版本 逐渐不支持该参数，兼容之前的老代码，提示以下报错</span>
+      <span class="token comment" spellcheck="true">// (node:23652) DeprecationWarning: Hook.context is deprecated and will be removed</span>
+      <span class="token comment" spellcheck="true">// (Use `node --trace-deprecation ...` to show where the warning was created)</span>
+      <span class="token function">deprecateContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 合并所有参数属性</span>
+    options <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token punctuation">,</span> fn <span class="token punctuation">}</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 注册 函数执行前的拦截器</span>
+    options <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_runRegisterInterceptors</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 新的订阅插入到现有的订阅数组中</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_insert</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// tap('test', () => {})</span>
+  <span class="token comment" spellcheck="true">// tap({</span>
+  <span class="token comment" spellcheck="true">//  name: 'test',</span>
+  <span class="token comment" spellcheck="true">//  before: '',</span>
+  <span class="token comment" spellcheck="true">//  stage: ''</span>
+  <span class="token comment" spellcheck="true">// }, () => {})</span>
+  <span class="token function">tap</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_tap</span><span class="token punctuation">(</span><span class="token string">"sync"</span><span class="token punctuation">,</span> options<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">tapAsync</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_tap</span><span class="token punctuation">(</span><span class="token string">"async"</span><span class="token punctuation">,</span> options<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">tapPromise</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_tap</span><span class="token punctuation">(</span><span class="token string">"promise"</span><span class="token punctuation">,</span> options<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// done</span>
+  <span class="token function">_runRegisterInterceptors</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> interceptor <span class="token keyword">of</span> <span class="token keyword">this</span><span class="token punctuation">.</span>interceptors<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>interceptor<span class="token punctuation">.</span>register<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> newOptions <span class="token operator">=</span> interceptor<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>newOptions <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          options <span class="token operator">=</span> newOptions<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> options<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// TODO</span>
+  <span class="token function">isUsed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>taps<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token keyword">this</span><span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// TODO</span>
+  <span class="token function">withOptions</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> mergeOptions <span class="token operator">=</span> <span class="token punctuation">(</span>opt<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
+      Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> options<span class="token punctuation">,</span> <span class="token keyword">typeof</span> opt <span class="token operator">===</span> <span class="token string">"string"</span> <span class="token operator">?</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> opt <span class="token punctuation">}</span> <span class="token punctuation">:</span> opt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+      tap<span class="token punctuation">:</span> <span class="token punctuation">(</span>opt<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token function">mergeOptions</span><span class="token punctuation">(</span>opt<span class="token punctuation">)</span><span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      tapAsync<span class="token punctuation">:</span> <span class="token punctuation">(</span>opt<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">tapAsync</span><span class="token punctuation">(</span><span class="token function">mergeOptions</span><span class="token punctuation">(</span>opt<span class="token punctuation">)</span><span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      tapPromise<span class="token punctuation">:</span> <span class="token punctuation">(</span>opt<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">tapPromise</span><span class="token punctuation">(</span><span class="token function">mergeOptions</span><span class="token punctuation">(</span>opt<span class="token punctuation">)</span><span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      intercept<span class="token punctuation">:</span> <span class="token punctuation">(</span>interceptor<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">intercept</span><span class="token punctuation">(</span>interceptor<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      isUsed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isUsed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      withOptions<span class="token punctuation">:</span> <span class="token punctuation">(</span>opt<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">withOptions</span><span class="token punctuation">(</span><span class="token function">mergeOptions</span><span class="token punctuation">(</span>opt<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 注册 拦截器</span>
+  <span class="token function">intercept</span><span class="token punctuation">(</span>interceptor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_resetCompilation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> interceptor<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>interceptor<span class="token punctuation">.</span>register<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>taps<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>taps<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> interceptor<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>taps<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// done</span>
+  <span class="token function">_resetCompilation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 在每次有新的订阅的时候 还原 call 为 _call 当下次 call 执行的时候 先去计算一下新的执行函数 赋值给call</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>call <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_call<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>callAsync <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_callAsync<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>promise <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_promise<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 向订阅数组中插入新的订阅</span>
+  <span class="token function">_insert</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_resetCompilation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> before<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> item<span class="token punctuation">.</span>before <span class="token operator">===</span> <span class="token string">"string"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      before <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span>item<span class="token punctuation">.</span>before<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>before<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      before <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>before<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// 默认的执行顺序是 0</span>
+    <span class="token keyword">let</span> stage <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> item<span class="token punctuation">.</span>stage <span class="token operator">===</span> <span class="token string">"number"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      stage <span class="token operator">=</span> item<span class="token punctuation">.</span>stage<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// 对新订阅的函数进行排序</span>
+    <span class="token comment" spellcheck="true">// 从后向前 一个个比较</span>
+    <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>taps<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      i<span class="token operator">--</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>taps<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>taps<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span>
+      <span class="token keyword">const</span> xStage <span class="token operator">=</span> x<span class="token punctuation">.</span>stage <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+      <span class="token comment" spellcheck="true">// 这里没有先后，是要同时满足</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>before<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 新的订阅 要比 当前的订阅 排的前</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>before<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">// 删掉继续向前找</span>
+          before<span class="token punctuation">.</span><span class="token keyword">delete</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// before 数组还有就要继续循环</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>before<span class="token punctuation">.</span>size <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment" spellcheck="true">// 新的订阅 要比 当前的订阅 执行stage数值要小(小的排前面)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>xStage <span class="token operator">></span> stage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment" spellcheck="true">// 满足条件 不巡循环了</span>
+      i<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 将新的订阅 放入指定的数组位置中</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>taps<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> item<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>Hook<span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Hook<span class="token punctuation">;</span></div></code></pre>

@@ -1,0 +1,5851 @@
+{
+  "navs": [
+    {
+      "id": "前端",
+      "path": "前端",
+      "channelPath": "前端",
+      "title": "前端",
+      "items": [
+        {
+          "id": "sdf",
+          "path": "sdf",
+          "channelPath": "前端",
+          "title": "Sdf",
+          "order": 9007199254740991,
+          "toc": "content",
+          "headings": [],
+          "contentPath": "care/前端/sdf.html",
+          "originPath": "care/前端/sdf.md"
+        },
+        {
+          "id": "前端/库",
+          "path": "前端/库",
+          "channelPath": "前端",
+          "title": "库",
+          "items": [
+            {
+              "id": "pm2",
+              "path": "库/pm2",
+              "channelPath": "前端",
+              "title": "Pm2",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "pm2",
+                  "name": "PM2",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E5%AE%89%E8%A3%85",
+                  "name": "安装",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%91%BD%E4%BB%A4",
+                  "name": "命令",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "start",
+                  "name": "start",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "restart",
+                  "name": "restart",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "reload",
+                  "name": "reload",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "stop",
+                  "name": "stop",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "delete",
+                  "name": "delete",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "list/ls/status",
+                  "name": "list/ls/status",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "logs",
+                  "name": "logs",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "monit",
+                  "name": "monit",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "plus",
+                  "name": "plus",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "startup",
+                  "name": "startup",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "save",
+                  "name": "save",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "flush",
+                  "name": "flush",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "reloadlogs",
+                  "name": "reloadLogs",
+                  "level": 3,
+                  "type": "h3"
+                }
+              ],
+              "contentPath": "care/前端/库/pm2.html",
+              "originPath": "care/前端/库/pm2.md"
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "前端/方案",
+          "path": "前端/方案",
+          "channelPath": "前端",
+          "title": "方案",
+          "items": [
+            {
+              "id": "大文件分片上传",
+              "path": "方案",
+              "channelPath": "前端",
+              "title": "大文件分片上传",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E5%A4%A7%E6%96%87%E4%BB%B6%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0",
+                  "name": "大文件分片上传",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%3Ca-target=%22_blank%22-href=%22https://mp-weixin-qq-com/s/ynu7grwmvjipstjiaxzhrq%22%3Ehttps://mp-weixin-qq-com/s/ynu7grwmvjipstjiaxzhrq%3C/a%3E",
+                  "name": "<a target=\"_blank\" href=\"https://mp.weixin.qq.com/s/ynU7GRWMVjIpstjIaxzHrQ\">https://mp.weixin.qq.com/s/ynU7GRWMVjIpstjIaxzHrQ</a>",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/前端/方案/大文件分片上传.html",
+              "originPath": "care/前端/方案/大文件分片上传.md"
+            },
+            {
+              "id": "换肤",
+              "path": "方案",
+              "channelPath": "前端",
+              "title": "换肤",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E6%8D%A2%E8%82%A4",
+                  "name": "换肤",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E9%85%8D%E8%89%B2",
+                  "name": "浏览器的配色",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E9%80%9A%E8%BF%87-js-%E8%AE%BE%E7%BD%AE-css-%E5%8F%98%E9%87%8F",
+                  "name": "通过 js 设置 css 变量",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/前端/方案/换肤.html",
+              "originPath": "care/前端/方案/换肤.md"
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "前端/框架",
+          "path": "前端/框架",
+          "channelPath": "前端",
+          "title": "框架",
+          "items": [
+            {
+              "id": "前端/框架/angular",
+              "path": "前端/框架/angular",
+              "channelPath": "前端",
+              "title": "Angular",
+              "items": [
+                {
+                  "id": "API",
+                  "path": "框架/angular/api",
+                  "channelPath": "前端",
+                  "title": "API",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "api",
+                      "name": "API",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "directive",
+                      "name": "Directive",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "component",
+                      "name": "Component",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/前端/框架/angular/API.html",
+                  "originPath": "care/前端/框架/angular/API.md"
+                },
+                {
+                  "id": "前端/框架/angular/cdk",
+                  "path": "前端/框架/angular/cdk",
+                  "channelPath": "前端",
+                  "title": "Cdk",
+                  "items": [
+                    {
+                      "id": "clipboard",
+                      "path": "框架/angular/cdk/clipboard",
+                      "channelPath": "前端",
+                      "title": "Clipboard",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "clipboard",
+                          "name": "clipboard",
+                          "level": 1,
+                          "type": "h1"
+                        },
+                        {
+                          "id": "%E6%8C%87%E4%BB%A4%E6%A8%A1%E5%BC%8F",
+                          "name": "指令模式",
+                          "level": 2,
+                          "type": "h2"
+                        },
+                        {
+                          "id": "%E7%BC%96%E7%A8%8B%E6%96%B9%E5%BC%8F",
+                          "name": "编程方式",
+                          "level": 2,
+                          "type": "h2"
+                        }
+                      ],
+                      "contentPath": "care/前端/框架/angular/cdk/clipboard.html",
+                      "originPath": "care/前端/框架/angular/cdk/clipboard.md"
+                    }
+                  ],
+                  "order": 9007199254740991
+                },
+                {
+                  "id": "injector",
+                  "path": "框架/angular/injector",
+                  "channelPath": "前端",
+                  "title": "Injector",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5",
+                      "name": "依赖注入",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E5%B1%82%E7%BA%A7",
+                      "name": "层级",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/前端/框架/angular/injector.html",
+                  "originPath": "care/前端/框架/angular/injector.md"
+                },
+                {
+                  "id": "前端/框架/angular/概念",
+                  "path": "前端/框架/angular/概念",
+                  "channelPath": "前端",
+                  "title": "概念",
+                  "items": [
+                    {
+                      "id": "变化检测",
+                      "path": "框架/angular/概念",
+                      "channelPath": "前端",
+                      "title": "变化检测",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "%E5%8F%98%E5%8C%96%E6%A3%80%E6%B5%8B",
+                          "name": "变化检测",
+                          "level": 1,
+                          "type": "h1"
+                        }
+                      ],
+                      "contentPath": "care/前端/框架/angular/概念/变化检测.html",
+                      "originPath": "care/前端/框架/angular/概念/变化检测.md"
+                    },
+                    {
+                      "id": "模板",
+                      "path": "框架/angular/概念",
+                      "channelPath": "前端",
+                      "title": "模板",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "%E6%A8%A1%E6%9D%BF",
+                          "name": "模板",
+                          "level": 1,
+                          "type": "h1"
+                        },
+                        {
+                          "id": "ng-template",
+                          "name": "ng-template",
+                          "level": 2,
+                          "type": "h2"
+                        },
+                        {
+                          "id": "ng-container",
+                          "name": "ng-container",
+                          "level": 2,
+                          "type": "h2"
+                        }
+                      ],
+                      "contentPath": "care/前端/框架/angular/概念/模板.html",
+                      "originPath": "care/前端/框架/angular/概念/模板.md"
+                    },
+                    {
+                      "id": "编译模式",
+                      "path": "框架/angular/概念",
+                      "channelPath": "前端",
+                      "title": "编译模式",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "%E7%BC%96%E8%AF%91%E6%A8%A1%E5%BC%8F",
+                          "name": "编译模式",
+                          "level": 1,
+                          "type": "h1"
+                        },
+                        {
+                          "id": "aot",
+                          "name": "AOT",
+                          "level": 2,
+                          "type": "h2"
+                        },
+                        {
+                          "id": "jit",
+                          "name": "JIT",
+                          "level": 2,
+                          "type": "h2"
+                        }
+                      ],
+                      "contentPath": "care/前端/框架/angular/概念/编译模式.html",
+                      "originPath": "care/前端/框架/angular/概念/编译模式.md"
+                    }
+                  ],
+                  "order": 9007199254740991
+                }
+              ],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 9007199254740991
+        }
+      ],
+      "order": 9007199254740991
+    },
+    {
+      "id": "后端",
+      "path": "后端",
+      "channelPath": "后端",
+      "title": "后端",
+      "items": [
+        {
+          "id": "asd",
+          "path": "asd",
+          "channelPath": "后端",
+          "title": "Asd",
+          "order": 9007199254740991,
+          "toc": "content",
+          "headings": [],
+          "contentPath": "care/后端/asd.html",
+          "originPath": "care/后端/asd.md"
+        }
+      ],
+      "order": 9007199254740991
+    },
+    {
+      "id": "基础",
+      "path": "基础",
+      "channelPath": "基础",
+      "title": "基础",
+      "items": [
+        {
+          "id": "基础/数据结构算法",
+          "path": "基础/数据结构算法",
+          "channelPath": "基础",
+          "title": "数据结构算法",
+          "items": [
+            {
+              "id": "基础/数据结构算法/a",
+              "path": "基础/数据结构算法/a",
+              "channelPath": "基础",
+              "title": "A",
+              "items": [
+                {
+                  "id": "基础/数据结构算法/a/b",
+                  "path": "基础/数据结构算法/a/b",
+                  "channelPath": "基础",
+                  "title": "B",
+                  "items": [
+                    {
+                      "id": "1树",
+                      "path": "数据结构算法/a/b/1",
+                      "channelPath": "基础",
+                      "title": "1树",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [],
+                      "contentPath": "care/基础/数据结构算法/a/b/1树.html",
+                      "originPath": "care/基础/数据结构算法/a/b/1树.md"
+                    }
+                  ],
+                  "order": 9007199254740991
+                }
+              ],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "基础/源码分析",
+          "path": "基础/源码分析",
+          "channelPath": "基础",
+          "title": "源码分析",
+          "items": [
+            {
+              "id": "基础/源码分析/rxjs",
+              "path": "基础/源码分析/rxjs",
+              "channelPath": "基础",
+              "title": "Rxjs",
+              "items": [
+                {
+                  "id": "operate",
+                  "path": "源码分析/rxjs/operate",
+                  "channelPath": "基础",
+                  "title": "Operate",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "of",
+                      "name": "of",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "take",
+                      "name": "take",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/基础/源码分析/rxjs/operate.html",
+                  "originPath": "care/基础/源码分析/rxjs/operate.md"
+                },
+                {
+                  "id": "readme",
+                  "path": "源码分析/rxjs",
+                  "channelPath": "基础",
+                  "title": "Readme",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E6%98%AF%E4%BB%80%E4%B9%88",
+                      "name": "是什么",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98",
+                      "name": "解决了什么问题",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E7%89%88%E6%9C%AC",
+                      "name": "版本",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E6%A6%82%E5%BF%B5",
+                      "name": "概念",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E8%BF%87%E7%A8%8B",
+                      "name": "过程",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E4%BB%A3%E7%A0%81",
+                      "name": "代码",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/基础/源码分析/rxjs/readme.html",
+                  "originPath": "care/基础/源码分析/rxjs/readme.md"
+                },
+                {
+                  "id": "rxjs",
+                  "path": "源码分析/rxjs/rxjs",
+                  "channelPath": "基础",
+                  "title": "Rxjs",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "rxjs",
+                      "name": "RxJs",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "observable",
+                      "name": "Observable",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "observer",
+                      "name": "Observer",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "subscriber",
+                      "name": "Subscriber",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "subscription",
+                      "name": "Subscription",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "subject",
+                      "name": "Subject",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8B%E7%9A%84-subject",
+                      "name": "特殊类型的 Subject",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "operators",
+                      "name": "Operators",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "scheduler",
+                      "name": "Scheduler",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/基础/源码分析/rxjs/rxjs.html",
+                  "originPath": "care/基础/源码分析/rxjs/rxjs.md"
+                }
+              ],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "基础/语言",
+          "path": "基础/语言",
+          "channelPath": "基础",
+          "title": "语言",
+          "items": [
+            {
+              "id": "基础/语言/ts",
+              "path": "基础/语言/ts",
+              "channelPath": "基础",
+              "title": "TS",
+              "items": [
+                {
+                  "id": "1泛型",
+                  "path": "语言/ts/1",
+                  "channelPath": "基础",
+                  "title": "1泛型",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E7%B1%BB%E5%9E%8B",
+                      "name": "类型",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B",
+                      "name": "基础类型",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B",
+                      "name": "联合类型",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B",
+                      "name": "交叉类型",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E6%96%AD%E8%A8%80",
+                      "name": "断言",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B",
+                      "name": "内置类型",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%8F%96%E5%87%BA%E5%AF%B9%E8%B1%A1%E3%80%81%E6%8E%A5%E5%8F%A3%E7%9A%84key",
+                      "name": "取出对象、接口的key",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "record",
+                      "name": "Record",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "partial",
+                      "name": "Partial",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "required",
+                      "name": "Required",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "readonly",
+                      "name": "Readonly",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "pick",
+                      "name": "Pick",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "exclude",
+                      "name": "Exclude",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "omit",
+                      "name": "Omit",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "extract",
+                      "name": "Extract",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "nonnullable",
+                      "name": "NonNullable",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E6%A1%88%E4%BE%8B",
+                      "name": "案例",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%B8%A4%E4%B8%AA%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%93%8D%E4%BD%9C",
+                      "name": "两个接口的操作",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E4%BA%A4%E9%9B%86",
+                      "name": "交集",
+                      "level": 4,
+                      "type": "h4"
+                    },
+                    {
+                      "id": "%E5%B9%B6%E9%9B%86",
+                      "name": "并集",
+                      "level": 4,
+                      "type": "h4"
+                    },
+                    {
+                      "id": "%E5%B7%AE%E9%9B%86",
+                      "name": "差集",
+                      "level": 4,
+                      "type": "h4"
+                    }
+                  ],
+                  "contentPath": "care/基础/语言/TS/1泛型.html",
+                  "originPath": "care/基础/语言/TS/1泛型.md"
+                }
+              ],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 9007199254740991
+        }
+      ],
+      "order": 9007199254740991
+    },
+    {
+      "id": "源码",
+      "path": "源码",
+      "channelPath": "源码",
+      "title": "源码",
+      "items": [
+        {
+          "id": "源码/rxjs",
+          "path": "源码/rxjs",
+          "channelPath": "源码",
+          "title": "Rxjs",
+          "items": [
+            {
+              "id": "Observable",
+              "path": "rxjs/observable",
+              "channelPath": "源码",
+              "title": "Observable",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "",
+                  "name": "",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/源码/rxjs/Observable.html",
+              "originPath": "care/源码/rxjs/Observable.md"
+            },
+            {
+              "id": "index",
+              "path": "rxjs",
+              "channelPath": "源码",
+              "title": "Index",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "rxjs",
+                  "name": "rxjs",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/源码/rxjs/index.html",
+              "originPath": "care/源码/rxjs/index.md"
+            },
+            {
+              "id": "源码/rxjs/operator",
+              "path": "源码/rxjs/operator",
+              "channelPath": "源码",
+              "title": "Operator",
+              "items": [
+                {
+                  "id": "源码/rxjs/operator/错误处理",
+                  "path": "源码/rxjs/operator/错误处理",
+                  "channelPath": "源码",
+                  "title": "错误处理",
+                  "items": [
+                    {
+                      "id": "catchError",
+                      "path": "rxjs/operator/错误处理/catch-error",
+                      "channelPath": "源码",
+                      "title": "catchError",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "catcherror",
+                          "name": "catchError",
+                          "level": 1,
+                          "type": "h1"
+                        },
+                        {
+                          "id": "%E7%A4%BA%E4%BE%8B",
+                          "name": "示例",
+                          "level": 2,
+                          "type": "h2"
+                        },
+                        {
+                          "id": "%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90",
+                          "name": "源码分析",
+                          "level": 2,
+                          "type": "h2"
+                        }
+                      ],
+                      "contentPath": "care/源码/rxjs/operator/错误处理/catchError.html",
+                      "originPath": "care/源码/rxjs/operator/错误处理/catchError.md"
+                    },
+                    {
+                      "id": "retry",
+                      "path": "rxjs/operator/错误处理/retry",
+                      "channelPath": "源码",
+                      "title": "Retry",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "retry",
+                          "name": "retry",
+                          "level": 1,
+                          "type": "h1"
+                        },
+                        {
+                          "id": "%E7%A4%BA%E4%BE%8B",
+                          "name": "示例",
+                          "level": 2,
+                          "type": "h2"
+                        },
+                        {
+                          "id": "%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90",
+                          "name": "源码分析",
+                          "level": 2,
+                          "type": "h2"
+                        }
+                      ],
+                      "contentPath": "care/源码/rxjs/operator/错误处理/retry.html",
+                      "originPath": "care/源码/rxjs/operator/错误处理/retry.md"
+                    },
+                    {
+                      "id": "retryWhen",
+                      "path": "rxjs/operator/错误处理/retry-when",
+                      "channelPath": "源码",
+                      "title": "retryWhen",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "retrywhen",
+                          "name": "retryWhen",
+                          "level": 1,
+                          "type": "h1"
+                        },
+                        {
+                          "id": "%E7%A4%BA%E4%BE%8B",
+                          "name": "示例",
+                          "level": 2,
+                          "type": "h2"
+                        },
+                        {
+                          "id": "%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90",
+                          "name": "源码分析",
+                          "level": 2,
+                          "type": "h2"
+                        }
+                      ],
+                      "contentPath": "care/源码/rxjs/operator/错误处理/retryWhen.html",
+                      "originPath": "care/源码/rxjs/operator/错误处理/retryWhen.md"
+                    }
+                  ],
+                  "order": 9007199254740991
+                }
+              ],
+              "order": 9007199254740991
+            },
+            {
+              "id": "源码/rxjs/util",
+              "path": "源码/rxjs/util",
+              "channelPath": "源码",
+              "title": "Util",
+              "items": [
+                {
+                  "id": "identity",
+                  "path": "rxjs/util/identity",
+                  "channelPath": "源码",
+                  "title": "Identity",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "identity",
+                      "name": "identity",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/源码/rxjs/util/identity.html",
+                  "originPath": "care/源码/rxjs/util/identity.md"
+                },
+                {
+                  "id": "lift",
+                  "path": "rxjs/util/lift",
+                  "channelPath": "源码",
+                  "title": "Lift",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "lift",
+                      "name": "lift",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/源码/rxjs/util/lift.html",
+                  "originPath": "care/源码/rxjs/util/lift.md"
+                }
+              ],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "源码/tapable",
+          "path": "源码/tapable",
+          "channelPath": "源码",
+          "title": "Tapable",
+          "items": [
+            {
+              "id": "Hook",
+              "path": "tapable/hook",
+              "channelPath": "源码",
+              "title": "Hook",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "hook",
+                  "name": "Hook",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/源码/tapable/Hook.html",
+              "originPath": "care/源码/tapable/Hook.md"
+            },
+            {
+              "id": "HookCodeFactory",
+              "path": "tapable/hook-code-factory",
+              "channelPath": "源码",
+              "title": "HookCodeFactory",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "hookcodefactory",
+                  "name": "HookCodeFactory",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/源码/tapable/HookCodeFactory.html",
+              "originPath": "care/源码/tapable/HookCodeFactory.md"
+            },
+            {
+              "id": "SyncHook",
+              "path": "tapable/sync-hook",
+              "channelPath": "源码",
+              "title": "SyncHook",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "synchook",
+                  "name": "SyncHook",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/源码/tapable/SyncHook.html",
+              "originPath": "care/源码/tapable/SyncHook.md"
+            },
+            {
+              "id": "index",
+              "path": "tapable",
+              "channelPath": "源码",
+              "title": "Index",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "index-js",
+                  "name": "index.js",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/源码/tapable/index.html",
+              "originPath": "care/源码/tapable/index.md"
+            }
+          ],
+          "order": 9007199254740991
+        }
+      ],
+      "order": 9007199254740991
+    },
+    {
+      "id": "监控系统",
+      "path": "监控系统",
+      "channelPath": "监控系统",
+      "title": "监控系统",
+      "items": [
+        {
+          "id": "index",
+          "path": "监控系统",
+          "channelPath": "监控系统",
+          "title": "Index",
+          "order": 9007199254740991,
+          "toc": "content",
+          "headings": [
+            {
+              "id": "hertzbeat",
+              "name": "hertzbeat",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "uptime",
+              "name": "uptime",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "clklog",
+              "name": "clklog",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "%E7%A5%9E%E7%AD%96%E6%95%B0%E6%8D%AE",
+              "name": "神策数据",
+              "level": 1,
+              "type": "h1"
+            }
+          ],
+          "contentPath": "care/监控系统/index.html",
+          "originPath": "care/监控系统/index.md"
+        },
+        {
+          "id": "其他",
+          "path": "监控系统",
+          "channelPath": "监控系统",
+          "title": "其他",
+          "order": 9007199254740991,
+          "toc": "content",
+          "headings": [
+            {
+              "id": "%E5%85%8D%E8%B4%B9%E7%9A%84-mysql-%E6%9C%8D%E5%8A%A1%E5%99%A8",
+              "name": "免费的 mysql 服务器",
+              "level": 1,
+              "type": "h1"
+            }
+          ],
+          "contentPath": "care/监控系统/其他.html",
+          "originPath": "care/监控系统/其他.md"
+        }
+      ],
+      "order": 9007199254740991
+    },
+    {
+      "id": "英语",
+      "path": "英语",
+      "channelPath": "英语",
+      "title": "英语",
+      "items": [
+        {
+          "id": "英语/文章",
+          "path": "英语/文章",
+          "channelPath": "英语",
+          "title": "文章",
+          "items": [
+            {
+              "id": "农夫和他的毛驴",
+              "path": "文章",
+              "channelPath": "英语",
+              "title": "农夫和他的毛驴",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "the-farmer-and-the-donkey",
+                  "name": "The Farmer and the Donkey",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/英语/文章/农夫和他的毛驴.html",
+              "originPath": "care/英语/文章/农夫和他的毛驴.md"
+            }
+          ],
+          "order": 9007199254740991
+        }
+      ],
+      "order": 9007199254740991
+    },
+    {
+      "id": "计算机基础",
+      "path": "计算机基础",
+      "channelPath": "计算机基础",
+      "title": "计算机基础",
+      "items": [
+        {
+          "id": "计算机基础/操作系统",
+          "path": "计算机基础/操作系统",
+          "channelPath": "计算机基础",
+          "title": "操作系统",
+          "items": [
+            {
+              "id": "index",
+              "path": "操作系统",
+              "channelPath": "计算机基础",
+              "title": "Index",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F",
+                  "name": "操作系统",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E3%80%81%E5%8D%8F%E7%A8%8B",
+                  "name": "进程、线程、协程",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E8%BF%9B%E7%A8%8B",
+                  "name": "进程",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E7%BA%BF%E7%A8%8B",
+                  "name": "线程",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E5%8D%8F%E7%A8%8B",
+                  "name": "协程",
+                  "level": 3,
+                  "type": "h3"
+                }
+              ],
+              "contentPath": "care/计算机基础/操作系统/index.html",
+              "originPath": "care/计算机基础/操作系统/index.md"
+            },
+            {
+              "id": "test",
+              "path": "操作系统/test",
+              "channelPath": "计算机基础",
+              "title": "Test",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "1",
+                  "name": "1",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/操作系统/test.html",
+              "originPath": "care/计算机基础/操作系统/test.md"
+            },
+            {
+              "id": "组成原理",
+              "path": "操作系统",
+              "channelPath": "计算机基础",
+              "title": "组成原理",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86",
+                  "name": "组成原理",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/操作系统/组成原理.html",
+              "originPath": "care/计算机基础/操作系统/组成原理.md"
+            },
+            {
+              "id": "编译原理",
+              "path": "操作系统",
+              "channelPath": "计算机基础",
+              "title": "编译原理",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86",
+                  "name": "编译原理",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/操作系统/编译原理.html",
+              "originPath": "care/计算机基础/操作系统/编译原理.md"
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "计算机基础/数据结构",
+          "path": "计算机基础/数据结构",
+          "channelPath": "计算机基础",
+          "title": "数据结构",
+          "items": [
+            {
+              "id": "计算机基础/数据结构/images",
+              "path": "计算机基础/数据结构/images",
+              "channelPath": "计算机基础",
+              "title": "Images",
+              "items": [],
+              "order": 9007199254740991
+            },
+            {
+              "id": "图",
+              "path": "数据结构",
+              "channelPath": "计算机基础",
+              "title": "图",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E5%9B%BE",
+                  "name": "图",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/数据结构/图.html",
+              "originPath": "care/计算机基础/数据结构/图.md"
+            },
+            {
+              "id": "散列表",
+              "path": "数据结构",
+              "channelPath": "计算机基础",
+              "title": "散列表",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E6%95%A3%E5%88%97%E8%A1%A8",
+                  "name": "散列表",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/数据结构/散列表.html",
+              "originPath": "care/计算机基础/数据结构/散列表.md"
+            },
+            {
+              "id": "数据结构",
+              "path": "数据结构",
+              "channelPath": "计算机基础",
+              "title": "数据结构",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95",
+                  "name": "数据结构与算法",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E5%A4%8D%E6%9D%82%E5%BA%A6",
+                  "name": "复杂度",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6",
+                  "name": "时间复杂度",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6",
+                  "name": "空间复杂度",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E6%95%B0%E6%8D%AE",
+                  "name": "数据",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%A0%86",
+                  "name": "堆",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E6%A0%88",
+                  "name": "栈",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E9%98%9F%E5%88%97",
+                  "name": "队列",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E9%93%BE%E8%A1%A8",
+                  "name": "链表",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E6%A0%91",
+                  "name": "树",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E6%95%A3%E5%88%97%E8%A1%A8",
+                  "name": "散列表",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E5%9B%BE",
+                  "name": "图",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E5%88%86%E7%B1%BB",
+                  "name": "分类",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E5%9B%BE%E7%9A%84%E4%B8%80%E4%BA%9B%E5%90%8D%E7%A7%B0",
+                  "name": "图的一些名称",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E5%82%A8%E5%AD%98",
+                  "name": "储存",
+                  "level": 3,
+                  "type": "h3"
+                }
+              ],
+              "contentPath": "care/计算机基础/数据结构/数据结构.html",
+              "originPath": "care/计算机基础/数据结构/数据结构.md"
+            },
+            {
+              "id": "计算机基础/数据结构/树",
+              "path": "计算机基础/数据结构/树",
+              "channelPath": "计算机基础",
+              "title": "树",
+              "items": [
+                {
+                  "id": "二叉树",
+                  "path": "数据结构/树",
+                  "channelPath": "计算机基础",
+                  "title": "二叉树",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E4%BA%8C%E5%8F%89%E6%A0%91",
+                      "name": "二叉树",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E7%B1%BB%E5%9E%8B",
+                      "name": "类型",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%BD%9C%E7%94%A8",
+                      "name": "作用",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/树/二叉树.html",
+                  "originPath": "care/计算机基础/数据结构/树/二叉树.md"
+                },
+                {
+                  "id": "树",
+                  "path": "数据结构/树",
+                  "channelPath": "计算机基础",
+                  "title": "树",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E6%A0%91",
+                      "name": "树",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/树/树.html",
+                  "originPath": "care/计算机基础/数据结构/树/树.md"
+                },
+                {
+                  "id": "概念",
+                  "path": "数据结构/树",
+                  "channelPath": "计算机基础",
+                  "title": "概念",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E6%A6%82%E5%BF%B5",
+                      "name": "概念",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E7%94%A8%E4%BB%80%E4%B9%88%E7%BB%93%E6%9E%84%E8%A1%A8%E7%A4%BA%E6%A0%91",
+                      "name": "用什么结构表示树",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/树/概念.html",
+                  "originPath": "care/计算机基础/数据结构/树/概念.md"
+                }
+              ],
+              "order": 9007199254740991
+            },
+            {
+              "id": "概念",
+              "path": "数据结构",
+              "channelPath": "计算机基础",
+              "title": "概念",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E6%A6%82%E5%BF%B5",
+                  "name": "概念",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%B1%BB%E5%9E%8B",
+                  "name": "类型",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/数据结构/概念.html",
+              "originPath": "care/计算机基础/数据结构/概念.md"
+            },
+            {
+              "id": "计算机基础/数据结构/线性",
+              "path": "计算机基础/数据结构/线性",
+              "channelPath": "计算机基础",
+              "title": "线性",
+              "items": [
+                {
+                  "id": "index",
+                  "path": "数据结构/线性",
+                  "channelPath": "计算机基础",
+                  "title": "Index",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E7%AE%97%E6%B3%95",
+                      "name": "算法",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE",
+                      "name": "二分查找",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/线性/index.html",
+                  "originPath": "care/计算机基础/数据结构/线性/index.md"
+                },
+                {
+                  "id": "堆",
+                  "path": "数据结构/线性",
+                  "channelPath": "计算机基础",
+                  "title": "堆",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E5%A0%86",
+                      "name": "堆",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/线性/堆.html",
+                  "originPath": "care/计算机基础/数据结构/线性/堆.md"
+                },
+                {
+                  "id": "散列表",
+                  "path": "数据结构/线性",
+                  "channelPath": "计算机基础",
+                  "title": "散列表",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E6%95%A3%E5%88%97%E8%A1%A8",
+                      "name": "散列表",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0",
+                      "name": "哈希函数",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/线性/散列表.html",
+                  "originPath": "care/计算机基础/数据结构/线性/散列表.md"
+                },
+                {
+                  "id": "数组",
+                  "path": "数据结构/线性",
+                  "channelPath": "计算机基础",
+                  "title": "数组",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E6%95%B0%E7%BB%84",
+                      "name": "数组",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E6%8F%8F%E8%BF%B0",
+                      "name": "描述",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%BC%98%E7%BC%BA%E7%82%B9",
+                      "name": "优缺点",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%BC%98%E7%82%B9",
+                      "name": "优点",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E7%BC%BA%E7%82%B9",
+                      "name": "缺点",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C",
+                      "name": "基本操作",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/线性/数组.html",
+                  "originPath": "care/计算机基础/数据结构/线性/数组.md"
+                },
+                {
+                  "id": "栈",
+                  "path": "数据结构/线性",
+                  "channelPath": "计算机基础",
+                  "title": "栈",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E6%A0%88(stack)",
+                      "name": "栈(Stack)",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E6%A6%82%E5%BF%B5",
+                      "name": "概念",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%BA%94%E7%94%A8",
+                      "name": "应用",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/线性/栈.html",
+                  "originPath": "care/计算机基础/数据结构/线性/栈.md"
+                },
+                {
+                  "id": "链表",
+                  "path": "数据结构/线性",
+                  "channelPath": "计算机基础",
+                  "title": "链表",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E9%93%BE%E8%A1%A8",
+                      "name": "链表",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E7%A7%8D%E7%B1%BB",
+                      "name": "种类",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%BC%98%E7%BC%BA%E7%82%B9",
+                      "name": "优缺点",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%AE%9E%E7%8E%B0",
+                      "name": "实现",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E6%9C%89%E5%A4%B4%E5%8D%95%E5%90%91%E4%B8%8D%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8",
+                      "name": "有头单向不循环链表",
+                      "level": 3,
+                      "type": "h3"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/线性/链表.html",
+                  "originPath": "care/计算机基础/数据结构/线性/链表.md"
+                },
+                {
+                  "id": "队列",
+                  "path": "数据结构/线性",
+                  "channelPath": "计算机基础",
+                  "title": "队列",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E9%98%9F%E5%88%97(queue)",
+                      "name": "队列(Queue)",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E6%A6%82%E5%BF%B5",
+                      "name": "概念",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E7%A7%8D%E7%B1%BB",
+                      "name": "种类",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/数据结构/线性/队列.html",
+                  "originPath": "care/计算机基础/数据结构/线性/队列.md"
+                }
+              ],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "计算机基础/算法",
+          "path": "计算机基础/算法",
+          "channelPath": "计算机基础",
+          "title": "算法",
+          "items": [
+            {
+              "id": "排序",
+              "path": "算法",
+              "channelPath": "计算机基础",
+              "title": "排序",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [],
+              "contentPath": "care/计算机基础/算法/排序.html",
+              "originPath": "care/计算机基础/算法/排序.md"
+            },
+            {
+              "id": "概念",
+              "path": "算法",
+              "channelPath": "计算机基础",
+              "title": "概念",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E6%A6%82%E5%BF%B5",
+                  "name": "概念",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6",
+                  "name": "时间复杂度",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6",
+                  "name": "空间复杂度",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/算法/概念.html",
+              "originPath": "care/计算机基础/算法/概念.md"
+            },
+            {
+              "id": "题目",
+              "path": "算法",
+              "channelPath": "计算机基础",
+              "title": "题目",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E9%A2%98%E7%9B%AE",
+                  "name": "题目",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%88%AC%E6%A2%AF%E5%AD%90",
+                  "name": "爬梯子",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/算法/题目.html",
+              "originPath": "care/计算机基础/算法/题目.md"
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "计算机基础/编码规范",
+          "path": "计算机基础/编码规范",
+          "channelPath": "计算机基础",
+          "title": "编码规范",
+          "items": [
+            {
+              "id": "0、前言",
+              "path": "编码规范/0",
+              "channelPath": "计算机基础",
+              "title": "0、前言",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E5%89%8D%E8%A8%80",
+                  "name": "前言",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/编码规范/0、前言.html",
+              "originPath": "care/计算机基础/编码规范/0、前言.md"
+            },
+            {
+              "id": "1、有意义的命名",
+              "path": "编码规范/1",
+              "channelPath": "计算机基础",
+              "title": "1、有意义的命名",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E5%91%BD%E5%90%8D",
+                  "name": "有意义的命名",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E8%A7%84%E5%88%99",
+                  "name": "规则",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E9%82%A3%E4%BA%9B%E9%9C%80%E8%A6%81%E5%91%BD%E5%90%8D",
+                  "name": "那些需要命名",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/编码规范/1、有意义的命名.html",
+              "originPath": "care/计算机基础/编码规范/1、有意义的命名.md"
+            },
+            {
+              "id": "2、函数",
+              "path": "编码规范/2",
+              "channelPath": "计算机基础",
+              "title": "2、函数",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E5%87%BD%E6%95%B0",
+                  "name": "函数",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E5%91%BD%E5%90%8D",
+                  "name": "命名",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%8F%82%E6%95%B0",
+                  "name": "参数",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E4%BD%9C%E7%94%A8",
+                  "name": "作用",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%86%85%E5%AE%B9",
+                  "name": "内容",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E9%87%8D%E5%A4%8D",
+                  "name": "重复",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%A6%82%E4%BD%95%E5%86%99%E5%87%BA%E8%BF%99%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0",
+                  "name": "如何写出这样的函数",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/编码规范/2、函数.html",
+              "originPath": "care/计算机基础/编码规范/2、函数.md"
+            },
+            {
+              "id": "3、注释",
+              "path": "编码规范/3",
+              "channelPath": "计算机基础",
+              "title": "3、注释",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E6%B3%A8%E9%87%8A",
+                  "name": "注释",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%90%86%E6%83%B3",
+                  "name": "理想",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98",
+                  "name": "存在的问题",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%8E%B0%E5%AE%9E",
+                  "name": "现实",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%A5%BD%E6%B3%A8%E9%87%8A",
+                  "name": "好注释",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E6%B3%A8%E9%87%8A%E7%9A%84%E7%B1%BB%E5%9E%8B",
+                  "name": "注释的类型",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%9D%8F%E6%B3%A8%E9%87%8A",
+                  "name": "坏注释",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/编码规范/3、注释.html",
+              "originPath": "care/计算机基础/编码规范/3、注释.md"
+            },
+            {
+              "id": "codeReview",
+              "path": "编码规范/code-review",
+              "channelPath": "计算机基础",
+              "title": "codeReview",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "code-review",
+                  "name": "Code Review",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E4%BD%9C%E7%94%A8",
+                  "name": "作用",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%A6%82%E4%BD%95%E5%81%9A",
+                  "name": "如何做",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E8%AF%84%E5%AE%A1%E4%BB%80%E4%B9%88",
+                  "name": "评审什么",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E8%AF%84%E5%AE%A1%E6%97%B6%E9%97%B4",
+                  "name": "评审时间",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9",
+                  "name": "注意事项",
+                  "level": 3,
+                  "type": "h3"
+                }
+              ],
+              "contentPath": "care/计算机基础/编码规范/codeReview.html",
+              "originPath": "care/计算机基础/编码规范/codeReview.md"
+            },
+            {
+              "id": "index",
+              "path": "编码规范",
+              "channelPath": "计算机基础",
+              "title": "Index",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83",
+                  "name": "代码规范",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/编码规范/index.html",
+              "originPath": "care/计算机基础/编码规范/index.md"
+            },
+            {
+              "id": "temp",
+              "path": "编码规范/temp",
+              "channelPath": "计算机基础",
+              "title": "Temp",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "temp",
+                  "name": "temp",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/编码规范/temp.html",
+              "originPath": "care/计算机基础/编码规范/temp.md"
+            },
+            {
+              "id": "计算机基础/编码规范/代码风格&格式化",
+              "path": "计算机基础/编码规范/代码风格&格式化",
+              "channelPath": "计算机基础",
+              "title": "代码风格&格式化",
+              "items": [
+                {
+                  "id": "Prettier",
+                  "path": "编码规范/代码风格&格式化/prettier",
+                  "channelPath": "计算机基础",
+                  "title": "Prettier",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "prettier",
+                      "name": "Prettier",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F",
+                      "name": "使用方式",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6",
+                      "name": "配置文件",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E6%94%AF%E6%8C%81%E7%9A%84%E7%B1%BB%E5%9E%8B",
+                      "name": "支持的类型",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6",
+                      "name": "忽略文件",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "cli%E5%91%BD%E4%BB%A4",
+                      "name": "cli命令",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E9%85%8D%E7%BD%AE%E9%A1%B9",
+                      "name": "配置项",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/编码规范/代码风格&格式化/Prettier.html",
+                  "originPath": "care/计算机基础/编码规范/代码风格&格式化/Prettier.md"
+                }
+              ],
+              "order": 9007199254740991
+            },
+            {
+              "id": "好的代码",
+              "path": "编码规范",
+              "channelPath": "计算机基础",
+              "title": "好的代码",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E5%A5%BD%E7%9A%84%E4%BB%A3%E7%A0%81",
+                  "name": "好的代码",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%BC%96%E7%A0%81%E7%9B%B8%E5%85%B3",
+                  "name": "编码相关",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E5%91%BD%E5%90%8D",
+                  "name": "有意义的命名",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E5%87%BD%E6%95%B0",
+                  "name": "函数",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E6%B3%A8%E9%87%8A",
+                  "name": "注释",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E6%A0%BC%E5%BC%8F",
+                  "name": "格式",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E9%80%BB%E8%BE%91%E7%9B%B8%E5%85%B3%E7%9A%84",
+                  "name": "逻辑相关的",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%B1%BB%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84",
+                  "name": "类、对象和数据结构",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E3%80%81",
+                  "name": "错误处理、",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95",
+                  "name": "单元测试",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E8%BF%AD%E4%BB%A3",
+                  "name": "迭代",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/编码规范/好的代码.html",
+              "originPath": "care/计算机基础/编码规范/好的代码.md"
+            },
+            {
+              "id": "项目结构组织",
+              "path": "编码规范",
+              "channelPath": "计算机基础",
+              "title": "项目结构组织",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E7%BB%84%E7%BB%87",
+                  "name": "项目结构组织",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/编码规范/项目结构组织.html",
+              "originPath": "care/计算机基础/编码规范/项目结构组织.md"
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "计算机基础/编程思想",
+          "path": "计算机基础/编程思想",
+          "channelPath": "计算机基础",
+          "title": "编程思想",
+          "items": [
+            {
+              "id": "计算机基础/编程思想/声明式",
+              "path": "计算机基础/编程思想/声明式",
+              "channelPath": "计算机基础",
+              "title": "声明式",
+              "items": [
+                {
+                  "id": "计算机基础/编程思想/声明式/函数式",
+                  "path": "计算机基础/编程思想/声明式/函数式",
+                  "channelPath": "计算机基础",
+                  "title": "函数式",
+                  "items": [
+                    {
+                      "id": "函数式",
+                      "path": "编程思想/声明式/函数式",
+                      "channelPath": "计算机基础",
+                      "title": "函数式",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "%E5%87%BD%E6%95%B0%E5%BC%8F",
+                          "name": "函数式",
+                          "level": 1,
+                          "type": "h1"
+                        },
+                        {
+                          "id": "%E5%87%BD%E6%95%B0%E6%98%AF%E4%B8%80%E7%AD%89%E5%85%AC%E6%B0%91",
+                          "name": "函数是一等公民",
+                          "level": 2,
+                          "type": "h2"
+                        },
+                        {
+                          "id": "%E7%BA%AF%E5%87%BD%E6%95%B0",
+                          "name": "纯函数",
+                          "level": 2,
+                          "type": "h2"
+                        },
+                        {
+                          "id": "%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0",
+                          "name": "数学函数",
+                          "level": 3,
+                          "type": "h3"
+                        },
+                        {
+                          "id": "%E8%BF%BD%E6%B1%82%E2%80%9C%E7%BA%AF%E2%80%9D%E7%9A%84%E7%90%86%E7%94%B1",
+                          "name": "追求“纯”的理由",
+                          "level": 3,
+                          "type": "h3"
+                        },
+                        {
+                          "id": "%E5%89%AF%E4%BD%9C%E7%94%A8",
+                          "name": "副作用",
+                          "level": 3,
+                          "type": "h3"
+                        },
+                        {
+                          "id": "%E5%BC%95%E7%94%A8%E9%80%8F%E6%98%8E",
+                          "name": "引用透明",
+                          "level": 3,
+                          "type": "h3"
+                        },
+                        {
+                          "id": "%E6%95%B0%E6%8D%AE%E4%B8%8D%E5%8F%AF%E5%8F%98",
+                          "name": "数据不可变",
+                          "level": 3,
+                          "type": "h3"
+                        },
+                        {
+                          "id": "%E6%9F%AF%E9%87%8C%E5%8C%96(curry)",
+                          "name": "柯里化(curry)",
+                          "level": 2,
+                          "type": "h2"
+                        },
+                        {
+                          "id": "%E7%BB%84%E5%90%88",
+                          "name": "组合",
+                          "level": 2,
+                          "type": "h2"
+                        }
+                      ],
+                      "contentPath": "care/计算机基础/编程思想/声明式/函数式/函数式.html",
+                      "originPath": "care/计算机基础/编程思想/声明式/函数式/函数式.md"
+                    },
+                    {
+                      "id": "函数组合",
+                      "path": "编程思想/声明式/函数式",
+                      "channelPath": "计算机基础",
+                      "title": "函数组合",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "%E5%87%BD%E6%95%B0%E7%BB%84%E5%90%88",
+                          "name": "函数组合",
+                          "level": 1,
+                          "type": "h1"
+                        },
+                        {
+                          "id": "%E7%BB%93%E5%90%88%E5%BE%8B",
+                          "name": "结合律",
+                          "level": 3,
+                          "type": "h3"
+                        }
+                      ],
+                      "contentPath": "care/计算机基础/编程思想/声明式/函数式/函数组合.html",
+                      "originPath": "care/计算机基础/编程思想/声明式/函数式/函数组合.md"
+                    },
+                    {
+                      "id": "柯里化",
+                      "path": "编程思想/声明式/函数式",
+                      "channelPath": "计算机基础",
+                      "title": "柯里化",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [
+                        {
+                          "id": "%E6%9F%AF%E9%87%8C%E5%8C%96",
+                          "name": "柯里化",
+                          "level": 1,
+                          "type": "h1"
+                        },
+                        {
+                          "id": "curry%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90",
+                          "name": "curry源码解析",
+                          "level": 2,
+                          "type": "h2"
+                        }
+                      ],
+                      "contentPath": "care/计算机基础/编程思想/声明式/函数式/柯里化.html",
+                      "originPath": "care/计算机基础/编程思想/声明式/函数式/柯里化.md"
+                    },
+                    {
+                      "id": "纯函数",
+                      "path": "编程思想/声明式/函数式",
+                      "channelPath": "计算机基础",
+                      "title": "纯函数",
+                      "order": 9007199254740991,
+                      "toc": "content",
+                      "headings": [],
+                      "contentPath": "care/计算机基础/编程思想/声明式/函数式/纯函数.html",
+                      "originPath": "care/计算机基础/编程思想/声明式/函数式/纯函数.md"
+                    }
+                  ],
+                  "order": 9007199254740991
+                },
+                {
+                  "id": "约束式",
+                  "path": "编程思想/声明式",
+                  "channelPath": "计算机基础",
+                  "title": "约束式",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E7%BA%A6%E6%9D%9F%E5%BC%8F",
+                      "name": "约束式",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/编程思想/声明式/约束式.html",
+                  "originPath": "care/计算机基础/编程思想/声明式/约束式.md"
+                },
+                {
+                  "id": "逻辑式编程",
+                  "path": "编程思想/声明式",
+                  "channelPath": "计算机基础",
+                  "title": "逻辑式编程",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E9%80%BB%E8%BE%91%E5%BC%8F%E7%BC%96%E7%A8%8B",
+                      "name": "逻辑式编程",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/编程思想/声明式/逻辑式编程.html",
+                  "originPath": "care/计算机基础/编程思想/声明式/逻辑式编程.md"
+                },
+                {
+                  "id": "领域专属语言",
+                  "path": "编程思想/声明式",
+                  "channelPath": "计算机基础",
+                  "title": "领域专属语言",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E9%A2%86%E5%9F%9F%E4%B8%93%E5%B1%9E%E8%AF%AD%E8%A8%80",
+                      "name": "领域专属语言",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/编程思想/声明式/领域专属语言.html",
+                  "originPath": "care/计算机基础/编程思想/声明式/领域专属语言.md"
+                }
+              ],
+              "order": 9007199254740991
+            },
+            {
+              "id": "软件设计",
+              "path": "编程思想",
+              "channelPath": "计算机基础",
+              "title": "软件设计",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1",
+                  "name": "软件设计",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E5%BC%95%E8%A8%80",
+                  "name": "引言",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%A4%8D%E6%9D%82%E5%BA%A6",
+                  "name": "复杂度",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E5%88%86%E5%B1%82",
+                  "name": "分层",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E6%A8%A1%E5%9D%97%E5%8C%96",
+                  "name": "模块化",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/编程思想/软件设计.html",
+              "originPath": "care/计算机基础/编程思想/软件设计.md"
+            },
+            {
+              "id": "面向切面(AOP)",
+              "path": "编程思想/aop",
+              "channelPath": "计算机基础",
+              "title": "面向切面(AOP)",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "aop",
+                  "name": "AOP",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/编程思想/面向切面(AOP).html",
+              "originPath": "care/计算机基础/编程思想/面向切面(AOP).md"
+            },
+            {
+              "id": "计算机基础/编程思想/面向对象",
+              "path": "计算机基础/编程思想/面向对象",
+              "channelPath": "计算机基础",
+              "title": "面向对象",
+              "items": [
+                {
+                  "id": "多态",
+                  "path": "编程思想/面向对象",
+                  "channelPath": "计算机基础",
+                  "title": "多态",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [],
+                  "contentPath": "care/计算机基础/编程思想/面向对象/多态.html",
+                  "originPath": "care/计算机基础/编程思想/面向对象/多态.md"
+                },
+                {
+                  "id": "对象",
+                  "path": "编程思想/面向对象",
+                  "channelPath": "计算机基础",
+                  "title": "对象",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E5%AF%B9%E8%B1%A1",
+                      "name": "对象",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E5%8C%85%E8%A3%85%E5%AF%B9%E8%B1%A1",
+                      "name": "包装对象",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/编程思想/面向对象/对象.html",
+                  "originPath": "care/计算机基础/编程思想/面向对象/对象.md"
+                },
+                {
+                  "id": "接口",
+                  "path": "编程思想/面向对象",
+                  "channelPath": "计算机基础",
+                  "title": "接口",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E6%8E%A5%E5%8F%A3",
+                      "name": "接口",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/编程思想/面向对象/接口.html",
+                  "originPath": "care/计算机基础/编程思想/面向对象/接口.md"
+                },
+                {
+                  "id": "类",
+                  "path": "编程思想/面向对象",
+                  "channelPath": "计算机基础",
+                  "title": "类",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E7%B1%BB",
+                      "name": "类",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E5%B1%9E%E6%80%A7",
+                      "name": "属性",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E6%96%B9%E6%B3%95",
+                      "name": "方法",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%BF%AE%E9%A5%B0%E7%AC%A6",
+                      "name": "修饰符",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6",
+                      "name": "访问控制",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E7%A7%81%E6%9C%89%E6%95%B0%E6%8D%AE",
+                      "name": "私有数据",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E5%B0%81%E8%A3%85",
+                      "name": "封装",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E6%95%B0%E6%8D%AE%E9%9A%90%E8%97%8F",
+                      "name": "数据隐藏",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E6%8E%A5%E5%8F%A3",
+                      "name": "接口",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E7%BB%A7%E6%89%BF(is-a)",
+                      "name": "继承(is-a)",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E8%B6%85%E7%B1%BB",
+                      "name": "超类",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E5%AD%90%E7%B1%BB",
+                      "name": "子类",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E5%8D%95%E7%BB%A7%E6%89%BF",
+                      "name": "单继承",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E5%A4%9A%E7%BB%A7%E6%89%BF",
+                      "name": "多继承",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E6%8A%BD%E8%B1%A1%E7%B1%BB",
+                      "name": "抽象类",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%A4%9A%E6%80%81",
+                      "name": "多态",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E9%87%8D%E8%BD%BD",
+                      "name": "重载",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E7%BB%84%E5%90%88(has-a)",
+                      "name": "组合(has-a)",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/编程思想/面向对象/类.html",
+                  "originPath": "care/计算机基础/编程思想/面向对象/类.md"
+                },
+                {
+                  "id": "类图",
+                  "path": "编程思想/面向对象",
+                  "channelPath": "计算机基础",
+                  "title": "类图",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E7%B1%BB%E5%9B%BE",
+                      "name": "类图",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/编程思想/面向对象/类图.html",
+                  "originPath": "care/计算机基础/编程思想/面向对象/类图.md"
+                }
+              ],
+              "order": 9007199254740991
+            },
+            {
+              "id": "面向对象(OOP)",
+              "path": "编程思想/oop",
+              "channelPath": "计算机基础",
+              "title": "面向对象(OOP)",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1(oop)",
+                  "name": "面向对象(OOP)",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%B1%BB",
+                  "name": "类",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%AF%B9%E8%B1%A1",
+                  "name": "对象",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/编程思想/面向对象(OOP).html",
+              "originPath": "care/计算机基础/编程思想/面向对象(OOP).md"
+            },
+            {
+              "id": "面向过程",
+              "path": "编程思想",
+              "channelPath": "计算机基础",
+              "title": "面向过程",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B",
+                  "name": "面向过程",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "care/计算机基础/编程思想/面向过程.html",
+              "originPath": "care/计算机基础/编程思想/面向过程.md"
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "计算机基础/计算机网络",
+          "path": "计算机基础/计算机网络",
+          "channelPath": "计算机基础",
+          "title": "计算机网络",
+          "items": [
+            {
+              "id": "计算机基础/计算机网络/http",
+              "path": "计算机基础/计算机网络/http",
+              "channelPath": "计算机基础",
+              "title": "HTTP",
+              "items": [
+                {
+                  "id": "http",
+                  "path": "计算机网络/http/http",
+                  "channelPath": "计算机基础",
+                  "title": "Http",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "http",
+                      "name": "HTTP",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E4%B8%8E-http-%E5%8D%8F%E4%BD%9C%E7%9A%84-web-%E6%9C%8D%E5%8A%A1%E5%99%A8",
+                      "name": "与 HTTP 协作的 Web 服务器",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "http-%E7%9A%84%E5%87%A0%E7%A7%8D%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F",
+                      "name": "HTTP 的几种请求方式",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E7%8A%B6%E6%80%81%E5%90%97",
+                      "name": "状态吗",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%BF%A1%E6%81%AF%E7%B1%BB%E7%8A%B6%E6%80%81%E7%A0%81-1xx",
+                      "name": "信息类状态码 1XX",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E6%88%90%E5%8A%9F%E7%8A%B6%E6%80%81%E7%A0%81-2xx",
+                      "name": "成功状态码 2XX",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E9%87%8D%E5%AE%9A%E5%90%91%E7%8A%B6%E6%80%81%E7%A0%81-3xx",
+                      "name": "重定向状态码 3XX",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%94%99%E8%AF%AF%E7%8A%B6%E6%80%81%E7%A0%81,%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E5%A4%84%E7%90%86%E8%AF%B7%E6%B1%82-4xx",
+                      "name": "客户端错误状态码,服务器无法处理请求 4XX",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%94%99%E8%AF%AF%E7%8A%B6%E6%80%81%E7%A0%81,%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AF%B7%E6%B1%82%E5%87%BA%E9%94%99-5xx",
+                      "name": "服务端错误状态码,服务器请求出错 5XX",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E9%A6%96%E9%83%A8",
+                      "name": "首部",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E8%AF%B7%E6%B1%82%E5%A4%B4",
+                      "name": "请求头",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%93%8D%E5%BA%94%E5%A4%B4(:%E5%90%8E%E9%9D%A2%E6%98%AF%E4%BE%8B%E5%AD%90)",
+                      "name": "响应头(:后面是例子)",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%9E%84%E6%88%90",
+                      "name": "应用层协议的构成",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "http1-0-/-http1-1-/-http2-0-%E5%8D%87%E7%BA%A7%E4%BA%86%E4%BB%80%E4%B9%88",
+                      "name": "HTTP1.0 / HTTP1.1 / HTTP2.0 升级了什么",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%BB%A3%E7%90%86",
+                      "name": "代理",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E7%BD%91%E5%85%B3",
+                      "name": "网关",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%85%B6%E4%BB%96",
+                      "name": "其他",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "http-%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC",
+                      "name": "http 的各个版本",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/计算机网络/HTTP/http.html",
+                  "originPath": "care/计算机基础/计算机网络/HTTP/http.md"
+                },
+                {
+                  "id": "计算机基础/计算机网络/http/images",
+                  "path": "计算机基础/计算机网络/http/images",
+                  "channelPath": "计算机基础",
+                  "title": "Images",
+                  "items": [],
+                  "order": 9007199254740991
+                }
+              ],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 9007199254740991
+        },
+        {
+          "id": "计算机基础/软件工程",
+          "path": "计算机基础/软件工程",
+          "channelPath": "计算机基础",
+          "title": "软件工程",
+          "items": [
+            {
+              "id": "复杂度2",
+              "path": "软件工程/2",
+              "channelPath": "计算机基础",
+              "title": "复杂度2",
+              "order": 9007199254740991,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E5%A4%8D%E6%9D%82%E5%BA%A6",
+                  "name": "复杂度",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E4%B9%A6%E7%B1%8D",
+                  "name": "书籍",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%AC%AC%E4%B8%80%E7%AB%A0",
+                  "name": "第一章",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "care/计算机基础/软件工程/复杂度2.html",
+              "originPath": "care/计算机基础/软件工程/复杂度2.md"
+            },
+            {
+              "id": "计算机基础/软件工程/复杂性",
+              "path": "计算机基础/软件工程/复杂性",
+              "channelPath": "计算机基础",
+              "title": "复杂性",
+              "items": [
+                {
+                  "id": "temp",
+                  "path": "软件工程/复杂性/temp",
+                  "channelPath": "计算机基础",
+                  "title": "Temp",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [],
+                  "contentPath": "care/计算机基础/软件工程/复杂性/temp.html",
+                  "originPath": "care/计算机基础/软件工程/复杂性/temp.md"
+                },
+                {
+                  "id": "什么是复杂性",
+                  "path": "软件工程/复杂性",
+                  "channelPath": "计算机基础",
+                  "title": "什么是复杂性",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E5%A4%8D%E6%9D%82%E5%BA%A6",
+                      "name": "复杂度",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%A4%8D%E6%9D%82%E6%80%A7",
+                      "name": "如何定义复杂性",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E8%A1%A8%E7%8E%B0",
+                      "name": "复杂性的表现",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E6%88%90%E5%9B%A0",
+                      "name": "复杂性的成因",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E6%80%BB%E7%BB%93",
+                      "name": "总结",
+                      "level": 3,
+                      "type": "h3"
+                    },
+                    {
+                      "id": "%E5%A6%82%E4%BD%95%E5%87%8F%E4%BD%8E%E5%A4%8D%E6%9D%82%E6%80%A7",
+                      "name": "如何减低复杂性",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/软件工程/复杂性/什么是复杂性.html",
+                  "originPath": "care/计算机基础/软件工程/复杂性/什么是复杂性.md"
+                },
+                {
+                  "id": "减低复杂性-模块设计",
+                  "path": "软件工程/复杂性",
+                  "channelPath": "计算机基础",
+                  "title": "减低复杂性 模块设计",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1",
+                      "name": "模块设计",
+                      "level": 1,
+                      "type": "h1"
+                    },
+                    {
+                      "id": "%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F",
+                      "name": "模块化的表现形式",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E6%A8%A1%E5%9D%97%E5%BA%94%E8%AF%A5%E6%98%AF%E6%B7%B1%E7%9A%84",
+                      "name": "模块应该是深的",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E4%BF%A1%E6%81%AF%E7%9A%84%E9%9A%90%E8%97%8F",
+                      "name": "信息的隐藏",
+                      "level": 2,
+                      "type": "h2"
+                    },
+                    {
+                      "id": "%E6%8A%BD%E8%B1%A1",
+                      "name": "抽象",
+                      "level": 2,
+                      "type": "h2"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/软件工程/复杂性/减低复杂性-模块设计.html",
+                  "originPath": "care/计算机基础/软件工程/复杂性/减低复杂性-模块设计.md"
+                },
+                {
+                  "id": "工作代码和程序设计之间的关系",
+                  "path": "软件工程/复杂性",
+                  "channelPath": "计算机基础",
+                  "title": "工作代码和程序设计之间的关系",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E5%B7%A5%E4%BD%9C%E4%BB%A3%E7%A0%81%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB",
+                      "name": "工作代码和程序设计之间的关系",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/软件工程/复杂性/工作代码和程序设计之间的关系.html",
+                  "originPath": "care/计算机基础/软件工程/复杂性/工作代码和程序设计之间的关系.md"
+                },
+                {
+                  "id": "目录",
+                  "path": "软件工程/复杂性",
+                  "channelPath": "计算机基础",
+                  "title": "目录",
+                  "order": 9007199254740991,
+                  "toc": "content",
+                  "headings": [
+                    {
+                      "id": "%E5%A4%8D%E6%9D%82%E6%80%A7",
+                      "name": "复杂性",
+                      "level": 1,
+                      "type": "h1"
+                    }
+                  ],
+                  "contentPath": "care/计算机基础/软件工程/复杂性/目录.html",
+                  "originPath": "care/计算机基础/软件工程/复杂性/目录.md"
+                }
+              ],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 9007199254740991
+        }
+      ],
+      "order": 9007199254740991
+    },
+    {
+      "id": "部署",
+      "path": "部署",
+      "channelPath": "部署",
+      "title": "部署",
+      "items": [
+        {
+          "id": "docker",
+          "path": "docker",
+          "channelPath": "部署",
+          "title": "Docker",
+          "order": 9007199254740991,
+          "toc": "content",
+          "headings": [],
+          "contentPath": "care/部署/docker.html",
+          "originPath": "care/部署/docker.md"
+        }
+      ],
+      "order": 9007199254740991
+    }
+  ],
+  "docs": [
+    {
+      "id": "sdf",
+      "path": "sdf",
+      "channelPath": "前端",
+      "title": "Sdf",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [],
+      "contentPath": "care/前端/sdf.html",
+      "originPath": "care/前端/sdf.md"
+    },
+    {
+      "id": "pm2",
+      "path": "库/pm2",
+      "channelPath": "前端",
+      "title": "Pm2",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "pm2",
+          "name": "PM2",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%AE%89%E8%A3%85",
+          "name": "安装",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%91%BD%E4%BB%A4",
+          "name": "命令",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "start",
+          "name": "start",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "restart",
+          "name": "restart",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "reload",
+          "name": "reload",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "stop",
+          "name": "stop",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "delete",
+          "name": "delete",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "list/ls/status",
+          "name": "list/ls/status",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "logs",
+          "name": "logs",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "monit",
+          "name": "monit",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "plus",
+          "name": "plus",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "startup",
+          "name": "startup",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "save",
+          "name": "save",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "flush",
+          "name": "flush",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "reloadlogs",
+          "name": "reloadLogs",
+          "level": 3,
+          "type": "h3"
+        }
+      ],
+      "contentPath": "care/前端/库/pm2.html",
+      "originPath": "care/前端/库/pm2.md"
+    },
+    {
+      "id": "大文件分片上传",
+      "path": "方案",
+      "channelPath": "前端",
+      "title": "大文件分片上传",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%A4%A7%E6%96%87%E4%BB%B6%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0",
+          "name": "大文件分片上传",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%3Ca-target=%22_blank%22-href=%22https://mp-weixin-qq-com/s/ynu7grwmvjipstjiaxzhrq%22%3Ehttps://mp-weixin-qq-com/s/ynu7grwmvjipstjiaxzhrq%3C/a%3E",
+          "name": "<a target=\"_blank\" href=\"https://mp.weixin.qq.com/s/ynU7GRWMVjIpstjIaxzHrQ\">https://mp.weixin.qq.com/s/ynU7GRWMVjIpstjIaxzHrQ</a>",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/前端/方案/大文件分片上传.html",
+      "originPath": "care/前端/方案/大文件分片上传.md"
+    },
+    {
+      "id": "换肤",
+      "path": "方案",
+      "channelPath": "前端",
+      "title": "换肤",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%8D%A2%E8%82%A4",
+          "name": "换肤",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E9%85%8D%E8%89%B2",
+          "name": "浏览器的配色",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%80%9A%E8%BF%87-js-%E8%AE%BE%E7%BD%AE-css-%E5%8F%98%E9%87%8F",
+          "name": "通过 js 设置 css 变量",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/前端/方案/换肤.html",
+      "originPath": "care/前端/方案/换肤.md"
+    },
+    {
+      "id": "API",
+      "path": "框架/angular/api",
+      "channelPath": "前端",
+      "title": "API",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "api",
+          "name": "API",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "directive",
+          "name": "Directive",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "component",
+          "name": "Component",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/前端/框架/angular/API.html",
+      "originPath": "care/前端/框架/angular/API.md"
+    },
+    {
+      "id": "clipboard",
+      "path": "框架/angular/cdk/clipboard",
+      "channelPath": "前端",
+      "title": "Clipboard",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "clipboard",
+          "name": "clipboard",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%8C%87%E4%BB%A4%E6%A8%A1%E5%BC%8F",
+          "name": "指令模式",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%BC%96%E7%A8%8B%E6%96%B9%E5%BC%8F",
+          "name": "编程方式",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/前端/框架/angular/cdk/clipboard.html",
+      "originPath": "care/前端/框架/angular/cdk/clipboard.md"
+    },
+    {
+      "id": "injector",
+      "path": "框架/angular/injector",
+      "channelPath": "前端",
+      "title": "Injector",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5",
+          "name": "依赖注入",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%B1%82%E7%BA%A7",
+          "name": "层级",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/前端/框架/angular/injector.html",
+      "originPath": "care/前端/框架/angular/injector.md"
+    },
+    {
+      "id": "变化检测",
+      "path": "框架/angular/概念",
+      "channelPath": "前端",
+      "title": "变化检测",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%8F%98%E5%8C%96%E6%A3%80%E6%B5%8B",
+          "name": "变化检测",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/前端/框架/angular/概念/变化检测.html",
+      "originPath": "care/前端/框架/angular/概念/变化检测.md"
+    },
+    {
+      "id": "模板",
+      "path": "框架/angular/概念",
+      "channelPath": "前端",
+      "title": "模板",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%A8%A1%E6%9D%BF",
+          "name": "模板",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "ng-template",
+          "name": "ng-template",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "ng-container",
+          "name": "ng-container",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/前端/框架/angular/概念/模板.html",
+      "originPath": "care/前端/框架/angular/概念/模板.md"
+    },
+    {
+      "id": "编译模式",
+      "path": "框架/angular/概念",
+      "channelPath": "前端",
+      "title": "编译模式",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E7%BC%96%E8%AF%91%E6%A8%A1%E5%BC%8F",
+          "name": "编译模式",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "aot",
+          "name": "AOT",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "jit",
+          "name": "JIT",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/前端/框架/angular/概念/编译模式.html",
+      "originPath": "care/前端/框架/angular/概念/编译模式.md"
+    },
+    {
+      "id": "asd",
+      "path": "asd",
+      "channelPath": "后端",
+      "title": "Asd",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [],
+      "contentPath": "care/后端/asd.html",
+      "originPath": "care/后端/asd.md"
+    },
+    {
+      "id": "1树",
+      "path": "数据结构算法/a/b/1",
+      "channelPath": "基础",
+      "title": "1树",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [],
+      "contentPath": "care/基础/数据结构算法/a/b/1树.html",
+      "originPath": "care/基础/数据结构算法/a/b/1树.md"
+    },
+    {
+      "id": "operate",
+      "path": "源码分析/rxjs/operate",
+      "channelPath": "基础",
+      "title": "Operate",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "of",
+          "name": "of",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "take",
+          "name": "take",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/基础/源码分析/rxjs/operate.html",
+      "originPath": "care/基础/源码分析/rxjs/operate.md"
+    },
+    {
+      "id": "readme",
+      "path": "源码分析/rxjs",
+      "channelPath": "基础",
+      "title": "Readme",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%98%AF%E4%BB%80%E4%B9%88",
+          "name": "是什么",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98",
+          "name": "解决了什么问题",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%89%88%E6%9C%AC",
+          "name": "版本",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%A6%82%E5%BF%B5",
+          "name": "概念",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E8%BF%87%E7%A8%8B",
+          "name": "过程",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E4%BB%A3%E7%A0%81",
+          "name": "代码",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/基础/源码分析/rxjs/readme.html",
+      "originPath": "care/基础/源码分析/rxjs/readme.md"
+    },
+    {
+      "id": "rxjs",
+      "path": "源码分析/rxjs/rxjs",
+      "channelPath": "基础",
+      "title": "Rxjs",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "rxjs",
+          "name": "RxJs",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "observable",
+          "name": "Observable",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "observer",
+          "name": "Observer",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "subscriber",
+          "name": "Subscriber",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "subscription",
+          "name": "Subscription",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "subject",
+          "name": "Subject",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8B%E7%9A%84-subject",
+          "name": "特殊类型的 Subject",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "operators",
+          "name": "Operators",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "scheduler",
+          "name": "Scheduler",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/基础/源码分析/rxjs/rxjs.html",
+      "originPath": "care/基础/源码分析/rxjs/rxjs.md"
+    },
+    {
+      "id": "1泛型",
+      "path": "语言/ts/1",
+      "channelPath": "基础",
+      "title": "1泛型",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E7%B1%BB%E5%9E%8B",
+          "name": "类型",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B",
+          "name": "基础类型",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B",
+          "name": "联合类型",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B",
+          "name": "交叉类型",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%96%AD%E8%A8%80",
+          "name": "断言",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B",
+          "name": "内置类型",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%8F%96%E5%87%BA%E5%AF%B9%E8%B1%A1%E3%80%81%E6%8E%A5%E5%8F%A3%E7%9A%84key",
+          "name": "取出对象、接口的key",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "record",
+          "name": "Record",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "partial",
+          "name": "Partial",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "required",
+          "name": "Required",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "readonly",
+          "name": "Readonly",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "pick",
+          "name": "Pick",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "exclude",
+          "name": "Exclude",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "omit",
+          "name": "Omit",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "extract",
+          "name": "Extract",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "nonnullable",
+          "name": "NonNullable",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%A1%88%E4%BE%8B",
+          "name": "案例",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%B8%A4%E4%B8%AA%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%93%8D%E4%BD%9C",
+          "name": "两个接口的操作",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E4%BA%A4%E9%9B%86",
+          "name": "交集",
+          "level": 4,
+          "type": "h4"
+        },
+        {
+          "id": "%E5%B9%B6%E9%9B%86",
+          "name": "并集",
+          "level": 4,
+          "type": "h4"
+        },
+        {
+          "id": "%E5%B7%AE%E9%9B%86",
+          "name": "差集",
+          "level": 4,
+          "type": "h4"
+        }
+      ],
+      "contentPath": "care/基础/语言/TS/1泛型.html",
+      "originPath": "care/基础/语言/TS/1泛型.md"
+    },
+    {
+      "id": "Observable",
+      "path": "rxjs/observable",
+      "channelPath": "源码",
+      "title": "Observable",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "",
+          "name": "",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/源码/rxjs/Observable.html",
+      "originPath": "care/源码/rxjs/Observable.md"
+    },
+    {
+      "id": "index",
+      "path": "rxjs",
+      "channelPath": "源码",
+      "title": "Index",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "rxjs",
+          "name": "rxjs",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/源码/rxjs/index.html",
+      "originPath": "care/源码/rxjs/index.md"
+    },
+    {
+      "id": "catchError",
+      "path": "rxjs/operator/错误处理/catch-error",
+      "channelPath": "源码",
+      "title": "catchError",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "catcherror",
+          "name": "catchError",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%A4%BA%E4%BE%8B",
+          "name": "示例",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90",
+          "name": "源码分析",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/源码/rxjs/operator/错误处理/catchError.html",
+      "originPath": "care/源码/rxjs/operator/错误处理/catchError.md"
+    },
+    {
+      "id": "retry",
+      "path": "rxjs/operator/错误处理/retry",
+      "channelPath": "源码",
+      "title": "Retry",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "retry",
+          "name": "retry",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%A4%BA%E4%BE%8B",
+          "name": "示例",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90",
+          "name": "源码分析",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/源码/rxjs/operator/错误处理/retry.html",
+      "originPath": "care/源码/rxjs/operator/错误处理/retry.md"
+    },
+    {
+      "id": "retryWhen",
+      "path": "rxjs/operator/错误处理/retry-when",
+      "channelPath": "源码",
+      "title": "retryWhen",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "retrywhen",
+          "name": "retryWhen",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%A4%BA%E4%BE%8B",
+          "name": "示例",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90",
+          "name": "源码分析",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/源码/rxjs/operator/错误处理/retryWhen.html",
+      "originPath": "care/源码/rxjs/operator/错误处理/retryWhen.md"
+    },
+    {
+      "id": "identity",
+      "path": "rxjs/util/identity",
+      "channelPath": "源码",
+      "title": "Identity",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "identity",
+          "name": "identity",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/源码/rxjs/util/identity.html",
+      "originPath": "care/源码/rxjs/util/identity.md"
+    },
+    {
+      "id": "lift",
+      "path": "rxjs/util/lift",
+      "channelPath": "源码",
+      "title": "Lift",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "lift",
+          "name": "lift",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/源码/rxjs/util/lift.html",
+      "originPath": "care/源码/rxjs/util/lift.md"
+    },
+    {
+      "id": "Hook",
+      "path": "tapable/hook",
+      "channelPath": "源码",
+      "title": "Hook",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "hook",
+          "name": "Hook",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/源码/tapable/Hook.html",
+      "originPath": "care/源码/tapable/Hook.md"
+    },
+    {
+      "id": "HookCodeFactory",
+      "path": "tapable/hook-code-factory",
+      "channelPath": "源码",
+      "title": "HookCodeFactory",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "hookcodefactory",
+          "name": "HookCodeFactory",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/源码/tapable/HookCodeFactory.html",
+      "originPath": "care/源码/tapable/HookCodeFactory.md"
+    },
+    {
+      "id": "SyncHook",
+      "path": "tapable/sync-hook",
+      "channelPath": "源码",
+      "title": "SyncHook",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "synchook",
+          "name": "SyncHook",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/源码/tapable/SyncHook.html",
+      "originPath": "care/源码/tapable/SyncHook.md"
+    },
+    {
+      "id": "index",
+      "path": "tapable",
+      "channelPath": "源码",
+      "title": "Index",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "index-js",
+          "name": "index.js",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/源码/tapable/index.html",
+      "originPath": "care/源码/tapable/index.md"
+    },
+    {
+      "id": "index",
+      "path": "监控系统",
+      "channelPath": "监控系统",
+      "title": "Index",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "hertzbeat",
+          "name": "hertzbeat",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "uptime",
+          "name": "uptime",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "clklog",
+          "name": "clklog",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%A5%9E%E7%AD%96%E6%95%B0%E6%8D%AE",
+          "name": "神策数据",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/监控系统/index.html",
+      "originPath": "care/监控系统/index.md"
+    },
+    {
+      "id": "其他",
+      "path": "监控系统",
+      "channelPath": "监控系统",
+      "title": "其他",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%85%8D%E8%B4%B9%E7%9A%84-mysql-%E6%9C%8D%E5%8A%A1%E5%99%A8",
+          "name": "免费的 mysql 服务器",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/监控系统/其他.html",
+      "originPath": "care/监控系统/其他.md"
+    },
+    {
+      "id": "农夫和他的毛驴",
+      "path": "文章",
+      "channelPath": "英语",
+      "title": "农夫和他的毛驴",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "the-farmer-and-the-donkey",
+          "name": "The Farmer and the Donkey",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/英语/文章/农夫和他的毛驴.html",
+      "originPath": "care/英语/文章/农夫和他的毛驴.md"
+    },
+    {
+      "id": "index",
+      "path": "操作系统",
+      "channelPath": "计算机基础",
+      "title": "Index",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F",
+          "name": "操作系统",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E3%80%81%E5%8D%8F%E7%A8%8B",
+          "name": "进程、线程、协程",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E8%BF%9B%E7%A8%8B",
+          "name": "进程",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E7%BA%BF%E7%A8%8B",
+          "name": "线程",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%8D%8F%E7%A8%8B",
+          "name": "协程",
+          "level": 3,
+          "type": "h3"
+        }
+      ],
+      "contentPath": "care/计算机基础/操作系统/index.html",
+      "originPath": "care/计算机基础/操作系统/index.md"
+    },
+    {
+      "id": "test",
+      "path": "操作系统/test",
+      "channelPath": "计算机基础",
+      "title": "Test",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "1",
+          "name": "1",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/操作系统/test.html",
+      "originPath": "care/计算机基础/操作系统/test.md"
+    },
+    {
+      "id": "组成原理",
+      "path": "操作系统",
+      "channelPath": "计算机基础",
+      "title": "组成原理",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86",
+          "name": "组成原理",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/操作系统/组成原理.html",
+      "originPath": "care/计算机基础/操作系统/组成原理.md"
+    },
+    {
+      "id": "编译原理",
+      "path": "操作系统",
+      "channelPath": "计算机基础",
+      "title": "编译原理",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86",
+          "name": "编译原理",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/操作系统/编译原理.html",
+      "originPath": "care/计算机基础/操作系统/编译原理.md"
+    },
+    {
+      "id": "图",
+      "path": "数据结构",
+      "channelPath": "计算机基础",
+      "title": "图",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%9B%BE",
+          "name": "图",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/图.html",
+      "originPath": "care/计算机基础/数据结构/图.md"
+    },
+    {
+      "id": "散列表",
+      "path": "数据结构",
+      "channelPath": "计算机基础",
+      "title": "散列表",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%95%A3%E5%88%97%E8%A1%A8",
+          "name": "散列表",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/散列表.html",
+      "originPath": "care/计算机基础/数据结构/散列表.md"
+    },
+    {
+      "id": "数据结构",
+      "path": "数据结构",
+      "channelPath": "计算机基础",
+      "title": "数据结构",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95",
+          "name": "数据结构与算法",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%A4%8D%E6%9D%82%E5%BA%A6",
+          "name": "复杂度",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6",
+          "name": "时间复杂度",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6",
+          "name": "空间复杂度",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%95%B0%E6%8D%AE",
+          "name": "数据",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%A0%86",
+          "name": "堆",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%A0%88",
+          "name": "栈",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E9%98%9F%E5%88%97",
+          "name": "队列",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E9%93%BE%E8%A1%A8",
+          "name": "链表",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%A0%91",
+          "name": "树",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%95%A3%E5%88%97%E8%A1%A8",
+          "name": "散列表",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%9B%BE",
+          "name": "图",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%88%86%E7%B1%BB",
+          "name": "分类",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%9B%BE%E7%9A%84%E4%B8%80%E4%BA%9B%E5%90%8D%E7%A7%B0",
+          "name": "图的一些名称",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%82%A8%E5%AD%98",
+          "name": "储存",
+          "level": 3,
+          "type": "h3"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/数据结构.html",
+      "originPath": "care/计算机基础/数据结构/数据结构.md"
+    },
+    {
+      "id": "二叉树",
+      "path": "数据结构/树",
+      "channelPath": "计算机基础",
+      "title": "二叉树",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E4%BA%8C%E5%8F%89%E6%A0%91",
+          "name": "二叉树",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%B1%BB%E5%9E%8B",
+          "name": "类型",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BD%9C%E7%94%A8",
+          "name": "作用",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/树/二叉树.html",
+      "originPath": "care/计算机基础/数据结构/树/二叉树.md"
+    },
+    {
+      "id": "树",
+      "path": "数据结构/树",
+      "channelPath": "计算机基础",
+      "title": "树",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%A0%91",
+          "name": "树",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/树/树.html",
+      "originPath": "care/计算机基础/数据结构/树/树.md"
+    },
+    {
+      "id": "概念",
+      "path": "数据结构/树",
+      "channelPath": "计算机基础",
+      "title": "概念",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%A6%82%E5%BF%B5",
+          "name": "概念",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%94%A8%E4%BB%80%E4%B9%88%E7%BB%93%E6%9E%84%E8%A1%A8%E7%A4%BA%E6%A0%91",
+          "name": "用什么结构表示树",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/树/概念.html",
+      "originPath": "care/计算机基础/数据结构/树/概念.md"
+    },
+    {
+      "id": "概念",
+      "path": "数据结构",
+      "channelPath": "计算机基础",
+      "title": "概念",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%A6%82%E5%BF%B5",
+          "name": "概念",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%B1%BB%E5%9E%8B",
+          "name": "类型",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/概念.html",
+      "originPath": "care/计算机基础/数据结构/概念.md"
+    },
+    {
+      "id": "index",
+      "path": "数据结构/线性",
+      "channelPath": "计算机基础",
+      "title": "Index",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E7%AE%97%E6%B3%95",
+          "name": "算法",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE",
+          "name": "二分查找",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/线性/index.html",
+      "originPath": "care/计算机基础/数据结构/线性/index.md"
+    },
+    {
+      "id": "堆",
+      "path": "数据结构/线性",
+      "channelPath": "计算机基础",
+      "title": "堆",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%A0%86",
+          "name": "堆",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/线性/堆.html",
+      "originPath": "care/计算机基础/数据结构/线性/堆.md"
+    },
+    {
+      "id": "散列表",
+      "path": "数据结构/线性",
+      "channelPath": "计算机基础",
+      "title": "散列表",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%95%A3%E5%88%97%E8%A1%A8",
+          "name": "散列表",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0",
+          "name": "哈希函数",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/线性/散列表.html",
+      "originPath": "care/计算机基础/数据结构/线性/散列表.md"
+    },
+    {
+      "id": "数组",
+      "path": "数据结构/线性",
+      "channelPath": "计算机基础",
+      "title": "数组",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%95%B0%E7%BB%84",
+          "name": "数组",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%8F%8F%E8%BF%B0",
+          "name": "描述",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BC%98%E7%BC%BA%E7%82%B9",
+          "name": "优缺点",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BC%98%E7%82%B9",
+          "name": "优点",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E7%BC%BA%E7%82%B9",
+          "name": "缺点",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C",
+          "name": "基本操作",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/线性/数组.html",
+      "originPath": "care/计算机基础/数据结构/线性/数组.md"
+    },
+    {
+      "id": "栈",
+      "path": "数据结构/线性",
+      "channelPath": "计算机基础",
+      "title": "栈",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%A0%88(stack)",
+          "name": "栈(Stack)",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%A6%82%E5%BF%B5",
+          "name": "概念",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%BA%94%E7%94%A8",
+          "name": "应用",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/线性/栈.html",
+      "originPath": "care/计算机基础/数据结构/线性/栈.md"
+    },
+    {
+      "id": "链表",
+      "path": "数据结构/线性",
+      "channelPath": "计算机基础",
+      "title": "链表",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%93%BE%E8%A1%A8",
+          "name": "链表",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%A7%8D%E7%B1%BB",
+          "name": "种类",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BC%98%E7%BC%BA%E7%82%B9",
+          "name": "优缺点",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%AE%9E%E7%8E%B0",
+          "name": "实现",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%9C%89%E5%A4%B4%E5%8D%95%E5%90%91%E4%B8%8D%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8",
+          "name": "有头单向不循环链表",
+          "level": 3,
+          "type": "h3"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/线性/链表.html",
+      "originPath": "care/计算机基础/数据结构/线性/链表.md"
+    },
+    {
+      "id": "队列",
+      "path": "数据结构/线性",
+      "channelPath": "计算机基础",
+      "title": "队列",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%98%9F%E5%88%97(queue)",
+          "name": "队列(Queue)",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%A6%82%E5%BF%B5",
+          "name": "概念",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%A7%8D%E7%B1%BB",
+          "name": "种类",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/数据结构/线性/队列.html",
+      "originPath": "care/计算机基础/数据结构/线性/队列.md"
+    },
+    {
+      "id": "排序",
+      "path": "算法",
+      "channelPath": "计算机基础",
+      "title": "排序",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [],
+      "contentPath": "care/计算机基础/算法/排序.html",
+      "originPath": "care/计算机基础/算法/排序.md"
+    },
+    {
+      "id": "概念",
+      "path": "算法",
+      "channelPath": "计算机基础",
+      "title": "概念",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%A6%82%E5%BF%B5",
+          "name": "概念",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6",
+          "name": "时间复杂度",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6",
+          "name": "空间复杂度",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/算法/概念.html",
+      "originPath": "care/计算机基础/算法/概念.md"
+    },
+    {
+      "id": "题目",
+      "path": "算法",
+      "channelPath": "计算机基础",
+      "title": "题目",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%A2%98%E7%9B%AE",
+          "name": "题目",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%88%AC%E6%A2%AF%E5%AD%90",
+          "name": "爬梯子",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/算法/题目.html",
+      "originPath": "care/计算机基础/算法/题目.md"
+    },
+    {
+      "id": "0、前言",
+      "path": "编码规范/0",
+      "channelPath": "计算机基础",
+      "title": "0、前言",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%89%8D%E8%A8%80",
+          "name": "前言",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/0、前言.html",
+      "originPath": "care/计算机基础/编码规范/0、前言.md"
+    },
+    {
+      "id": "1、有意义的命名",
+      "path": "编码规范/1",
+      "channelPath": "计算机基础",
+      "title": "1、有意义的命名",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E5%91%BD%E5%90%8D",
+          "name": "有意义的命名",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E8%A7%84%E5%88%99",
+          "name": "规则",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%82%A3%E4%BA%9B%E9%9C%80%E8%A6%81%E5%91%BD%E5%90%8D",
+          "name": "那些需要命名",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/1、有意义的命名.html",
+      "originPath": "care/计算机基础/编码规范/1、有意义的命名.md"
+    },
+    {
+      "id": "2、函数",
+      "path": "编码规范/2",
+      "channelPath": "计算机基础",
+      "title": "2、函数",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%87%BD%E6%95%B0",
+          "name": "函数",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%91%BD%E5%90%8D",
+          "name": "命名",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%8F%82%E6%95%B0",
+          "name": "参数",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BD%9C%E7%94%A8",
+          "name": "作用",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%86%85%E5%AE%B9",
+          "name": "内容",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%87%8D%E5%A4%8D",
+          "name": "重复",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%A6%82%E4%BD%95%E5%86%99%E5%87%BA%E8%BF%99%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0",
+          "name": "如何写出这样的函数",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/2、函数.html",
+      "originPath": "care/计算机基础/编码规范/2、函数.md"
+    },
+    {
+      "id": "3、注释",
+      "path": "编码规范/3",
+      "channelPath": "计算机基础",
+      "title": "3、注释",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%B3%A8%E9%87%8A",
+          "name": "注释",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%90%86%E6%83%B3",
+          "name": "理想",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98",
+          "name": "存在的问题",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%8E%B0%E5%AE%9E",
+          "name": "现实",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%A5%BD%E6%B3%A8%E9%87%8A",
+          "name": "好注释",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%B3%A8%E9%87%8A%E7%9A%84%E7%B1%BB%E5%9E%8B",
+          "name": "注释的类型",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%9D%8F%E6%B3%A8%E9%87%8A",
+          "name": "坏注释",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/3、注释.html",
+      "originPath": "care/计算机基础/编码规范/3、注释.md"
+    },
+    {
+      "id": "codeReview",
+      "path": "编码规范/code-review",
+      "channelPath": "计算机基础",
+      "title": "codeReview",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "code-review",
+          "name": "Code Review",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E4%BD%9C%E7%94%A8",
+          "name": "作用",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%A6%82%E4%BD%95%E5%81%9A",
+          "name": "如何做",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E8%AF%84%E5%AE%A1%E4%BB%80%E4%B9%88",
+          "name": "评审什么",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E8%AF%84%E5%AE%A1%E6%97%B6%E9%97%B4",
+          "name": "评审时间",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9",
+          "name": "注意事项",
+          "level": 3,
+          "type": "h3"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/codeReview.html",
+      "originPath": "care/计算机基础/编码规范/codeReview.md"
+    },
+    {
+      "id": "index",
+      "path": "编码规范",
+      "channelPath": "计算机基础",
+      "title": "Index",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83",
+          "name": "代码规范",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/index.html",
+      "originPath": "care/计算机基础/编码规范/index.md"
+    },
+    {
+      "id": "temp",
+      "path": "编码规范/temp",
+      "channelPath": "计算机基础",
+      "title": "Temp",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "temp",
+          "name": "temp",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/temp.html",
+      "originPath": "care/计算机基础/编码规范/temp.md"
+    },
+    {
+      "id": "Prettier",
+      "path": "编码规范/代码风格&格式化/prettier",
+      "channelPath": "计算机基础",
+      "title": "Prettier",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "prettier",
+          "name": "Prettier",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F",
+          "name": "使用方式",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6",
+          "name": "配置文件",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%94%AF%E6%8C%81%E7%9A%84%E7%B1%BB%E5%9E%8B",
+          "name": "支持的类型",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6",
+          "name": "忽略文件",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "cli%E5%91%BD%E4%BB%A4",
+          "name": "cli命令",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%85%8D%E7%BD%AE%E9%A1%B9",
+          "name": "配置项",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/代码风格&格式化/Prettier.html",
+      "originPath": "care/计算机基础/编码规范/代码风格&格式化/Prettier.md"
+    },
+    {
+      "id": "好的代码",
+      "path": "编码规范",
+      "channelPath": "计算机基础",
+      "title": "好的代码",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%A5%BD%E7%9A%84%E4%BB%A3%E7%A0%81",
+          "name": "好的代码",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%BC%96%E7%A0%81%E7%9B%B8%E5%85%B3",
+          "name": "编码相关",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E5%91%BD%E5%90%8D",
+          "name": "有意义的命名",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%87%BD%E6%95%B0",
+          "name": "函数",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%B3%A8%E9%87%8A",
+          "name": "注释",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%A0%BC%E5%BC%8F",
+          "name": "格式",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E9%80%BB%E8%BE%91%E7%9B%B8%E5%85%B3%E7%9A%84",
+          "name": "逻辑相关的",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%B1%BB%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84",
+          "name": "类、对象和数据结构",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E3%80%81",
+          "name": "错误处理、",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95",
+          "name": "单元测试",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E8%BF%AD%E4%BB%A3",
+          "name": "迭代",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/好的代码.html",
+      "originPath": "care/计算机基础/编码规范/好的代码.md"
+    },
+    {
+      "id": "项目结构组织",
+      "path": "编码规范",
+      "channelPath": "计算机基础",
+      "title": "项目结构组织",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E7%BB%84%E7%BB%87",
+          "name": "项目结构组织",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编码规范/项目结构组织.html",
+      "originPath": "care/计算机基础/编码规范/项目结构组织.md"
+    },
+    {
+      "id": "函数式",
+      "path": "编程思想/声明式/函数式",
+      "channelPath": "计算机基础",
+      "title": "函数式",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%87%BD%E6%95%B0%E5%BC%8F",
+          "name": "函数式",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%87%BD%E6%95%B0%E6%98%AF%E4%B8%80%E7%AD%89%E5%85%AC%E6%B0%91",
+          "name": "函数是一等公民",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%BA%AF%E5%87%BD%E6%95%B0",
+          "name": "纯函数",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0",
+          "name": "数学函数",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E8%BF%BD%E6%B1%82%E2%80%9C%E7%BA%AF%E2%80%9D%E7%9A%84%E7%90%86%E7%94%B1",
+          "name": "追求“纯”的理由",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%89%AF%E4%BD%9C%E7%94%A8",
+          "name": "副作用",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%BC%95%E7%94%A8%E9%80%8F%E6%98%8E",
+          "name": "引用透明",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%95%B0%E6%8D%AE%E4%B8%8D%E5%8F%AF%E5%8F%98",
+          "name": "数据不可变",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%9F%AF%E9%87%8C%E5%8C%96(curry)",
+          "name": "柯里化(curry)",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%BB%84%E5%90%88",
+          "name": "组合",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/声明式/函数式/函数式.html",
+      "originPath": "care/计算机基础/编程思想/声明式/函数式/函数式.md"
+    },
+    {
+      "id": "函数组合",
+      "path": "编程思想/声明式/函数式",
+      "channelPath": "计算机基础",
+      "title": "函数组合",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%87%BD%E6%95%B0%E7%BB%84%E5%90%88",
+          "name": "函数组合",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%BB%93%E5%90%88%E5%BE%8B",
+          "name": "结合律",
+          "level": 3,
+          "type": "h3"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/声明式/函数式/函数组合.html",
+      "originPath": "care/计算机基础/编程思想/声明式/函数式/函数组合.md"
+    },
+    {
+      "id": "柯里化",
+      "path": "编程思想/声明式/函数式",
+      "channelPath": "计算机基础",
+      "title": "柯里化",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%9F%AF%E9%87%8C%E5%8C%96",
+          "name": "柯里化",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "curry%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90",
+          "name": "curry源码解析",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/声明式/函数式/柯里化.html",
+      "originPath": "care/计算机基础/编程思想/声明式/函数式/柯里化.md"
+    },
+    {
+      "id": "纯函数",
+      "path": "编程思想/声明式/函数式",
+      "channelPath": "计算机基础",
+      "title": "纯函数",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [],
+      "contentPath": "care/计算机基础/编程思想/声明式/函数式/纯函数.html",
+      "originPath": "care/计算机基础/编程思想/声明式/函数式/纯函数.md"
+    },
+    {
+      "id": "约束式",
+      "path": "编程思想/声明式",
+      "channelPath": "计算机基础",
+      "title": "约束式",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E7%BA%A6%E6%9D%9F%E5%BC%8F",
+          "name": "约束式",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/声明式/约束式.html",
+      "originPath": "care/计算机基础/编程思想/声明式/约束式.md"
+    },
+    {
+      "id": "逻辑式编程",
+      "path": "编程思想/声明式",
+      "channelPath": "计算机基础",
+      "title": "逻辑式编程",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%80%BB%E8%BE%91%E5%BC%8F%E7%BC%96%E7%A8%8B",
+          "name": "逻辑式编程",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/声明式/逻辑式编程.html",
+      "originPath": "care/计算机基础/编程思想/声明式/逻辑式编程.md"
+    },
+    {
+      "id": "领域专属语言",
+      "path": "编程思想/声明式",
+      "channelPath": "计算机基础",
+      "title": "领域专属语言",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%A2%86%E5%9F%9F%E4%B8%93%E5%B1%9E%E8%AF%AD%E8%A8%80",
+          "name": "领域专属语言",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/声明式/领域专属语言.html",
+      "originPath": "care/计算机基础/编程思想/声明式/领域专属语言.md"
+    },
+    {
+      "id": "软件设计",
+      "path": "编程思想",
+      "channelPath": "计算机基础",
+      "title": "软件设计",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1",
+          "name": "软件设计",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%BC%95%E8%A8%80",
+          "name": "引言",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%A4%8D%E6%9D%82%E5%BA%A6",
+          "name": "复杂度",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%88%86%E5%B1%82",
+          "name": "分层",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%A8%A1%E5%9D%97%E5%8C%96",
+          "name": "模块化",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/软件设计.html",
+      "originPath": "care/计算机基础/编程思想/软件设计.md"
+    },
+    {
+      "id": "面向切面(AOP)",
+      "path": "编程思想/aop",
+      "channelPath": "计算机基础",
+      "title": "面向切面(AOP)",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "aop",
+          "name": "AOP",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/面向切面(AOP).html",
+      "originPath": "care/计算机基础/编程思想/面向切面(AOP).md"
+    },
+    {
+      "id": "多态",
+      "path": "编程思想/面向对象",
+      "channelPath": "计算机基础",
+      "title": "多态",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [],
+      "contentPath": "care/计算机基础/编程思想/面向对象/多态.html",
+      "originPath": "care/计算机基础/编程思想/面向对象/多态.md"
+    },
+    {
+      "id": "对象",
+      "path": "编程思想/面向对象",
+      "channelPath": "计算机基础",
+      "title": "对象",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%AF%B9%E8%B1%A1",
+          "name": "对象",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%8C%85%E8%A3%85%E5%AF%B9%E8%B1%A1",
+          "name": "包装对象",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/面向对象/对象.html",
+      "originPath": "care/计算机基础/编程思想/面向对象/对象.md"
+    },
+    {
+      "id": "接口",
+      "path": "编程思想/面向对象",
+      "channelPath": "计算机基础",
+      "title": "接口",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%8E%A5%E5%8F%A3",
+          "name": "接口",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/面向对象/接口.html",
+      "originPath": "care/计算机基础/编程思想/面向对象/接口.md"
+    },
+    {
+      "id": "类",
+      "path": "编程思想/面向对象",
+      "channelPath": "计算机基础",
+      "title": "类",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E7%B1%BB",
+          "name": "类",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%B1%9E%E6%80%A7",
+          "name": "属性",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%96%B9%E6%B3%95",
+          "name": "方法",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BF%AE%E9%A5%B0%E7%AC%A6",
+          "name": "修饰符",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6",
+          "name": "访问控制",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%A7%81%E6%9C%89%E6%95%B0%E6%8D%AE",
+          "name": "私有数据",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%B0%81%E8%A3%85",
+          "name": "封装",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%95%B0%E6%8D%AE%E9%9A%90%E8%97%8F",
+          "name": "数据隐藏",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%8E%A5%E5%8F%A3",
+          "name": "接口",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%BB%A7%E6%89%BF(is-a)",
+          "name": "继承(is-a)",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E8%B6%85%E7%B1%BB",
+          "name": "超类",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%AD%90%E7%B1%BB",
+          "name": "子类",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%8D%95%E7%BB%A7%E6%89%BF",
+          "name": "单继承",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%A4%9A%E7%BB%A7%E6%89%BF",
+          "name": "多继承",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%8A%BD%E8%B1%A1%E7%B1%BB",
+          "name": "抽象类",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%A4%9A%E6%80%81",
+          "name": "多态",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%87%8D%E8%BD%BD",
+          "name": "重载",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E7%BB%84%E5%90%88(has-a)",
+          "name": "组合(has-a)",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/面向对象/类.html",
+      "originPath": "care/计算机基础/编程思想/面向对象/类.md"
+    },
+    {
+      "id": "类图",
+      "path": "编程思想/面向对象",
+      "channelPath": "计算机基础",
+      "title": "类图",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E7%B1%BB%E5%9B%BE",
+          "name": "类图",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/面向对象/类图.html",
+      "originPath": "care/计算机基础/编程思想/面向对象/类图.md"
+    },
+    {
+      "id": "面向对象(OOP)",
+      "path": "编程思想/oop",
+      "channelPath": "计算机基础",
+      "title": "面向对象(OOP)",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1(oop)",
+          "name": "面向对象(OOP)",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%B1%BB",
+          "name": "类",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%AF%B9%E8%B1%A1",
+          "name": "对象",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/面向对象(OOP).html",
+      "originPath": "care/计算机基础/编程思想/面向对象(OOP).md"
+    },
+    {
+      "id": "面向过程",
+      "path": "编程思想",
+      "channelPath": "计算机基础",
+      "title": "面向过程",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B",
+          "name": "面向过程",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/编程思想/面向过程.html",
+      "originPath": "care/计算机基础/编程思想/面向过程.md"
+    },
+    {
+      "id": "http",
+      "path": "计算机网络/http/http",
+      "channelPath": "计算机基础",
+      "title": "Http",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "http",
+          "name": "HTTP",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E4%B8%8E-http-%E5%8D%8F%E4%BD%9C%E7%9A%84-web-%E6%9C%8D%E5%8A%A1%E5%99%A8",
+          "name": "与 HTTP 协作的 Web 服务器",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "http-%E7%9A%84%E5%87%A0%E7%A7%8D%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F",
+          "name": "HTTP 的几种请求方式",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%8A%B6%E6%80%81%E5%90%97",
+          "name": "状态吗",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BF%A1%E6%81%AF%E7%B1%BB%E7%8A%B6%E6%80%81%E7%A0%81-1xx",
+          "name": "信息类状态码 1XX",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%88%90%E5%8A%9F%E7%8A%B6%E6%80%81%E7%A0%81-2xx",
+          "name": "成功状态码 2XX",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E9%87%8D%E5%AE%9A%E5%90%91%E7%8A%B6%E6%80%81%E7%A0%81-3xx",
+          "name": "重定向状态码 3XX",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%94%99%E8%AF%AF%E7%8A%B6%E6%80%81%E7%A0%81,%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E5%A4%84%E7%90%86%E8%AF%B7%E6%B1%82-4xx",
+          "name": "客户端错误状态码,服务器无法处理请求 4XX",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%94%99%E8%AF%AF%E7%8A%B6%E6%80%81%E7%A0%81,%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AF%B7%E6%B1%82%E5%87%BA%E9%94%99-5xx",
+          "name": "服务端错误状态码,服务器请求出错 5XX",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E9%A6%96%E9%83%A8",
+          "name": "首部",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E8%AF%B7%E6%B1%82%E5%A4%B4",
+          "name": "请求头",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%93%8D%E5%BA%94%E5%A4%B4(:%E5%90%8E%E9%9D%A2%E6%98%AF%E4%BE%8B%E5%AD%90)",
+          "name": "响应头(:后面是例子)",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%9E%84%E6%88%90",
+          "name": "应用层协议的构成",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "http1-0-/-http1-1-/-http2-0-%E5%8D%87%E7%BA%A7%E4%BA%86%E4%BB%80%E4%B9%88",
+          "name": "HTTP1.0 / HTTP1.1 / HTTP2.0 升级了什么",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BB%A3%E7%90%86",
+          "name": "代理",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%BD%91%E5%85%B3",
+          "name": "网关",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%85%B6%E4%BB%96",
+          "name": "其他",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "http-%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC",
+          "name": "http 的各个版本",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/计算机网络/HTTP/http.html",
+      "originPath": "care/计算机基础/计算机网络/HTTP/http.md"
+    },
+    {
+      "id": "复杂度2",
+      "path": "软件工程/2",
+      "channelPath": "计算机基础",
+      "title": "复杂度2",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%A4%8D%E6%9D%82%E5%BA%A6",
+          "name": "复杂度",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E4%B9%A6%E7%B1%8D",
+          "name": "书籍",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%AC%AC%E4%B8%80%E7%AB%A0",
+          "name": "第一章",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/软件工程/复杂度2.html",
+      "originPath": "care/计算机基础/软件工程/复杂度2.md"
+    },
+    {
+      "id": "temp",
+      "path": "软件工程/复杂性/temp",
+      "channelPath": "计算机基础",
+      "title": "Temp",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [],
+      "contentPath": "care/计算机基础/软件工程/复杂性/temp.html",
+      "originPath": "care/计算机基础/软件工程/复杂性/temp.md"
+    },
+    {
+      "id": "什么是复杂性",
+      "path": "软件工程/复杂性",
+      "channelPath": "计算机基础",
+      "title": "什么是复杂性",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%A4%8D%E6%9D%82%E5%BA%A6",
+          "name": "复杂度",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%A4%8D%E6%9D%82%E6%80%A7",
+          "name": "如何定义复杂性",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E8%A1%A8%E7%8E%B0",
+          "name": "复杂性的表现",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E6%88%90%E5%9B%A0",
+          "name": "复杂性的成因",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%80%BB%E7%BB%93",
+          "name": "总结",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%A6%82%E4%BD%95%E5%87%8F%E4%BD%8E%E5%A4%8D%E6%9D%82%E6%80%A7",
+          "name": "如何减低复杂性",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/软件工程/复杂性/什么是复杂性.html",
+      "originPath": "care/计算机基础/软件工程/复杂性/什么是复杂性.md"
+    },
+    {
+      "id": "减低复杂性-模块设计",
+      "path": "软件工程/复杂性",
+      "channelPath": "计算机基础",
+      "title": "减低复杂性 模块设计",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1",
+          "name": "模块设计",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F",
+          "name": "模块化的表现形式",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%A8%A1%E5%9D%97%E5%BA%94%E8%AF%A5%E6%98%AF%E6%B7%B1%E7%9A%84",
+          "name": "模块应该是深的",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BF%A1%E6%81%AF%E7%9A%84%E9%9A%90%E8%97%8F",
+          "name": "信息的隐藏",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%8A%BD%E8%B1%A1",
+          "name": "抽象",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "care/计算机基础/软件工程/复杂性/减低复杂性-模块设计.html",
+      "originPath": "care/计算机基础/软件工程/复杂性/减低复杂性-模块设计.md"
+    },
+    {
+      "id": "工作代码和程序设计之间的关系",
+      "path": "软件工程/复杂性",
+      "channelPath": "计算机基础",
+      "title": "工作代码和程序设计之间的关系",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%B7%A5%E4%BD%9C%E4%BB%A3%E7%A0%81%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB",
+          "name": "工作代码和程序设计之间的关系",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/软件工程/复杂性/工作代码和程序设计之间的关系.html",
+      "originPath": "care/计算机基础/软件工程/复杂性/工作代码和程序设计之间的关系.md"
+    },
+    {
+      "id": "目录",
+      "path": "软件工程/复杂性",
+      "channelPath": "计算机基础",
+      "title": "目录",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%A4%8D%E6%9D%82%E6%80%A7",
+          "name": "复杂性",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "care/计算机基础/软件工程/复杂性/目录.html",
+      "originPath": "care/计算机基础/软件工程/复杂性/目录.md"
+    },
+    {
+      "id": "docker",
+      "path": "docker",
+      "channelPath": "部署",
+      "title": "Docker",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [],
+      "contentPath": "care/部署/docker.html",
+      "originPath": "care/部署/docker.md"
+    }
+  ],
+  "homeMeta": {
+    "hero": {
+      "title": "care's blog",
+      "description": "the meaning of my existence"
+    },
+    "contentPath": "care/index.html"
+  }
+}

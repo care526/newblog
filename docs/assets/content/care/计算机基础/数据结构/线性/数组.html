@@ -1,0 +1,57 @@
+
+        <h1 id="%E6%95%B0%E7%BB%84" class="docs-header-link">
+          <span header-link="%E6%95%B0%E7%BB%84"></span>
+          数组
+        </h1>
+      <p>有限个相同类型的变量所组成的有序集合，数组中 的每一个变量被称为元素  </p>
+
+        <h2 id="%E6%8F%8F%E8%BF%B0" class="docs-header-link">
+          <span header-link="%E6%8F%8F%E8%BF%B0"></span>
+          描述
+        </h2>
+      <ul>
+<li>元素在内存在顺序存储  </li>
+<li>每个元素都有自己的下标，从0开始</li>
+</ul>
+
+        <h2 id="%E4%BC%98%E7%BC%BA%E7%82%B9" class="docs-header-link">
+          <span header-link="%E4%BC%98%E7%BC%BA%E7%82%B9"></span>
+          优缺点
+        </h2>
+      <p>适合读操作多，写操作少的场景  </p>
+
+        <h3 id="%E4%BC%98%E7%82%B9" class="docs-header-link">
+          <span header-link="%E4%BC%98%E7%82%B9"></span>
+          优点
+        </h3>
+      <ul>
+<li>高效的随机访问能力</li>
+</ul>
+
+        <h3 id="%E7%BC%BA%E7%82%B9" class="docs-header-link">
+          <span header-link="%E7%BC%BA%E7%82%B9"></span>
+          缺点
+        </h3>
+      <ul>
+<li>插入和删除方面<br>因为元素连续紧密的储存在内存中<br>所以插入和删除都会导致大量的元素被迫移动，效率低</li>
+</ul>
+
+        <h2 id="%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C" class="docs-header-link">
+          <span header-link="%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"></span>
+          基本操作
+        </h2>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> list<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span></div></code></pre>
+<ul>
+<li>读取<pre class="language-ts"><code class="language-ts"><div>list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span></div></code></pre>
+</li>
+<li>更新<pre class="language-ts"><code class="language-ts"><div>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></div></code></pre>
+</li>
+<li>插入<ul>
+<li>首部插入</li>
+<li>中间插入</li>
+<li>尾部插入</li>
+<li>超范围插入</li>
+</ul>
+</li>
+<li>删除元素</li>
+</ul>
