@@ -1,0 +1,60 @@
+
+        <h1 id="index-js" class="docs-header-link">
+          <span header-link="index-js"></span>
+          index.js
+        </h1>
+      <pre class="language-js"><code class="language-js"><div><span class="token comment" spellcheck="true">// 同步/异步分类</span>
+<span class="token comment" spellcheck="true">// - 同步</span>
+<span class="token comment" spellcheck="true">// - 异步</span>
+<span class="token comment" spellcheck="true">//  - 异步串行</span>
+<span class="token comment" spellcheck="true">//  - 异步并行</span>
+
+<span class="token comment" spellcheck="true">// 执行机制分类</span>
+<span class="token comment" spellcheck="true">// - Basic Hook : 基本类型的钩子</span>
+<span class="token comment" spellcheck="true">// 它仅仅执行钩子注册的事件，并不关心每个被调用的事件函数返回值如何。</span>
+<span class="token comment" spellcheck="true">// - Waterfall : 瀑布类型的钩子</span>
+<span class="token comment" spellcheck="true">// 瀑布类型的钩子和基本类型的钩子基本类似，唯一不同的是瀑布类型的钩子会在注册的事件执行时将事件函数执行非 undefined 的返回值传递给接下来的事件函数作为参数。</span>
+<span class="token comment" spellcheck="true">// - Bail : 保险类型钩子</span>
+<span class="token comment" spellcheck="true">// 保险类型钩子在基础类型钩子上增加了一种保险机制，如果任意一个注册函数执行返回非 undefined 的值，那么整个钩子执行过程会立即中断，之后注册事件函数就不会被调用了。</span>
+<span class="token comment" spellcheck="true">// - Loop : 循环类型钩子</span>
+<span class="token comment" spellcheck="true">// 循环类型钩子通过 call 调用时，如果任意一个注册的事件函数返回值非 undefeind ,那么会立即重头开始重新执行所有的注册事件函数，直到所有被注册的事件函数都返回 undefined。</span>
+
+exports<span class="token punctuation">.</span>__esModule <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 同步钩子</span>
+exports<span class="token punctuation">.</span>SyncHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./SyncHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 同步保险钩子</span>
+exports<span class="token punctuation">.</span>SyncBailHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./SyncBailHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 同步瀑布钩子</span>
+exports<span class="token punctuation">.</span>SyncWaterfallHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./SyncWaterfallHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 同步循环钩子</span>
+exports<span class="token punctuation">.</span>SyncLoopHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./SyncLoopHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">// 异步并行钩子</span>
+exports<span class="token punctuation">.</span>AsyncParallelHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./AsyncParallelHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 异步并行保险钩子</span>
+exports<span class="token punctuation">.</span>AsyncParallelBailHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./AsyncParallelBailHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">// 异步串行钩子</span>
+exports<span class="token punctuation">.</span>AsyncSeriesHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./AsyncSeriesHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 异步串行保险钩子</span>
+exports<span class="token punctuation">.</span>AsyncSeriesBailHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./AsyncSeriesBailHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 异步串行瀑布钩子</span>
+exports<span class="token punctuation">.</span>AsyncSeriesWaterfallHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./AsyncSeriesWaterfallHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 异步串行循环钩子</span>
+exports<span class="token punctuation">.</span>AsyncSeriesLoopHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./AsyncSeriesLoopHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//</span>
+exports<span class="token punctuation">.</span>HookMap <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./HookMap"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//</span>
+exports<span class="token punctuation">.</span>MultiHook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./MultiHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></div></code></pre>

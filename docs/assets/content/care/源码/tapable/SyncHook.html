@@ -1,0 +1,47 @@
+
+        <h1 id="synchook" class="docs-header-link">
+          <span header-link="synchook"></span>
+          SyncHook
+        </h1>
+      <pre class="language-js"><code class="language-js"><div><span class="token keyword">const</span> Hook <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./Hook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> HookCodeFactory <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./HookCodeFactory"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SyncHookCodeFactory</span> <span class="token keyword">extends</span> <span class="token class-name">HookCodeFactory</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 设置 编译过程中的 钩子处理事件</span>
+  <span class="token function">content</span><span class="token punctuation">(</span><span class="token punctuation">{</span> onError<span class="token punctuation">,</span> onDone<span class="token punctuation">,</span> rethrowIfPossible <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callTapsSeries</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      onError<span class="token punctuation">:</span> <span class="token punctuation">(</span>i<span class="token punctuation">,</span> err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">onError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      onDone<span class="token punctuation">,</span>
+      rethrowIfPossible<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> factory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SyncHookCodeFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 同步钩子 不支持非同步的订阅</span>
+<span class="token keyword">const</span> TAP_ASYNC <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"tapAsync is not supported on a SyncHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> TAP_PROMISE <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"tapPromise is not supported on a SyncHook"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> COMPILE <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 设置 _x</span>
+  factory<span class="token punctuation">.</span><span class="token function">setup</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> factory<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">SyncHook</span><span class="token punctuation">(</span>args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> name <span class="token operator">=</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> hook <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Hook</span><span class="token punctuation">(</span>args<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  hook<span class="token punctuation">.</span>constructor <span class="token operator">=</span> SyncHook<span class="token punctuation">;</span>
+  hook<span class="token punctuation">.</span>tapAsync <span class="token operator">=</span> TAP_ASYNC<span class="token punctuation">;</span>
+  hook<span class="token punctuation">.</span>tapPromise <span class="token operator">=</span> TAP_PROMISE<span class="token punctuation">;</span>
+  hook<span class="token punctuation">.</span>compile <span class="token operator">=</span> COMPILE<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> hook<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+SyncHook<span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> SyncHook<span class="token punctuation">;</span></div></code></pre>

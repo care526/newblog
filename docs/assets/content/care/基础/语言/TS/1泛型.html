@@ -1,0 +1,264 @@
+
+        <h1 id="%E7%B1%BB%E5%9E%8B" class="docs-header-link">
+          <span header-link="%E7%B1%BB%E5%9E%8B"></span>
+          类型
+        </h1>
+      
+        <h2 id="%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B" class="docs-header-link">
+          <span header-link="%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B"></span>
+          基础类型
+        </h2>
+      <ul>
+<li>boolean
+  布尔</li>
+<li>number
+  数值</li>
+<li>string
+  字符串</li>
+<li>xxx[] Array<xxx>
+  数组</li>
+<li>[xxx, xxx]
+  元组</li>
+<li>enum
+  枚举</li>
+<li>any</li>
+<li>void</li>
+<li>undefined / null</li>
+<li>never</li>
+<li>object</li>
+</ul>
+
+        <h2 id="%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B" class="docs-header-link">
+          <span header-link="%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B"></span>
+          联合类型
+        </h2>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">interface</span> <span class="token class-name">Bird</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  <span class="token function">fly</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  <span class="token function">talk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+type BirdPerson  <span class="token operator">=</span> Bird <span class="token operator">&amp;</span> Person<span class="token punctuation">;</span>
+<span class="token keyword">const</span> birdPerson<span class="token punctuation">:</span> BirdPerson <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">"zhufeng"</span><span class="token punctuation">,</span> <span class="token function">fly</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token function">talk</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></div></code></pre>
+
+        <h2 id="%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B" class="docs-header-link">
+          <span header-link="%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B"></span>
+          交叉类型
+        </h2>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">interface</span> <span class="token class-name">Bird</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  <span class="token function">fly</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  <span class="token function">talk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+type BirdPerson  <span class="token operator">=</span> Bird <span class="token operator">|</span> Person<span class="token punctuation">;</span>
+<span class="token keyword">const</span> birdPerson1<span class="token punctuation">:</span> BirdPerson <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">"zfeng"</span><span class="token punctuation">,</span> <span class="token function">fly</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span> 
+<span class="token keyword">const</span> birdPerson2<span class="token punctuation">:</span> BirdPerson <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">"zfeng"</span><span class="token punctuation">,</span> <span class="token function">talk</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></div></code></pre>
+
+        <h2 id="%E6%96%AD%E8%A8%80" class="docs-header-link">
+          <span header-link="%E6%96%AD%E8%A8%80"></span>
+          断言
+        </h2>
+      <ul>
+<li><code>&lt;string&gt;someValue</code></li>
+<li><code>someValue as string</code></li>
+</ul>
+
+        <h2 id="%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B" class="docs-header-link">
+          <span header-link="%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B"></span>
+          内置类型
+        </h2>
+      
+        <h3 id="%E5%8F%96%E5%87%BA%E5%AF%B9%E8%B1%A1%E3%80%81%E6%8E%A5%E5%8F%A3%E7%9A%84key" class="docs-header-link">
+          <span header-link="%E5%8F%96%E5%87%BA%E5%AF%B9%E8%B1%A1%E3%80%81%E6%8E%A5%E5%8F%A3%E7%9A%84key"></span>
+          取出对象、接口的key
+        </h3>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span>
+  age<span class="token punctuation">:</span> <span class="token keyword">number</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 等同于 type PersonKeys = 'name' | 'age'</span>
+type PersonKeys <span class="token operator">=</span> keyof Person<span class="token punctuation">;</span></div></code></pre>
+
+        <h3 id="record" class="docs-header-link">
+          <span header-link="record"></span>
+          Record
+        </h3>
+      <blockquote>
+<p>用于属性映射</p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><div>type Record<span class="token operator">&lt;</span>K <span class="token keyword">extends</span> <span class="token class-name">string</span> <span class="token operator">|</span> <span class="token keyword">number</span> <span class="token operator">|</span> symbol<span class="token punctuation">,</span> T<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>P <span class="token keyword">in</span> K<span class="token punctuation">]</span><span class="token punctuation">:</span> T<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div>type MyObject <span class="token operator">=</span> Record<span class="token operator">&lt;</span><span class="token keyword">string</span><span class="token punctuation">,</span> <span class="token keyword">number</span><span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// type MyObject = {</span>
+<span class="token comment" spellcheck="true">//     [key: string]: number;</span>
+<span class="token comment" spellcheck="true">// }</span>
+type RequestMethods <span class="token operator">=</span> <span class="token string">'GET'</span> <span class="token operator">|</span> <span class="token string">'POST'</span> <span class="token operator">|</span> <span class="token string">'DELETE'</span><span class="token punctuation">;</span>
+type MethodsAny <span class="token operator">=</span> Record<span class="token operator">&lt;</span>RequestMethods<span class="token punctuation">,</span> <span class="token keyword">any</span><span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// type MethodsAny = {</span>
+<span class="token comment" spellcheck="true">//     GET: any;</span>
+<span class="token comment" spellcheck="true">//     POST: any;</span>
+<span class="token comment" spellcheck="true">//     DELETE: any;</span>
+<span class="token comment" spellcheck="true">// }</span></div></code></pre>
+
+        <h3 id="partial" class="docs-header-link">
+          <span header-link="partial"></span>
+          Partial
+        </h3>
+      <blockquote>
+<p>将一个定义中的所有属性都变成可选参数</p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><div>type Partial<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>P <span class="token keyword">in</span> keyof T<span class="token punctuation">]</span><span class="token operator">?</span><span class="token punctuation">:</span> T<span class="token punctuation">[</span>P<span class="token punctuation">]</span>
+<span class="token punctuation">}</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span>
+  age<span class="token punctuation">:</span> <span class="token keyword">number</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> person1<span class="token punctuation">:</span> Partial<span class="token operator">&lt;</span>Person<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">const</span> person2<span class="token punctuation">:</span> Partial<span class="token operator">&lt;</span>Person<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'xxx'</span> <span class="token punctuation">}</span></div></code></pre>
+
+        <h3 id="required" class="docs-header-link">
+          <span header-link="required"></span>
+          Required
+        </h3>
+      <blockquote>
+<p>将一个定义中的属性全部变成必选参数</p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><div>type Required<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>P <span class="token keyword">in</span> keyof T<span class="token punctuation">]</span><span class="token operator">-</span><span class="token operator">?</span><span class="token punctuation">:</span> T<span class="token punctuation">[</span>P<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span>
+  age<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">number</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> person<span class="token punctuation">:</span> Required<span class="token operator">&lt;</span>Person<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'xxx'</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token number">12</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></div></code></pre>
+
+        <h3 id="readonly" class="docs-header-link">
+          <span header-link="readonly"></span>
+          Readonly
+        </h3>
+      <blockquote>
+<p>将一个定义中的所有属性都变成只读参数</p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><div></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+type ReadonlyPerson <span class="token operator">=</span> Readonly<span class="token operator">&lt;</span>Person<span class="token operator">></span></div></code></pre>
+
+        <h3 id="pick" class="docs-header-link">
+          <span header-link="pick"></span>
+          Pick
+        </h3>
+      <blockquote>
+<p>选择一个原来的接口中一部分的属性定义</p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><div>type Pick<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> K <span class="token keyword">extends</span> <span class="token class-name">keyof</span> T<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>P <span class="token keyword">in</span> K<span class="token punctuation">]</span><span class="token punctuation">:</span> T<span class="token punctuation">[</span>P<span class="token punctuation">]</span>
+<span class="token punctuation">}</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
+  visiable<span class="token punctuation">:</span> <span class="token keyword">boolean</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+type Person1 <span class="token operator">=</span> Pick<span class="token operator">&lt;</span>Person<span class="token punctuation">,</span> <span class="token string">'name'</span> <span class="token operator">|</span> <span class="token string">'age'</span><span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> person<span class="token punctuation">:</span> Person1 <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'xxx'</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token number">12</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></div></code></pre>
+
+        <h3 id="exclude" class="docs-header-link">
+          <span header-link="exclude"></span>
+          Exclude
+        </h3>
+      <blockquote>
+<p>排除联合类型中一部分的内容</p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><div>type Exclude<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> U<span class="token operator">></span> <span class="token operator">=</span> T <span class="token keyword">extends</span> <span class="token class-name">U</span> <span class="token operator">?</span> never <span class="token punctuation">:</span> T</div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div>type MyTypes <span class="token operator">=</span> <span class="token string">'name'</span> <span class="token operator">|</span> <span class="token string">'age'</span> <span class="token operator">|</span> <span class="token string">'height'</span><span class="token punctuation">;</span>
+type someMyTypes <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span>MyTypes<span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token operator">></span></div></code></pre>
+
+        <h3 id="omit" class="docs-header-link">
+          <span header-link="omit"></span>
+          Omit
+        </h3>
+      <blockquote>
+<p>将接口或者类型的键值对删除一部分</p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><div>type Omit<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> K <span class="token keyword">extends</span> <span class="token class-name">string</span> <span class="token operator">|</span> <span class="token keyword">number</span> <span class="token operator">|</span> symbol<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>P <span class="token keyword">in</span> Exclude<span class="token operator">&lt;</span>keyof T<span class="token punctuation">,</span> K<span class="token operator">></span><span class="token punctuation">]</span><span class="token punctuation">:</span> T<span class="token punctuation">[</span>P<span class="token punctuation">]</span>
+<span class="token punctuation">}</span></div></code></pre>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token keyword">string</span>
+  age<span class="token punctuation">:</span> <span class="token keyword">number</span>
+<span class="token punctuation">}</span>
+type SomePerson <span class="token operator">=</span> Omit<span class="token operator">&lt;</span>Person<span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token operator">></span></div></code></pre>
+
+        <h3 id="extract" class="docs-header-link">
+          <span header-link="extract"></span>
+          Extract
+        </h3>
+      
+        <h3 id="nonnullable" class="docs-header-link">
+          <span header-link="nonnullable"></span>
+          NonNullable
+        </h3>
+      
+        <h2 id="%E6%A1%88%E4%BE%8B" class="docs-header-link">
+          <span header-link="%E6%A1%88%E4%BE%8B"></span>
+          案例
+        </h2>
+      
+        <h3 id="%E4%B8%A4%E4%B8%AA%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%93%8D%E4%BD%9C" class="docs-header-link">
+          <span header-link="%E4%B8%A4%E4%B8%AA%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%93%8D%E4%BD%9C"></span>
+          两个接口的操作
+        </h3>
+      
+        <h4 id="%E4%BA%A4%E9%9B%86" class="docs-header-link">
+          <span header-link="%E4%BA%A4%E9%9B%86"></span>
+          交集
+        </h4>
+      <pre class="language-ts"><code class="language-ts"><div>type Extract<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> U<span class="token operator">></span> <span class="token operator">=</span> T <span class="token keyword">extends</span> <span class="token class-name">U</span> <span class="token operator">?</span> T <span class="token punctuation">:</span> never<span class="token punctuation">;</span>
+type Intersection<span class="token operator">&lt;</span>T <span class="token keyword">extends</span> <span class="token class-name">object</span><span class="token punctuation">,</span> U <span class="token keyword">extends</span> <span class="token class-name">object</span><span class="token operator">></span> <span class="token operator">=</span> Pick<span class="token operator">&lt;</span>
+  T<span class="token punctuation">,</span>
+  Extract<span class="token operator">&lt;</span>keyof T<span class="token punctuation">,</span> keyof U<span class="token operator">></span> <span class="token operator">&amp;</span> Extract<span class="token operator">&lt;</span>keyof U<span class="token punctuation">,</span> keyof T<span class="token operator">></span>
+<span class="token operator">></span><span class="token punctuation">;</span>
+
+type C1 <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span> visible<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+type C2 <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span> sex<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+type C3 <span class="token operator">=</span> Intersection<span class="token operator">&lt;</span>C1<span class="token punctuation">,</span> C2<span class="token operator">></span><span class="token punctuation">;</span></div></code></pre>
+
+        <h4 id="%E5%B9%B6%E9%9B%86" class="docs-header-link">
+          <span header-link="%E5%B9%B6%E9%9B%86"></span>
+          并集
+        </h4>
+      <pre class="language-ts"><code class="language-ts"><div>type C1 <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span> visible<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+type C2 <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> age<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> sex<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+type Overwrite<span class="token operator">&lt;</span>
+  T <span class="token keyword">extends</span> <span class="token class-name">object</span><span class="token punctuation">,</span>
+  U <span class="token keyword">extends</span> <span class="token class-name">object</span><span class="token punctuation">,</span>
+  I <span class="token operator">=</span> Diff<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> U<span class="token operator">></span> <span class="token operator">&amp;</span> Intersection<span class="token operator">&lt;</span>U<span class="token punctuation">,</span> T<span class="token operator">></span>
+<span class="token operator">></span> <span class="token operator">=</span> Pick<span class="token operator">&lt;</span>I<span class="token punctuation">,</span> keyof I<span class="token operator">></span><span class="token punctuation">;</span>
+  
+type overwrite <span class="token operator">=</span> Overwrite<span class="token operator">&lt;</span>C1<span class="token punctuation">,</span> C2<span class="token operator">></span><span class="token punctuation">;</span></div></code></pre>
+
+        <h4 id="%E5%B7%AE%E9%9B%86" class="docs-header-link">
+          <span header-link="%E5%B7%AE%E9%9B%86"></span>
+          差集
+        </h4>
+      <pre class="language-ts"><code class="language-ts"><div>type Exclude<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> U<span class="token operator">></span> <span class="token operator">=</span> T <span class="token keyword">extends</span> <span class="token class-name">U</span> <span class="token operator">?</span> never <span class="token punctuation">:</span> T<span class="token punctuation">;</span>
+type Diff<span class="token operator">&lt;</span>T <span class="token keyword">extends</span> <span class="token class-name">object</span><span class="token punctuation">,</span> U <span class="token keyword">extends</span> <span class="token class-name">object</span><span class="token operator">></span> <span class="token operator">=</span> Pick<span class="token operator">&lt;</span>
+  T<span class="token punctuation">,</span>
+  Exclude<span class="token operator">&lt;</span>keyof T<span class="token punctuation">,</span> keyof U<span class="token operator">></span>
+<span class="token operator">></span><span class="token punctuation">;</span>
+
+type C1 <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span> visible<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+type C2 <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span> sex<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+type C11 <span class="token operator">=</span> Diff<span class="token operator">&lt;</span>C1<span class="token punctuation">,</span> C2<span class="token operator">></span><span class="token punctuation">;</span></div></code></pre>

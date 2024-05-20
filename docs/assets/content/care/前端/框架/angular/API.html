@@ -1,0 +1,55 @@
+
+        <h1 id="api" class="docs-header-link">
+          <span header-link="api"></span>
+          API
+        </h1>
+      
+        <h2 id="directive" class="docs-header-link">
+          <span header-link="directive"></span>
+          Directive
+        </h2>
+      <p>指令装饰器</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">export</span> <span class="token keyword">declare</span> <span class="token keyword">interface</span> <span class="token class-name">Directive</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// CSS 选择器</span>
+  selector<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// </span>
+  inputs<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// </span>
+  outputs<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// </span>
+  providers<span class="token operator">?</span><span class="token punctuation">:</span> Provider<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// </span>
+  exportAs<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// </span>
+  queries<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>key<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// </span>
+  host<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>key<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// </span>
+  jit<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="component" class="docs-header-link">
+          <span header-link="component"></span>
+          Component
+        </h2>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">export</span> <span class="token keyword">declare</span> <span class="token keyword">interface</span> <span class="token class-name">Component</span> <span class="token keyword">extends</span> <span class="token class-name">Directive</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 变更检测策略</span>
+  changeDetection<span class="token operator">?</span><span class="token punctuation">:</span> ChangeDetectionStrategy<span class="token punctuation">;</span>
+  viewProviders<span class="token operator">?</span><span class="token punctuation">:</span> Provider<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  moduleId<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  templateUrl<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  template<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+  styleUrls<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  styles<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  animations<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  encapsulation<span class="token operator">?</span><span class="token punctuation">:</span> ViewEncapsulation<span class="token punctuation">;</span>
+  interpolation<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token keyword">string</span><span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  entryComponents<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">Array</span><span class="token operator">&lt;</span>Type<span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span> <span class="token operator">|</span> <span class="token keyword">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span><span class="token punctuation">;</span>
+  preserveWhitespaces<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">boolean</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@angular/core"</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span></div></code></pre>

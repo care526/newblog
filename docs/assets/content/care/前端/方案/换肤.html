@@ -1,0 +1,52 @@
+
+        <h1 id="%E6%8D%A2%E8%82%A4" class="docs-header-link">
+          <span header-link="%E6%8D%A2%E8%82%A4"></span>
+          换肤
+        </h1>
+      <ol>
+<li>link 标签</li>
+</ol>
+<blockquote>
+<p>通过 link 标签加载不同的 css 文件，每个主题 css 文件的内部结构一致，只是颜色不同</p>
+</blockquote>
+<ol start="2">
+<li>在根标签上加载不同的 class 类</li>
+</ol>
+<blockquote>
+<p>:root 中定义默认主题的 css 变量
+每个 class 类中定义相同的 css 变量，但是值不同
+IE 不兼容</p>
+</blockquote>
+<pre class="language-css"><code class="language-css"><div><span class="token selector"><span class="token pseudo-class">:root</span> </span><span class="token punctuation">{</span>
+  <span class="token property">--theme-color</span><span class="token punctuation">:</span> <span class="token hexcode">#333</span><span class="token punctuation">;</span>
+  <span class="token property">--theme-background</span><span class="token punctuation">:</span> <span class="token hexcode">#eee</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.dark</span> </span><span class="token punctuation">{</span>
+  <span class="token property">--theme-color</span><span class="token punctuation">:</span> <span class="token hexcode">#eee</span><span class="token punctuation">;</span>
+  <span class="token property">--theme-background</span><span class="token punctuation">:</span> <span class="token hexcode">#333</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.pink</span> </span><span class="token punctuation">{</span>
+  <span class="token property">--theme-color</span><span class="token punctuation">:</span> <span class="token hexcode">#fff</span><span class="token punctuation">;</span>
+  <span class="token property">--theme-background</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* 使用 */</span>
+<span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--theme-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--theme-background<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E9%85%8D%E8%89%B2" class="docs-header-link">
+          <span header-link="%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E9%85%8D%E8%89%B2"></span>
+          浏览器的配色
+        </h2>
+      <pre class="language-css"><code class="language-css"><div><span class="token comment" spellcheck="true">/* 以亮色渲染 */</span>
+<span class="token property">color-scheme</span><span class="token punctuation">:</span> light<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* 以深色渲染 */</span>
+<span class="token property">color-scheme</span><span class="token punctuation">:</span> dark<span class="token punctuation">;</span></div></code></pre>
+
+        <h2 id="%E9%80%9A%E8%BF%87-js-%E8%AE%BE%E7%BD%AE-css-%E5%8F%98%E9%87%8F" class="docs-header-link">
+          <span header-link="%E9%80%9A%E8%BF%87-js-%E8%AE%BE%E7%BD%AE-css-%E5%8F%98%E9%87%8F"></span>
+          通过 js 设置 css 变量
+        </h2>
+      <pre class="language-js"><code class="language-js"><div>DOM<span class="token punctuation">.</span>style<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">'--theme-color'</span><span class="token punctuation">,</span> <span class="token string">'#fff'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></div></code></pre>

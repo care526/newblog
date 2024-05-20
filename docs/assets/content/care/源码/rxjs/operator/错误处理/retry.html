@@ -1,0 +1,140 @@
+
+        <h1 id="retry" class="docs-header-link">
+          <span header-link="retry"></span>
+          retry
+        </h1>
+      
+        <h2 id="%E7%A4%BA%E4%BE%8B" class="docs-header-link">
+          <span header-link="%E7%A4%BA%E4%BE%8B"></span>
+          示例
+        </h2>
+      
+        <h2 id="%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90" class="docs-header-link">
+          <span header-link="%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"></span>
+          源码分析
+        </h2>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">RetryConfig</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/**
+   * The maximum number of times to retry.
+   * 最大重试次数(默认值：Infinity)，无限重试
+   */</span>
+  count<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/**
+   * The number of milliseconds to delay before retrying, OR a function to
+   * return a notifier for delaying. If a function is given, that function should
+   * return a notifier that, when it emits will retry the source. If the notifier
+   * completes _without_ emitting, the resulting observable will complete without error,
+   * if the notifier errors, the error will be pushed to the result.
+   * 每次重试延时的时间
+   * 每次重试延时的触发器函数
+   */</span>
+  delay<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">,</span> retryCount<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> ObservableInput<span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/**
+   * Whether or not to reset the retry counter when the retried subscription
+   * emits its first value.
+   * 重试成功后是否重置 重试次数(默认值：false)
+   */</span>
+  resetOnSuccess<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">boolean</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> retry<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">(</span>count<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span><span class="token punctuation">:</span> MonoTypeOperatorFunction<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> retry<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">(</span>config<span class="token punctuation">:</span> RetryConfig<span class="token punctuation">)</span><span class="token punctuation">:</span> MonoTypeOperatorFunction<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> retry<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">(</span>configOrCount<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token operator">|</span> RetryConfig <span class="token operator">=</span> <span class="token number">Infinity</span><span class="token punctuation">)</span><span class="token punctuation">:</span> MonoTypeOperatorFunction<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 处理不同的入参为配置对象</span>
+  <span class="token keyword">let</span> config<span class="token punctuation">:</span> RetryConfig<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>configOrCount <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> configOrCount <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    config <span class="token operator">=</span> configOrCount<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    config <span class="token operator">=</span> <span class="token punctuation">{</span>
+      count<span class="token punctuation">:</span> configOrCount<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> count <span class="token operator">=</span> <span class="token number">Infinity</span><span class="token punctuation">,</span> delay<span class="token punctuation">,</span> resetOnSuccess<span class="token punctuation">:</span> resetOnSuccess <span class="token operator">=</span> <span class="token keyword">false</span> <span class="token punctuation">}</span> <span class="token operator">=</span> config<span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// 不重试，直接返回原source</span>
+  <span class="token keyword">return</span> count <span class="token operator">&lt;=</span> <span class="token number">0</span>
+    <span class="token operator">?</span> identity
+    <span class="token punctuation">:</span> <span class="token function">operate</span><span class="token punctuation">(</span><span class="token punctuation">(</span>source<span class="token punctuation">,</span> subscriber<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> soFar <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 当前重试次数</span>
+        <span class="token keyword">let</span> innerSub<span class="token punctuation">:</span> Subscription <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">const</span> subscribeForRetry <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+          <span class="token keyword">let</span> syncUnsub <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 是否是同步订阅</span>
+
+          innerSub <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span>
+            <span class="token keyword">new</span> <span class="token class-name">OperatorSubscriber</span><span class="token punctuation">(</span>
+              subscriber<span class="token punctuation">,</span>
+              value <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// If we're resetting on success</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>resetOnSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  soFar <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                subscriber<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token comment" spellcheck="true">// Completions are passed through to consumer.</span>
+              undefined<span class="token punctuation">,</span>
+              err <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>soFar<span class="token operator">++</span> <span class="token operator">&lt;</span> count<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token comment" spellcheck="true">// We are still under our retry count</span>
+                  <span class="token keyword">const</span> resub <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>innerSub<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      <span class="token comment" spellcheck="true">// 异步订阅重试触发</span>
+                      innerSub<span class="token punctuation">.</span><span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      innerSub <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+                      <span class="token function">subscribeForRetry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                      syncUnsub <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+                  <span class="token keyword">if</span> <span class="token punctuation">(</span>delay <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// The user specified a retry delay.</span>
+                    <span class="token comment" spellcheck="true">// They gave us a number, use a timer, otherwise, it's a function,</span>
+                    <span class="token comment" spellcheck="true">// and we're going to call it to get a notifier.</span>
+                    <span class="token comment" spellcheck="true">// innerFrom 转化为 Observable</span>
+                    <span class="token keyword">const</span> notifier <span class="token operator">=</span> <span class="token keyword">typeof</span> delay <span class="token operator">===</span> <span class="token string">'number'</span> <span class="token operator">?</span> <span class="token function">timer</span><span class="token punctuation">(</span>delay<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">innerFrom</span><span class="token punctuation">(</span><span class="token function">delay</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> soFar<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">const</span> notifierSubscriber <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OperatorSubscriber</span><span class="token punctuation">(</span>
+                      subscriber<span class="token punctuation">,</span>
+                      <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">// After we get the first notification, we</span>
+                        <span class="token comment" spellcheck="true">// unsubscribe from the notifer, because we don't want anymore</span>
+                        <span class="token comment" spellcheck="true">// and we resubscribe to the source.</span>
+                        <span class="token comment" spellcheck="true">// notifier 通知器成功执行后，触发重试(通知器next一次后，立马结束)</span>
+                        notifierSubscriber<span class="token punctuation">.</span><span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token function">resub</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                      <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">// The notifier completed without emitting.</span>
+                        <span class="token comment" spellcheck="true">// The author is telling us they want to complete.</span>
+                        <span class="token comment" spellcheck="true">// 通知器完结后，原订阅也完结</span>
+                        subscriber<span class="token punctuation">.</span><span class="token function">complete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                    <span class="token comment" spellcheck="true">// 通过通知器 触发重试</span>
+                    notifier<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span>notifierSubscriber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// There was no notifier given. Just resub immediately.</span>
+                    <span class="token function">resub</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                  <span class="token comment" spellcheck="true">// We're past our maximum number of retries.</span>
+                  <span class="token comment" spellcheck="true">// Just send along the error.</span>
+                  <span class="token comment" spellcheck="true">// 不再重试后，直接原样报错</span>
+                  subscriber<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+          <span class="token comment" spellcheck="true">// 同步订阅重试触发</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>syncUnsub<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            innerSub<span class="token punctuation">.</span><span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            innerSub <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+            <span class="token function">subscribeForRetry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token function">subscribeForRetry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>

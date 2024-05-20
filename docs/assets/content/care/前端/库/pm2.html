@@ -1,0 +1,128 @@
+
+        <h1 id="pm2" class="docs-header-link">
+          <span header-link="pm2"></span>
+          PM2
+        </h1>
+      
+        <h2 id="%E5%AE%89%E8%A3%85" class="docs-header-link">
+          <span header-link="%E5%AE%89%E8%A3%85"></span>
+          安装
+        </h2>
+      <pre class="language-bash"><code class="language-bash"><div><span class="token function">npm</span> i -g pm2
+yarn global add pm2</div></code></pre>
+
+        <h2 id="%E5%91%BD%E4%BB%A4" class="docs-header-link">
+          <span header-link="%E5%91%BD%E4%BB%A4"></span>
+          命令
+        </h2>
+      
+        <h3 id="start" class="docs-header-link">
+          <span header-link="start"></span>
+          start
+        </h3>
+      <pre class="language-bash"><code class="language-bash"><div>pm2 start app.js
+pm2 start app.js --watch</div></code></pre>
+<div class="dg-paragraph"><strong>options</strong> </div>
+<pre class="language-base"><code class="language-base"><div># 设置应用名称
+<span class="token operator">-</span><span class="token operator">-</span>name <span class="token operator">&lt;</span>app_name<span class="token operator">></span>
+# 监听文件变更
+<span class="token operator">-</span><span class="token operator">-</span>watch
+# 设置内存门槛用于应用重启
+<span class="token operator">-</span><span class="token operator">-</span>max<span class="token operator">-</span>memory<span class="token operator">-</span>restart <span class="token operator">&lt;</span>200MB<span class="token operator">></span>
+# 日志文件路径
+<span class="token operator">-</span><span class="token operator">-</span>log <span class="token operator">&lt;</span>log_path<span class="token operator">></span>
+# 传给脚本的额外参数
+<span class="token operator">-</span><span class="token operator">-</span> arg1 arg2 arg3
+# 自动重启的间隔时间 ms
+<span class="token operator">-</span><span class="token operator">-</span>restart<span class="token operator">-</span>delay <span class="token operator">&lt;</span>delay<span class="token operator">></span>
+# 随着时间的日志前缀
+<span class="token operator">-</span><span class="token operator">-</span>time
+# 不自动重启应用
+<span class="token operator">-</span><span class="token operator">-</span>no<span class="token operator">-</span>autorestart
+# 附加到应用日志
+<span class="token operator">-</span><span class="token operator">-</span>no<span class="token operator">-</span>daemon
+# 以集群模式启动应用
+<span class="token operator">-</span>i max</div></code></pre>
+
+        <h3 id="restart" class="docs-header-link">
+          <span header-link="restart"></span>
+          restart
+        </h3>
+      <p>重新开始</p>
+
+        <h3 id="reload" class="docs-header-link">
+          <span header-link="reload"></span>
+          reload
+        </h3>
+      <p>重启</p>
+
+        <h3 id="stop" class="docs-header-link">
+          <span header-link="stop"></span>
+          stop
+        </h3>
+      <p>停止</p>
+
+        <h3 id="delete" class="docs-header-link">
+          <span header-link="delete"></span>
+          delete
+        </h3>
+      <p>删除</p>
+<pre class="language-base"><code class="language-base"><div># 应用名称
+pm2 restart<span class="token operator">/</span>reload<span class="token operator">/</span>stop<span class="token operator">/</span>delete <span class="token operator">&lt;</span>app_name<span class="token operator">></span>
+# 应用ID
+pm2 restart<span class="token operator">/</span>reload<span class="token operator">/</span>stop<span class="token operator">/</span>delete <span class="token operator">&lt;</span>app_id<span class="token operator">></span>
+# 所有应用
+pm2 restart<span class="token operator">/</span>reload<span class="token operator">/</span>stop<span class="token operator">/</span>delete all</div></code></pre>
+
+        <h3 id="list/ls/status" class="docs-header-link">
+          <span header-link="list/ls/status"></span>
+          list/ls/status
+        </h3>
+      <p>查看所有应用状态</p>
+
+        <h3 id="logs" class="docs-header-link">
+          <span header-link="logs"></span>
+          logs
+        </h3>
+      <p>查看日志</p>
+<pre class="language-bash"><code class="language-bash"><div>pm2 logs
+<span class="token comment" spellcheck="true"># 查看较前的日志 200 行</span>
+pm2 logs --lines 200
+<span class="token comment" spellcheck="true"># 以流的形式在打印日志</span>
+pm2 logs --raw</div></code></pre>
+
+        <h3 id="monit" class="docs-header-link">
+          <span header-link="monit"></span>
+          monit
+        </h3>
+      <p>实时的仪表盘</p>
+
+        <h3 id="plus" class="docs-header-link">
+          <span header-link="plus"></span>
+          plus
+        </h3>
+      <p>基于Web的仪表板</p>
+
+        <h3 id="startup" class="docs-header-link">
+          <span header-link="startup"></span>
+          startup
+        </h3>
+      <p>生成自启动活动脚本</p>
+
+        <h3 id="save" class="docs-header-link">
+          <span header-link="save"></span>
+          save
+        </h3>
+      <p>冻结进程列表进行自动重生</p>
+
+        <h3 id="flush" class="docs-header-link">
+          <span header-link="flush"></span>
+          flush
+        </h3>
+      <p>清空所有日志</p>
+
+        <h3 id="reloadlogs" class="docs-header-link">
+          <span header-link="reloadlogs"></span>
+          reloadLogs
+        </h3>
+      <p>重载所有日志</p>

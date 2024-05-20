@@ -1,0 +1,27 @@
+
+        <h1 id="clipboard" class="docs-header-link">
+          <span header-link="clipboard"></span>
+          clipboard
+        </h1>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// 在需要使用剪切板功能的模块中引入</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ClipboardModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/cdk/clipboard'</span><span class="token punctuation">;</span></div></code></pre>
+
+        <h2 id="%E6%8C%87%E4%BB%A4%E6%A8%A1%E5%BC%8F" class="docs-header-link">
+          <span header-link="%E6%8C%87%E4%BB%A4%E6%A8%A1%E5%BC%8F"></span>
+          指令模式
+        </h2>
+      <pre class="language-html"><code class="language-html"><div><span class="token comment" spellcheck="true">&lt;!-- 标签可以是任何标签 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">cdkCopyToClipboard</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>我是待复制的文本<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>点击复制<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">[cdkCopyToClipboard]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>willCopyText<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>点击复制<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></div></code></pre>
+
+        <h2 id="%E7%BC%96%E7%A8%8B%E6%96%B9%E5%BC%8F" class="docs-header-link">
+          <span header-link="%E7%BC%96%E7%A8%8B%E6%96%B9%E5%BC%8F"></span>
+          编程方式
+        </h2>
+      <pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// 引入</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Clipboard <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/cdk/clipboard'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 依赖注入</span>
+<span class="token keyword">private</span> clipboard<span class="token punctuation">:</span> Clipboard<span class="token punctuation">,</span>
+<span class="token comment" spellcheck="true">// 执行(适合短文本)</span>
+<span class="token keyword">const</span> copyResult <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>clipboard<span class="token punctuation">.</span><span class="token function">copy</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+copyResult <span class="token operator">?</span> <span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">'复制成功'</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'复制失败'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></div></code></pre>

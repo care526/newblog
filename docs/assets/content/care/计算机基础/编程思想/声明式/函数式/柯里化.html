@@ -1,0 +1,33 @@
+
+        <h1 id="%E6%9F%AF%E9%87%8C%E5%8C%96" class="docs-header-link">
+          <span header-link="%E6%9F%AF%E9%87%8C%E5%8C%96"></span>
+          柯里化
+        </h1>
+      <blockquote>
+<p>只传递给函数一部分参数来调用它，让他返回一个函数去处理剩下的参数  </p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>y<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> addTen <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">addTen</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 12</span></div></code></pre>
+<blockquote>
+<p>使用 loadsh 的 curry 函数
+将待操作的数据放到最后一个参数上</p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">const</span> curry <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'lodash'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>curry<span class="token punctuation">;</span>
+<span class="token keyword">const</span> replace <span class="token operator">=</span> <span class="token function">curry</span><span class="token punctuation">(</span><span class="token punctuation">(</span>what<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span> replacement<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span> str<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>what<span class="token punctuation">,</span> relpacement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'abc'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// bbc</span>
+<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// bbc</span>
+<span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// bbc</span></div></code></pre>
+
+        <h2 id="curry%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90" class="docs-header-link">
+          <span header-link="curry%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90"></span>
+          curry源码解析
+        </h2>
+      <pre class="language-ts"><code class="language-ts"><div></div></code></pre>

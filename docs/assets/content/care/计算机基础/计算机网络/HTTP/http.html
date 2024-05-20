@@ -1,0 +1,222 @@
+
+        <h1 id="http" class="docs-header-link">
+          <span header-link="http"></span>
+          HTTP
+        </h1>
+      
+        <h2 id="%E4%B8%8E-http-%E5%8D%8F%E4%BD%9C%E7%9A%84-web-%E6%9C%8D%E5%8A%A1%E5%99%A8" class="docs-header-link">
+          <span header-link="%E4%B8%8E-http-%E5%8D%8F%E4%BD%9C%E7%9A%84-web-%E6%9C%8D%E5%8A%A1%E5%99%A8"></span>
+          与 HTTP 协作的 Web 服务器
+        </h2>
+      <ul>
+<li>一台主机可以搭载多个 Web 站点，所以会有多个域名解析的 IP 地址为该主机 IP，在 Host 首部要完整指明主机名和域名的 URL</li>
+<li>隧道：目的是保证客户端和服务器之间进行安全通信，不会对报文做修改加工</li>
+<li>网关：利用网关可将 HTTP 请求转化为其他协议通信，比如，网关可以连接数据库，等</li>
+<li>代理：客户端和服务器中间的中间人，可有多级代理，可以在请求中追加代理的首部信息<ul>
+<li>缓存代理服务器：将从源服务器请求的资源保存在代理服务器上一份，下次访问同一资源，直接返回。用于减轻源服务器的访问压力</li>
+<li>反向代理：代理某个服务器的访问，所有用户通过正向代理服务器访问目标服务器</li>
+<li>正向代理：将用户的访问分向各个服务器集群中的某个服务器，将所有服务器的压力均衡负载<br><img src="./images/server.png" alt="替换文本"></li>
+<li>透明代理：不对请求报文做代理加工的叫透明代理，反之，叫非透明代理</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="http-%E7%9A%84%E5%87%A0%E7%A7%8D%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F" class="docs-header-link">
+          <span header-link="http-%E7%9A%84%E5%87%A0%E7%A7%8D%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F"></span>
+          HTTP 的几种请求方式
+        </h2>
+      <ul>
+<li>GET：数据放在 URL 的字段里，只能进行 url 编码，得到的数据会被浏览器主动缓存</li>
+<li>POST：数据放在 request.body 中，支持多种编码，可以设置响应头让浏览器缓存数据,请求服务器网关应用程序</li>
+<li>PUT：向指定位置上传资源，一般用来上传文件</li>
+<li>DELETE：请求服务器删除指定位置的资源</li>
+<li>HEAD: 同 GET，但是不返回响应体，只获取响应头的元信息，一般用于检测资源是否存在和是否有权限访问相应的资源</li>
+<li>OPTIONS: 返回服务器针对特定资源所支持的 HTTP 请求方法。也可以利用向 Web 服务器发送&#39;*&#39;的请求来测试服务器的功能性</li>
+<li>TRACE: 回显服务器收到的请求，主要用于测试或诊断</li>
+</ul>
+
+        <h2 id="%E7%8A%B6%E6%80%81%E5%90%97" class="docs-header-link">
+          <span header-link="%E7%8A%B6%E6%80%81%E5%90%97"></span>
+          状态吗
+        </h2>
+      
+        <h3 id="%E4%BF%A1%E6%81%AF%E7%B1%BB%E7%8A%B6%E6%80%81%E7%A0%81-1xx" class="docs-header-link">
+          <span header-link="%E4%BF%A1%E6%81%AF%E7%B1%BB%E7%8A%B6%E6%80%81%E7%A0%81-1xx"></span>
+          信息类状态码 1XX
+        </h3>
+      <p>1XX 接收的请求正在处理</p>
+
+        <h3 id="%E6%88%90%E5%8A%9F%E7%8A%B6%E6%80%81%E7%A0%81-2xx" class="docs-header-link">
+          <span header-link="%E6%88%90%E5%8A%9F%E7%8A%B6%E6%80%81%E7%A0%81-2xx"></span>
+          成功状态码 2XX
+        </h3>
+      <p>200 OK 请求正常处理<br>204 No Content 请求处理成功，但没有资源可返回<br>206 Partial Content 请求（请求的是部分资源）处理成功（一般用于断点续传）</p>
+
+        <h3 id="%E9%87%8D%E5%AE%9A%E5%90%91%E7%8A%B6%E6%80%81%E7%A0%81-3xx" class="docs-header-link">
+          <span header-link="%E9%87%8D%E5%AE%9A%E5%90%91%E7%8A%B6%E6%80%81%E7%A0%81-3xx"></span>
+          重定向状态码 3XX
+        </h3>
+      <p>301 Moved Permanently 当前资源已被分配了新的 URL(永久的)<br>302 Found 当前资源已被分配了新的 URL(临时的)<br>303 See Other<br>304 Not Modified 资源找到，但请求附带的条件不满足<br>307 Temporary Redirect</p>
+
+        <h3 id="%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%94%99%E8%AF%AF%E7%8A%B6%E6%80%81%E7%A0%81,%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E5%A4%84%E7%90%86%E8%AF%B7%E6%B1%82-4xx" class="docs-header-link">
+          <span header-link="%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%94%99%E8%AF%AF%E7%8A%B6%E6%80%81%E7%A0%81,%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E5%A4%84%E7%90%86%E8%AF%B7%E6%B1%82-4xx"></span>
+          客户端错误状态码,服务器无法处理请求 4XX
+        </h3>
+      <p>400 Bad Request 请求错误，可能是请求报文中存在错误<br>401 Unauthorized 需要认证，第一次请求会弹出认证窗口，第二次请求表示认证失败<br>403 Forbidden 该资源不允许访问<br>404 Not found 请求的资源不存在</p>
+
+        <h3 id="%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%94%99%E8%AF%AF%E7%8A%B6%E6%80%81%E7%A0%81,%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AF%B7%E6%B1%82%E5%87%BA%E9%94%99-5xx" class="docs-header-link">
+          <span header-link="%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%94%99%E8%AF%AF%E7%8A%B6%E6%80%81%E7%A0%81,%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AF%B7%E6%B1%82%E5%87%BA%E9%94%99-5xx"></span>
+          服务端错误状态码,服务器请求出错 5XX
+        </h3>
+      <p>500 Internal Server Error 服务器本身发生错误(可能是 bug 或者临时故障)<br>503 Server Unavailable 服务器无法处理请求，表明服务器处于超负载或者停机维护</p>
+
+        <h2 id="%E9%A6%96%E9%83%A8" class="docs-header-link">
+          <span header-link="%E9%A6%96%E9%83%A8"></span>
+          首部
+        </h2>
+      <ul>
+<li>通用首部</li>
+<li>请求首部</li>
+<li>相应首部</li>
+<li>实体首部</li>
+<li>扩展首部</li>
+</ul>
+
+        <h2 id="%E8%AF%B7%E6%B1%82%E5%A4%B4" class="docs-header-link">
+          <span header-link="%E8%AF%B7%E6%B1%82%E5%A4%B4"></span>
+          请求头
+        </h2>
+      
+        <h2 id="%E5%93%8D%E5%BA%94%E5%A4%B4(:%E5%90%8E%E9%9D%A2%E6%98%AF%E4%BE%8B%E5%AD%90)" class="docs-header-link">
+          <span header-link="%E5%93%8D%E5%BA%94%E5%A4%B4(:%E5%90%8E%E9%9D%A2%E6%98%AF%E4%BE%8B%E5%AD%90)"></span>
+          响应头(:后面是例子)
+        </h2>
+      <p>Access-Control-Allow-Origin #设置资源的跨域访问</p>
+<ul>
+<li>: *
+Accept-Patch #指定服务器所支持的文档补丁格式</li>
+<li>: text/example;charset=utf-8
+Accept-Ranges #服务器支持的内容范围</li>
+<li>: bytes
+Age #设置响应在代理服务器中存在的时间(s)</li>
+<li>: 12(数字就行)
+Allow #特定资源的有效动作</li>
+<li>: GET, HEAD
+Cache-Control #缓存可用的时间</li>
+<li>: max-age=3600
+Connection #针对该连接所预期的选项</li>
+<li>: close
+Content-Disposition #对已知 MIME 类型资源的描述,浏览器可以根据这个响应头决定是对返回资源的动作，如：将其下载或是打开</li>
+<li>: attachment; filename=&quot;fname.ext&quot;
+Content-Encoding #响应资源所使用的编码类型</li>
+<li>: gzip
+Content-Language #响应内容的语言</li>
+<li>: zh-cn
+Content-Length #响应消息体的长度(8 进制表示)</li>
+<li>: 348(数字就行)
+Content-Location #返回数据的第一个候选位置</li>
+<li>: /index.htm
+Content-MD5 #响应内容的二进制 MD5 散列值，以 Base64 方式编码
+Content-Range #如果是响应部分消息，表示属于完整消息的哪个部分</li>
+<li>: bytes 21010-47021/47022
+Content-Type #当前内容的 MIME 类型</li>
+<li>: text/html; charset=utf-8
+Date #此条消息被发送时的日期和时间</li>
+<li>: Tue, 15 Nov 1994 08:12:31 GMT
+ETag #对于某个资源的某个特定版本的一个标识符，通常是一个 消息散列
+Expires #指定一个时间,超过该时间表示过期</li>
+<li>: Thu, 01 Dec 1994 16:00:00 GMT
+Last-Modified #所请求的对象的最后修改日期</li>
+<li>: Dec, 26 Dec 2015 17:30:00 GMT
+Link #用来表示与另一个资源之间的类型关系
+Location #用于进行重定向或在创建了某个新资源时使用</li>
+<li>: <a target="_blank" href="http://www.itbilu.com/nodejs">http://www.itbilu.com/nodejs</a>
+P3P #P3P 策略相关设置</li>
+<li>: CP=&quot;This is not a P3P policy!
+Pragma
+Proxy-Authenticate #要求在访问代理时提供身份认证信息</li>
+<li>: Basic
+Public-Key-Pins #用于防止中间攻击，声明网站认证中传输层安全协议的证书散列值
+Refresh #用于重定向，或者当一个新的资源被创建时。默认会在 5 秒后刷新重定向</li>
+<li>: 5; url=<a target="_blank" href="http://itbilu.com">http://itbilu.com</a>
+Retry-After
+Server #服务器的名称</li>
+<li>: nginx/1.6.3
+Set-Cookie #设置 HTTP cookie
+Status #通用网关接口的响应头字段，用来说明当前 HTTP 连接的响应状态</li>
+<li>: 200 OK
+Trailer #用户说明传输中分块编码的编码信息</li>
+<li>: Max-Forwards
+Transfer-Encoding #用表示实体传输给用户的编码形式。包括：chunked、compress、 deflate、gzip、identity</li>
+<li>: chunked
+Upgrade #要求客户端升级到另一个高版本协议</li>
+<li>: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
+Vary #告知下游的代理服务器，应当如何对以后的请求协议头进行匹配，以决定是否可使用已缓存的响应内容而不是重新从原服务器请求新的内容</li>
+<li>: *
+Via #告知代理服务器的客户端，当前响应是通过什么途径发送的</li>
+<li>: 1.0 fred, 1.1 itbilu.com (nginx/1.6.3)
+Warning #一般性警告，告知在实体内容体中可能存在错误</li>
+<li>: 199 Miscellaneous warning
+WWW-Authenticate #表示在请求获取这个实体时应当使用的认证模式</li>
+<li>: Basic</li>
+</ul>
+
+        <h2 id="%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%9E%84%E6%88%90" class="docs-header-link">
+          <span header-link="%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%9E%84%E6%88%90"></span>
+          应用层协议的构成
+        </h2>
+      <p>HTTP：TCP &gt; HTTP<br>HTTPS: TCP &gt; TLS &gt; HTTP<br>WS: TCP &gt; WS<br>WSS: TCP &gt; TLS &gt; WS</p>
+
+        <h2 id="http1-0-/-http1-1-/-http2-0-%E5%8D%87%E7%BA%A7%E4%BA%86%E4%BB%80%E4%B9%88" class="docs-header-link">
+          <span header-link="http1-0-/-http1-1-/-http2-0-%E5%8D%87%E7%BA%A7%E4%BA%86%E4%BB%80%E4%B9%88"></span>
+          HTTP1.0 / HTTP1.1 / HTTP2.0 升级了什么
+        </h2>
+      
+        <h2 id="%E4%BB%A3%E7%90%86" class="docs-header-link">
+          <span header-link="%E4%BB%A3%E7%90%86"></span>
+          代理
+        </h2>
+      <ul>
+<li>作用:
+滤内容,阻止访问,访问控制,权限管理</li>
+<li>代理的种类
+私有代理: 一个用户专用的
+公共代理: 众多客户端共享使用的
+代理缓存: 保存了服务器文件的部分副本,
+反向代理: 按需或按照流量来分配用户的访问
+转码器: 将得到的服务器上的内容做转换,
+匿名代理: 将请求报文中的身份信息删除,提供私密性和匿名性</li>
+<li>还可以
+服务器设置配置,使其只接受来自代理的请求,防止用户直接连接
+安全防火墙</li>
+</ul>
+
+        <h2 id="%E7%BD%91%E5%85%B3" class="docs-header-link">
+          <span header-link="%E7%BD%91%E5%85%B3"></span>
+          网关
+        </h2>
+      <p>一般用于不同协议之间的转化</p>
+
+        <h2 id="%E5%85%B6%E4%BB%96" class="docs-header-link">
+          <span header-link="%E5%85%B6%E4%BB%96"></span>
+          其他
+        </h2>
+      <ul>
+<li>MIME 类型: 是为了区分上千种资源的类型而设计的 最初在邮件系统中使用,然后 http 也使用了他
+常见的 MIME 的文件类型</li>
+<li>URI 统一资源标识符 有两种形式
+URL 统一资源定位符 格式:协议 地址 资源
+URN 统一资源名</li>
+</ul>
+
+        <h2 id="http-%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC" class="docs-header-link">
+          <span header-link="http-%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC"></span>
+          http 的各个版本
+        </h2>
+      <ul>
+<li>HTTP/0.9</li>
+<li>HTTP/1.0</li>
+<li>HTTP/1.0+</li>
+<li>HTTP/0.9</li>
+<li>HTTP/2.0</li>
+</ul>
